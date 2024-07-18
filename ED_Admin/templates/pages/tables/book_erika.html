@@ -24,39 +24,26 @@
                   </tr>
                 </thead>
                 <tbody class="text-center">
+                  {% for book in event_book %}
                   <tr>
                     <td>
-                      1
+                      {{forloop.counter}}
                     </td>
-                    <td>Angular Typing</td>                    
+                    <td> {{book.Name}} </td>                    
                     <td>
                       <div class="text-wrap text-center" >
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatum sequi ratione, odit enim sed quidem commodi omnis magnam nisi natus itaque sunt temporibus id dolore, cupiditate, beatae iusto ea?
+                        {{book.EventDescription}}
                       </div>
                     </td>
                   <td><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="mailto:example@gmail.com">
-                    event@example.gmail.com
+                    {{book.Email}}
                   </a></td>
-                  <td>9801234567</td>
+                  <td> {{book.Phone}} </td>
                   </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Angular Muktan tamang</td>                    
-                    <td>
-                      <div class="text-wrap text-center" >
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatum sequi ratione, odit enim sed quidem commodi omnis magnam nisi natus itaque sunt temporibus id dolore, cupiditate, beatae iusto ea?
-                      </div>
-                    </td>
-                  <td>event@example.gamil.com</td>
-                  <td>9801234567</td>
-                  </tr>
-                  
+                  {% endfor %}                  
                 </tbody>
               </table>
-            </div>
-            <a class="text-black mt-3 d-block pl-4" href="#">
-              <span class="font-weight-medium h6">View all order history</span>
-              <i class="mdi mdi-chevron-right"></i></a>
+            </div>            
           </div>
         </div>
       </div>      

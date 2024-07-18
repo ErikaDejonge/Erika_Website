@@ -32,16 +32,18 @@
                   </tr>
                 </thead>
                 <tbody class="text-center">
+                  {% for blogs in blog %}
                   <tr>
                     <td>
                       <div class="d-flex align-items-center ">
-                        <img class="w-50 h-50 text-center" src="{% static 'assets/images/faces/face1.jpg' %}" alt="image" />                       
+                        <img style="width: 200px; height: 150px;" src="{{blogs.image.url}}" alt="image" />                       
                       </div>
                     </td>
-                    <td><h3>Angular Typing</h3></td>                    
-                    <td> <a href="#"> <div class="badge badge-inverse-success" style="font-size: 20px; cursor: pointer;"> Customize </div> </a></td>
+                    <td><h3> {{blogs.blog_title}} </h3></td>                    
+                    <td> <a href=""> <div class="badge badge-inverse-success" style="font-size: 20px; cursor: pointer;"> Customize </div> </a></td>
                   </tr>
                   
+                  {% endfor %}
                 </tbody>
               </table>
             </div>

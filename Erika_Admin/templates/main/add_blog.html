@@ -1,0 +1,85 @@
+{% extends 'main/admin_base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/admin_blogs.css' %}">
+{% endblock link %}
+
+{% block body %}
+    
+    <div class="container-fluid">
+        
+      <div class="form">
+        <div class="container py-5">
+        <form action="{% url 'add_blog' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-floating">
+              <input type="text" class="form-control" name="title" placeholder="Title" id="floatingTextarea2" required>
+              <label for="floatingTextarea2">Title</label>
+            </div><br><br>
+    
+            <div class="form-floating">
+                <textarea class="form-control" name="introduction"  placeholder="Leave a comment here" id="floatingTextarea2" style="height: 120px" required></textarea>
+                <label for="floatingTextarea2">Blog Introduction</label>
+            </div><br><br>
+            <div class="form-floating">
+              <textarea class="form-control" name="paragraph"  placeholder="Leave a comment here" id="floatingTextarea2" style="height: 220px" required></textarea>
+              <label for="floatingTextarea2">Blog Body Paragraph</label>
+          </div>
+          <div class="mb-3 py-2">
+            <label for="formFileMultiple" class="form-label">
+              <div id="selectedBanner"></div>
+            </label>
+            <input class="form-control" id="img" name="image" type="file" required id="formFileMultiple" multiple>
+          </div>
+          <input type="submit" class="btn btn-outline-info mb-4"  value="Upload BLog">    
+        </form>  
+        <a href="{% url 'admin_blogs' %}">
+        <button type="button" class="btn btn-outline-info">Go Back</button>      
+
+        </a>          
+        </div>
+      </div>
+
+    </div>
+
+
+
+    
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"
+></script>
+
+
+<script>
+  let selDiv = "";
+  let storedFiles = [];
+  $(document).ready(function () {
+    $("#img").on("change", handleFileSelect);
+    selDiv = $("#selectedBanner");
+  });
+
+  function handleFileSelect(e) {
+    let files = e.target.files;
+    let filesArr = Array.prototype.slice.call(files);
+    filesArr.forEach(function (f) {
+      if (!f.type.match("image.*")) {
+        return;
+      }
+      storedFiles.push(f);
+
+      let reader = new FileReader();
+      reader.onload = function (e) {
+        let html =
+          '<img src="' +
+          e.target.result +
+          "\" data-file='" +
+          f.name +
+          "' class='avatar rounded lg' alt='Category Image' height='200px' width='200px'>";
+        selDiv.html(html);
+      };
+      reader.readAsDataURL(f);
+    });
+  }
+</script>
+
+{% endblock body %}

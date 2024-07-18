@@ -1,0 +1,66 @@
+
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block body %}
+
+  
+<div class="main-panel justify-content-center">
+  <div class="content-wrapper pb-0">
+      <div class="row">
+      <div class="col-xl-12 col-sm-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body px-0 overflow-auto">
+            <h4 class="card-title pl-4 text-center">Bookings</h4>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead class="bg-light text-center">
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th style="width: 40%;" >Event Description</th>
+                    <th>E-mail</th>
+                    <th>Phone</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center">
+                  <tr>
+                    <td>
+                      1
+                    </td>
+                    <td>Angular Typing</td>                    
+                    <td>
+                      <div class="text-wrap text-center" >
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatum sequi ratione, odit enim sed quidem commodi omnis magnam nisi natus itaque sunt temporibus id dolore, cupiditate, beatae iusto ea?
+                      </div>
+                    </td>
+                  <td><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="mailto:example@gmail.com">
+                    event@example.gmail.com
+                  </a></td>
+                  <td>9801234567</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Angular Muktan tamang</td>                    
+                    <td>
+                      <div class="text-wrap text-center" >
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptatum sequi ratione, odit enim sed quidem commodi omnis magnam nisi natus itaque sunt temporibus id dolore, cupiditate, beatae iusto ea?
+                      </div>
+                    </td>
+                  <td>event@example.gamil.com</td>
+                  <td>9801234567</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+            <a class="text-black mt-3 d-block pl-4" href="#">
+              <span class="font-weight-medium h6">View all order history</span>
+              <i class="mdi mdi-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+
+{% endblock body %}

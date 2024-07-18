@@ -1,0 +1,83 @@
+{% extends 'main/admin_base.html' %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/admin_blog.css' %}">
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock link %}
+
+
+{% block body %}
+
+
+<div class="container px-4 py-5">
+  <h1 class="pb-2 border-bottom">Dashboard</h1>
+    <div class="row gx-5 text-center">
+      <div class="col">
+       <a href="{% url 'mail' %}" class="link-erika">
+        <div class="p-3 alert-style-row-box bold">Erika News Letter</div>
+       </a>
+      </div>
+      <div class="col">
+        <a href="{% url 'book_event' %}" class="link-erika">
+            <div class="p-3 alert-style-row-box bold">Erika Event Booking</div>
+        </a>
+      </div>
+    </div>
+</div>
+<!-- 
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center">
+        <div class="messages">
+          {% if messages %}
+          {% for message in messages %}
+
+          <div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+              <div class="toast-body">
+                {{message}}
+              </div>
+              <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+          </div>
+
+          {% endfor %}
+          {% endif %}
+        </div>
+      </h2>      
+    </div>
+  </div>
+</div>
+<!-- Blog Display -->
+<div class="container">
+  <h4 class="alert alert-success text-center" ><strong>All the Blogs</strong></h4>
+  <div class="wraper">
+    <div class="row gap-0 column-gap-3 text-center">
+      {% for blog in blogs reversed %}
+    <div class="card mb-3 text-center" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{blog.image.url}}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"> {{blog.blog_title}} </h5>
+            <p class="card-text"> {{blog.blog_intro}} </p>
+            <p class="card-text"><small class="text-body-secondary"> </small></p>
+          </div>
+          <a href="{% url 'read_blog' blog.id %}" class="btn btn-color mb-3">Read More</a>
+        </div>
+      </div>
+    </div>
+    
+    {% endfor %}
+
+  </div>
+  </div>
+</div> -->
+
+
+{% endblock body %}

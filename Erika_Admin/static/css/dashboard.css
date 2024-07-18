@@ -1,0 +1,29 @@
+.link-erika{
+    text-decoration: none;
+    color: #000000;
+}
+.bold{
+    font-weight: bold;
+    font-size: 25px;
+}
+.alert-style-row-box{
+    background-color: #c5dcdd;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+.alert-style-row-box:hover{
+    background-color: #8a9fa0;
+}
+.mailto-link{
+    text-decoration: none !important;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: none;
+
+}
+.mailto-link:hover{
+    color: #114b50;
+    border-bottom: 3px solid #8bb4be;
+    
+}

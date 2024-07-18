@@ -1,0 +1,33 @@
+.blog-blog{
+    text-align: justify;
+}
+.img-blog{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+.blog{
+    cursor: pointer;
+    font-family:  Archivo Narrow;
+}
+.blog label{
+    font-size: 25px !important;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000000;
+}
+.blog-tts{
+    text-decoration: underline;
+}
+
+.img-content-blog{
+    width: 100%;
+    height: 100%;
+}
+.img-content-blog .content-img{
+    width: 100% !important;
+    height: 550px !important;
+}
+.divider{
+    border: 3px solid #ddd;
+}

@@ -1,0 +1,45 @@
+{% extends 'main/admin_base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/admin_blog.css' %}">
+{% endblock link %}
+
+{% block body %}
+    <div class="container">
+        <div class="wrapper py-2">
+          <div class="text-end">
+            <a href="{% url 'change_image' read.id %}" class="btn btn-color"><i class="fa fa-image"></i> Change Image</a>
+            <a href="{% url 'edit_blog' read.id %}" class="btn btn-color"><i class="fa fa-pencil"></i> Edit</a>
+            <a href="{% url 'remove_blog' read.id %}" class="btn btn-color"><i class="fa fa-trash"></i> Delete</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="container text-center">
+            <div class="wrapper">
+                <div class='container py-5 ' >
+                    <div class="blog-body py-5">
+                        <h1 class ='blog-tts title-font' > {{read.blog_title}} </h1>
+                        <div class="paragraph">
+                            
+                           <div class="intro">
+                            <p class="blog-introduction blog-blog" > {{read.blog_intro}} </p>
+                           </div>
+                            <div class="img-content-blog">
+                                <img class="content-img" src="{{read.image.url}}" alt="">
+                            </div>
+                            <div class="blog-body-text blog-blog">
+                                <p class="body-font"> {{read.blog_body}} <p id="reload"></p></p>
+                            </div>
+                        </div>
+                    </div> 
+    
+                </div>           
+            </div>
+        </div>
+    </div>
+    
+    
+
+{% endblock body %}

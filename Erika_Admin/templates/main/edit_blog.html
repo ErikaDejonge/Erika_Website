@@ -1,0 +1,43 @@
+{% extends 'main/admin_base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/admin_blogs.css' %}">
+{% endblock link %}
+
+{% block body %}
+    
+    <div class="container-fluid">
+        
+      <div class="form">
+        <div class="container py-5">
+        <form action="{% url 'edit_blog' edit_blog.id %}" method="POST">
+            {% csrf_token %}
+            <div class="form-floating">
+              <input type="text" class="form-control" name="title" value="{{edit_blog.blog_title}}" placeholder="Title" id="floatingTextarea2" required>
+              <label for="floatingTextarea2">Title</label>
+            </div><br><br>
+    
+            <div class="form-floating">
+                <textarea class="form-control" name="introduction" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 120px" required>{{edit_blog.blog_intro}}</textarea>
+                <label for="floatingTextarea2">Blog Introduction</label>
+            </div><br><br>
+            <div class="form-floating">
+              <textarea class="form-control" name="paragraph"  placeholder="Leave a comment here"  id="floatingTextarea2" style="height: 220px" required> {{edit_blog.blog_body}} </textarea>
+              <label for="floatingTextarea2">Blog Body Paragraph</label>
+          </div>
+          <!-- <div class="mb-3">
+            <label for="formFileMultiple"  class="form-label">Select the images</label>
+            <input class="form-control" name="image" type="file" value="{{edit_blog.image.url}}" required id="formFileMultiple" multiple>
+          </div> -->
+          <input type="submit" class="btn btn-outline-info mb-4"  value="Upload BLog">    
+        </form>  
+        <a href="{% url 'admin_blogs' %}">
+        <button type="button" class="btn btn-outline-info">Go Back</button>      
+
+        </a>          
+        </div>
+      </div>
+
+    </div>
+
+{% endblock body %}

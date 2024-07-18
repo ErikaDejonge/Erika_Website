@@ -1,0 +1,82 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block link %}
+
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+{% endblock link %}
+{% block title %}
+    Blogs
+{% endblock title %}
+
+{% block content %}
+
+<form action=" blog.id ">
+    
+<div class="container-fluid">
+    <div class="container text-center">
+        <div class="wrapper">
+            <div class='container py-5 ' >
+                <div class="blog-body py-5">
+                    <h1 class ='blog-tts title-font' > {{blog.blog_title}} </h1>
+                    <div class="paragraph">
+                        
+                       <div class="intro">
+                        <p class="blog-introduction blog-blog body-font" > {{blog.blog_intro}} </p>
+                       </div>
+                        <div class="img-content-blog">
+                            <img class="content-img" src="{{blog.image.url}}" alt="">
+                        </div>
+                        <div class="blog-body-text blog-blog">
+                            <p class="body-font" > {{blog.blog_body}} <p id="reload"></p></p>
+                        </div>
+                    </div>
+                </div> 
+
+            </div>           
+        </div>
+    </div>
+</div>
+
+</form>
+
+<div class="container position-relative">
+    <div class="wrapper position-relative bottom-0 start-50 translate-middle-x">
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
+
+            {% for i in blog_content reversed %}
+            <div class="col blog">
+                <a href="{% url 'showblog' i.id %}" class="blog-link">
+                    <div class="text-center mb-2">
+                        <img class="img-blog" src="{{i.image.url}}" alt="..">
+                    </div>
+                    <div class="blog-title text-center py-2">
+                        <label> {{i.blog_title}} </label>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              {% if blog_content.has_previous %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{blog_content.previous_page_number}} #reload" >Previous Page &laquo;</a>
+              </li>
+              {% endif %}
+          
+          
+              {% if blog_content.has_next %}
+              <li class="page-item">
+                <a class="page-link" href="?page={{blog_content.next_page_number}} #reload" >More Blog &raquo;</a>
+          
+              </li>
+              {% endif %}
+            </ul>
+          </nav>
+    </div>
+    
+</div>
+
+
+{% endblock content %}

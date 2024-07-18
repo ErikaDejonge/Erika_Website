@@ -1,0 +1,44 @@
+{% extends 'main/admin_base.html' %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock link %}
+
+
+{% block body %}
+<div class="container-fluid py-5 ">
+    <div class="container">
+        <table class="table text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">No.</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Event Description</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Phone No</th>
+                    <th scope="col">Active</th>
+                  </tr>
+            </thead>
+            <tbody>
+                {% for i in event_book reversed %}
+                <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td><strong> {{i.Name}}</strong></td>
+                    <td> {{i.EventDescription}} </a></td>
+                    <td><a href="mailto:{{i.Email}} " class="mailto-link">{{i.Email}} </a></td>
+                    <td>{{i.Phone}} </td>
+                    <td>
+                        <a href="{% url 'delete_event' i.id %}">
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</div>
+
+{% endblock body %}

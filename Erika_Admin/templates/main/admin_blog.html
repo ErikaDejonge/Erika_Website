@@ -1,0 +1,43 @@
+{% extends 'main/admin_base.html' %}
+
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/admin_blog.css' %}">
+{% endblock link %}
+
+{% block body %}
+<div class="container">
+  <div class="wrapper py-2">
+    <div class="text-end">
+      <a href="{% url 'add_blog' %}" class="btn btn-color"><i class="fa fa-plus"></i> Add Blogs</a>
+    </div>
+  </div>
+</div>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+         <h3 class=" text-center" >{{message}}</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+
+    {% endif %}
+
+
+    <div class="container">
+      <div class="wrapper py-3">
+        {% for blog in blog reversed %}
+        <div class="card text-center mb-3">
+          <img src="{{blog.image.url}}" width="auto" height="240px" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> {{blog.blog_title}} </h5>
+            <p class="card-text">{{blog.blog_intro}} </p>
+            <a href="{% url 'read_blog' blog.id %}" class="btn btn-color">Read More</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+{% endblock body %}9l

@@ -1,0 +1,139 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- title section -->
+{% block title %}
+        Erika
+{% endblock title %}
+
+<!-- link section -->
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock link %}
+
+
+<!-- Body section -->
+{% block content %}    
+
+<div class="container-fluid main-container py-5">
+    <div class="container sub-container">
+        <div class="wrapper">
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <img class='main-img' src="{% static 'images/Erika_holder.jpg' %}" alt="">
+                </div>
+                <div class="col-md-6 ">
+                    <p class="pag py-5 mb-5">ON A MISSION TO MAKE HEARING GOD'S VOICE A DAILY PART OF YOUR LIFE.</p>
+                </div>                    
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-5">
+    <div class="box position-relative">
+        <div class="position-relative top-100 start-50 translate-middle w">
+            <div class="container box-sub">
+                <h1 class="text-center hi">Hi, I'm</h1>
+                <h1 class="text-center erika">Erika</h1>
+                
+                <p id='reload' class="main-pag">I am a wife and mother and I believe God wants to speak into every aspect of you life from parenting to marriage.
+                    We aren't meant to do this alone, so I am on a mission to create tools and resources to help you begin hearing God's voice today!
+                </p>
+            </div>
+        </div>        
+    </div>
+</div >    
+
+</div>
+
+<div class="container position-relative">
+    <div class="wrapper position-relative top-0 start-50 translate-middle">
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
+
+            {% for i in blog reversed %}
+            <div class="col blog">
+                <a href="{% url 'showblog' i.id %}" class="blog-link">
+                    <div class="text-center mb-2">
+                        <img class="img-blog" src="{{i.image.url}}" alt="..">
+                    </div>
+                    <div class="blog-title text-center py-2">
+                        <label> {{i.blog_title}} </label>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              {% if blog.has_previous %}
+              <li class="page-item">
+                <a class="page-link" style="color: #000;" href="?page={{blog.previous_page_number}} #reload" >Previous Page &laquo;</a>
+              </li>
+              {% endif %}
+          
+          
+              {% if blog.has_next  %}
+              <li class="page-item">
+                <a class="page-link" style="color: #000;" href="?page={{blog.next_page_number}} #reload">More Blog &raquo;</a>          
+              </li>
+              {% endif %}
+            </ul>
+          </nav>
+    </div>
+    
+</div>
+
+<div class="container-fluid thumnail-body">
+    <div class="wrapper thum-body">
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container py-5 ">
+        <div class="wrapper justify-content-center position-relative top-50 start-50 translate-middle">
+            <div class="d-grid gap-2 text-center title-read">
+                <h2 class="read-title" >START READING TODAY!</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="book-erika">
+        <div class="wrapper">
+            <div class="form mb-5" >
+                <span>
+                    <h3 class="font ft-2 text-center">Book Erika for an event.</h3>
+                </span>
+                <form class="main-form" action="{% url 'books' %}" method="POST">
+                    {% csrf_token %}
+
+                    <div class="mb-3 row now-1">
+                        <label  class="col-sm-2 col-form-label font book-ttl">Name:</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="name" class="form-control-plaintext book-input"  placeholder="Full Name" required >
+                        </div>
+                        <label  class="col-sm-2 col-form-label font book-ttl">Event Description:</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control-plaintext book-input" name="event_description"  placeholder="Event Description" required> 
+                        </div>
+                        <label  class="col-sm-2 col-form-label font book-ttl">E-mail:</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control-plaintext book-input" name="email" placeholder="E-mail" required >
+                        </div>
+                        <label  class="col-sm-2 col-form-label font book-ttl">Phone#:</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control-plaintext book-input" name="phone"  placeholder="Phone No." required >
+                        </div>
+                    </div> 
+                  
+                    <input type="submit" class="form-control-plaintext book-submit" value="Book Erika" >         
+                </form>
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+
+
+
+{% endblock content %}

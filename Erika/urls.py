@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('ErikaApp.urls')),
     path('E_Admin/',include('Erika_Admin.urls')),
-    path('ED_Admin/',include('ED_Admin.urls')),
+    # path('Erika_Admin/',include('ED_Admin.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 ='ErikaApp.views.handling_404'

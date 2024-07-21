@@ -15,15 +15,15 @@
 <!-- Body section -->
 {% block content %}    
 
-<div class="container-fluid main-container py-5">
+<div class="container-fluid main-container py-5 mb-5 myblog">
     <div class="container sub-container">
         <div class="wrapper">
             <div class="row text-center">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <img class='main-img' src="{% static 'images/Erika_holder.jpg' %}" alt="">
                 </div>
-                <div class="col-md-6 ">
-                    <p class="pag py-5 mb-5">ON A MISSION TO MAKE HEARING GOD'S VOICE A DAILY PART OF YOUR LIFE.</p>
+                <div class="col-md-8 ">
+                    <p class="pag py-5 mb-5 ">ON A MISSION TO MAKE HEARING GOD'S VOICE A DAILY PART OF YOUR LIFE.</p>
                 </div>                    
             </div>
         </div>
@@ -31,23 +31,27 @@
 </div>
 
 <div class="container-fluid py-5">
-    <div class="box position-relative">
-        <div class="position-relative top-100 start-50 translate-middle w">
-            <div class="container box-sub">
-                <h1 class="text-center hi">Hi, I'm</h1>
-                <h1 class="text-center erika">Erika</h1>
-                
-                <p id='reload' class="main-pag">I am a wife and mother and I believe God wants to speak into every aspect of you life from parenting to marriage.
-                    We aren't meant to do this alone, so I am on a mission to create tools and resources to help you begin hearing God's voice today!
-                </p>
+    <div class="row row-cols-12 row-cols-md-12">
+        <div class="col-12">
+            <div class="box py-4 position-relative">
+                <div class=" position-relative bottom-0 start-50 translate-middle ">
+                    <div class="container box-sub p-4">
+                        <h1 class="text-center hi">Hi, I'm</h1>
+                        <h1 class="text-center erika_h1 mx-50">Erika</h1>
+                        
+                        <p id='reload' class="main-pag">I am a wife and mother and I believe God wants to speak into every aspect of you life from parenting to marriage.
+                            We aren't meant to do this alone, so I am on a mission to create tools and resources to help you begin hearing God's voice today!
+                        </p>
+                    </div>
+                </div>        
             </div>
-        </div>        
+        </div>
     </div>
 </div >    
 
 </div>
 
-<div class="container position-relative">
+<div class="container position-relative fixed-top">
     <div class="wrapper position-relative top-0 start-50 translate-middle">
         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
 
@@ -89,7 +93,7 @@
     </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid py-3">
     <div class="container py-5 ">
         <div class="wrapper justify-content-center position-relative top-50 start-50 translate-middle">
             <div class="d-grid gap-2 text-center title-read">
@@ -103,7 +107,7 @@
                 <span>
                     <h3 class="font ft-2 text-center">Book Erika for an event.</h3>
                 </span>
-                <form class="main-form" action="{% url 'books' %}" method="POST">
+                <form class="main-form" action="{% url 'event_book' %}" method="POST">
                     {% csrf_token %}
 
                     <div class="mb-3 row now-1">

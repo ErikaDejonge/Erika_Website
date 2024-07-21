@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 EXTERNAL_APPS =[
     'ErikaApp',
     'Erika_Admin',
-    'ED_Admin',
+    # 'ED_Admin',
 ]
 INSTALLED_APPS.extend(EXTERNAL_APPS)
 

@@ -1,0 +1,55 @@
+{% extends 'partials/base.html' %}
+
+{% block body %}
+  
+<div class="main-panel justify-content-center">
+  {% if messages %}
+{% for message in messages %}
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong> {{message}} </strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+{% endfor %}
+{% endif %}
+
+  <div class="content-wrapper pb-0">
+      <div class="row">
+      <div class="col-xl-12 col-sm-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body px-0 overflow-auto">
+            <h4 class="card-title pl-4 text-center">Bookings</h4>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead class="bg-light text-center">
+                  <tr>
+                    <th>#</th>                    
+                    <th>E-mail</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center">
+                  {% for emails in all_email  reversed %}
+                  <tr>
+                    <td> {{forloop.counter}} </td>
+                    <td>
+                      <a href="mailto:{{emails.Info_Email}}" style="font-size: 18px;">{{emails.Info_Email}}</a>
+                    </td>
+                    <td>
+                      <a href="{% url 'mail_remove' emails.id %}"><button type="button" class="btn btn-danger">Delete</button></a>
+                    </td>                    
+                    
+                  
+                  </tr>
+                  {% endfor %}                  
+                </tbody>
+              </table>
+            </div>            
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+
+{% endblock body %}

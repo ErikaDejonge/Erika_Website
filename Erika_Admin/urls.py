@@ -17,9 +17,9 @@ urlpatterns =[
     path('read_blog_blog/<int:id>',views.Blogs.read_blog,name='read_blog'),
     path('edit_blog/<int:id>',views.Blogs.edit_blog,name='edit_blog'),
     path('change_images/<int:id>',views.changeImage,name='change_image'),
-    # path('password-changing/',views.PasswordChangingView.as_view(template_name ="password/password_change.html"), name='password-changing'),
-    # path('password-success/',views.password_success, name='password_change_success'),
     path('password_change/',views.Password_change,name='password_change'),
+    path('myprofile?/',views.myprofile, name='my-profile'),
+    path('edit_myprofile/<int:id>',views.edit_myprofile, name='edit_profile'),
 
 
 

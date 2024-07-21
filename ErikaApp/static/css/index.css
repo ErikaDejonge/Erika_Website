@@ -1,12 +1,21 @@
+@font-face {
+    font-family: le jour script;
+    src: url(../le-jour/LeJourScript-Eaqpg.otf);
+    
+}
+
 .main-img{
     width: 300px !important;
     height: 300px;
     border-radius: 50%;
+    border: 0px solid #fff;
+    border-width: 7px;
     
 }
 .font{
     font-family: Archivo Narrow;
 }
+
 
 .main-container{
     background: #C5DCDD;
@@ -14,22 +23,27 @@
 .pag{
     font-size: 40px;
     text-align: center;
-    margin: 0px 40px;
+    margin: 10px 40px;
     font-family:  Cinzel !important;
 }
 
 .box-sub{
+    position: relative;
+    top: 50%;
     background: #A6A6Af;
     border: 0px solid rgb(255, 255, 255);
     border-width: 10px;
 }
 .main-pag{
-    font-family:  Archivo Narrow;
+    font-family:  'Open Sans Condensed';
     font-size: 28px !important;
 }
 .hi{
-    font-family: 'Le Jour Script';
+    font-family:'Open Sans Condensed' ;
 
+}
+.erika_h1{
+    font-family: le jour script;
 }
 .img-blog{
     border-radius: 50%;
@@ -136,4 +150,62 @@ h3{
     border: 2px solid #C5DCDD;
     background-color: #C5DCDD;
     
+}
+
+@media screen and (max-width:450px) {
+    .myblog{
+        padding:20% 0;
+    }
+    .pag{
+        margin: 0% 0% 40% 0%;
+        font-size: 30px;
+    }
+    .box-sub{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .myblog{
+        padding:20% 0;
+    }
+    .pag{
+        margin: 0% 0% 40% 0%;
+        font-size: 30px;
+    }
+    .box-sub{
+        margin-top: 20%;
+    }
+}
+@media screen and (max-width:350px) {
+    .myblog{
+        padding:20% 0;
+    }
+    .pag{
+        margin: 0% 0% 40% 0%;
+        font-size: 30px;
+    }
+    .box-sub{
+        margin-top: 40%;
+    }
+    .main-img{
+        width: 200px !important;
+        height: 200px;
+        border-radius: 50%;
+        border: 0px solid #fff;
+        border-width: 7px;
+        
+    }
+}
+@media screen and (max-width:310px) {
+    .myblog{
+        padding:20% 0;
+    }
+    .pag{
+        margin: 0% 0% 40% 0%;
+        font-size: 30px;
+    }
+    .box-sub{
+        margin-top: 60%;
+    }
 }

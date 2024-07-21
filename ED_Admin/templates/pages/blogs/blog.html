@@ -1,0 +1,47 @@
+{% extends 'partials/base.html' %}
+
+{% block body %}
+
+<div class="main-panel justify-content-center">
+  <div class="content-wrapper pb-0">
+    <div class="row">
+      <div class="col-xl-12 col-sm-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body px-0 overflow-auto">
+            <h4 class="card-title pl-4 text-center">Blogs</h4>
+            <div class="table-responsive">
+              <table class="table">
+                <thead class="bg-light text-center">
+                  <tr>
+                    <th>Images</th>
+                    <th>Title</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center">
+                  {% for blogs in blog %}
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center ">
+                        <img style="width: 200px; height: 150px;" src="{{blogs.image.url}}" alt="image" />                       
+                      </div>
+                    </td>
+                    <td><h3> {{blogs.blog_title}} </h3></td>                    
+                    <td> <a href=""> <div class="badge badge-inverse-success" style="font-size: 20px; cursor: pointer;"> Customize </div> </a></td>
+                  </tr>
+                  
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            <a class="text-black mt-3 d-block pl-4" href="#">
+              <span class="font-weight-medium h6">View all order history</span>
+              <i class="mdi mdi-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+
+
+{% endblock body %}

@@ -1,0 +1,66 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block link %}
+
+<style>
+    .my-pro-img{
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        position: relative;
+         
+    }
+    .m-container{
+        border: 2px solid gray;
+    }
+    .sub-menu{
+        border: none;
+        border-bottom: 2px solid gray;
+    }
+    
+</style>
+
+{% endblock link %}
+
+{% block body %}
+
+<div class="main-panel justify-content-center">
+    <div class="content-wrapper pb-0">
+        {% if user.is_authenticated %}
+        <div class="page-header  flex-wrap">
+            <div class="sub-menu">
+                <div class="wrapper py-2">
+                <div class="text-end">
+                    <a href="{% url 'my-profile' %}" class="btn btn-color"><i class="mdi mdi-arrow-left-bold-circle"></i> Go Back</a>
+                </div>
+                </div>
+            </div>          
+        </div>
+        <div class="container m-container justify-content-center">
+            <div class="main-wrapper text-center py-4">
+
+                <form action="{% url 'edit_profile' adu.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="img">
+                        <img src="{% static 'images/Ed-fav.png' %}" class="my-pro-img"  alt="profile images">
+                    </div>
+                    <div class="bio">
+                        <div class="input-group mb-3 py-4">
+                            <span class="input-group-text" id="basic-addon1"> <i class="mdi mdi-account-circle" style="font-size: 20px;"></i> </span>
+                            <input type="text" class="form-control" name="username"  value="{{adu.username}}"  placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                          </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"> <i class="mdi mdi-email" style="font-size: 20px;"></i> </span>
+                            <input type="text" class="form-control" name="email" value="{{adu.email}}"  placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+                        </div>
+                        <button type="submit" class="btn btn-success">Update profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock body %}

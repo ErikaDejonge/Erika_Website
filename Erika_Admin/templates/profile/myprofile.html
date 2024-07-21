@@ -1,0 +1,61 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+{% block link %}
+
+<style>
+    .my-pro-img{
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        position: relative;
+         
+    }
+    .m-container{
+        border: 2px solid gray;
+    }
+    .sub-menu{
+        border: none;
+        border-bottom: 2px solid gray;
+    }
+    
+</style>
+
+{% endblock link %}
+
+{% block body %}
+
+<div class="main-panel justify-content-center">
+    <div class="content-wrapper pb-0">
+        {% if user.is_authenticated %}
+        <div class="page-header  flex-wrap">
+            <div class="sub-menu">
+                <div class="wrapper py-2">
+                <div class="text-end">
+                    <a href="{% url 'password_change' %}" class="btn btn-color"><i class="mdi mdi-account-key"></i> Change Password</a>
+                    <a href="{% url 'edit_profile' user.id %}" class="btn btn-color"><i class="mdi mdi-pencil"></i> Edit</a>
+                    <!-- <a href="" class="btn btn-color"><i class="mdi mdi-delete"></i> Delete</a> -->
+                </div>
+                </div>
+            </div>          
+        </div>
+        <div class="container m-container justify-content-center">
+            <div class="main-wrapper text-center py-4">
+                <div class="img">
+                    <img src="{% static 'images/Ed-fav.png' %}" class="my-pro-img"  alt="profile images">
+                </div>
+                <div class="bio">
+                    <div class="name py-4">
+                        <label for=""> {{user.username |upper }} </label>
+                    </div>
+                    <div class="name">
+                        <label for=""> {{user.email}} </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock body %}

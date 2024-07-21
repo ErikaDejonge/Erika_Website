@@ -4,12 +4,14 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login,logout,update_session_auth_hash
 from django.contrib.auth.decorators import login_required
 from ErikaApp.models import Email_Info,BookErika,Blog
-from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth.forms import PasswordChangeForm
-from .forms import Password_Change_Form
-from django.core.paginator import Paginator
-from django.urls import reverse_lazy,reverse
-from django.forms import forms
+import requests
+import json
+from django.contrib import messages
+import datetime
+from .models import Country
+
+
 
 # Create your views here.
 
@@ -36,6 +38,27 @@ class AdminLogin():
 
         return render(request,  'main/login.html')
     
+@login_required(login_url='adminlogin')
+def myprofile(request):
+    
+    return render(request, 'profile/myprofile.html')   
+
+@login_required(login_url='adminlogin')
+def edit_myprofile(request,id):
+    if request.method == 'POST':
+        adu = User.objects.get(id=id)
+        adu.username = request.POST['username']
+        adu.email = request.POST['email']
+        adu.save()
+        messages.success(request, 'User name and Email address is updated successfully..')
+        return redirect('my-profile')
+
+
+    adu =  User.objects.get(id=id)
+    context = {
+        'adu':adu
+    }
+    return render(request, 'profile/Edit_profile.html',context)    
 
 
 class Out():
@@ -49,14 +72,36 @@ class Out():
         User.objects.get(username = request, is_superuser = True).delete()
         return redirect('adminlogin')
 
-    
-
 class Dashboard():
     @login_required(login_url='adminlogin')
     def dashboard(request):
+        # weather start     
+        city = 'Kathmandu'    
+        url =f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid=bf22686cf11682e29d657b984d138978'
+        PARAMS = {"units":"metric"}
+
+        data = requests.get(url, PARAMS).json()
+
+        temp = data["main"]['temp']       
+        humidity = data['main']['humidity']
+        wind = data['wind']['speed']
+        description = data['weather'][0]['description']
+        cloud = data['clouds']['all']
+        
+            
         blogs = Blog.objects.all()
         context={
             'blogs':blogs,
+
+            'city':city,
+            'temp':temp,
+            'humidity':humidity,
+            'wind':wind,
+            'description':description,
+            'cloud':cloud,                
+            'time':datetime.datetime.now(),
+            "dt":datetime.datetime.now()
+
         }
         return render(request, 'main/dashboard.html',context)
     

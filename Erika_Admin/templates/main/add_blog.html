@@ -1,13 +1,15 @@
-{% extends 'main/admin_base.html' %}
+{% extends 'partials/base.html' %}
 {% load static %}
 {% block link %}
 <link rel="stylesheet" href="{% static 'css/admin_blogs.css' %}">
 {% endblock link %}
 
 {% block body %}
+<div class="main-panel justify-content-center">
+  <div class="content-wrapper pb-0">
+      <div class="page-header flex-wrap">
     
-    <div class="container-fluid">
-        
+    <div class="container-fluid">        
       <div class="form">
         <div class="container py-5">
         <form action="{% url 'add_blog' %}" method="POST" enctype="multipart/form-data">
@@ -41,7 +43,10 @@
       </div>
 
     </div>
-
+   </div>
+  </div>
+</div>
+      
 
 
     

@@ -3,6 +3,7 @@
 {% block link %}
 
 <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
 
 {% endblock link %}
 {% block title %}
@@ -11,34 +12,33 @@
 
 {% block content %}
 
-<form action=" blog.id ">
-    
 <div class="container-fluid">
     <div class="container text-center">
         <div class="wrapper">
             <div class='container py-5 ' >
+               {% for i in blog_content reversed %}
                 <div class="blog-body py-5">
-                    <h1 class ='blog-tts title-font' > {{blog.blog_title}} </h1>
+                    <h1 class ='blog-tts title-font' > {{i.blog_title | upper }} </h1>
                     <div class="paragraph">
                         
-                       <div class="intro">
-                        <p class="blog-introduction blog-blog body-font py-5" > {{blog.blog_intro}} </p>
+                       <div class="intro py-5">
+                        <p class="blog-introduction blog-blog py-5" > {{i.blog_intro}} </p>
                        </div>
-                        <div class="img-content-blog">
-                            <img class="content-img mb-5" src="{{blog.image.url}}" alt="">
+                        <div class="img-content-blog mb-5">
+                            <img class="content-img" src="{{i.image.url}}" alt="">
                         </div>
                         <div class="blog-body-text blog-blog">
-                            <p class="body-font" > {{blog.blog_body}} <p id="reload"></p></p>
+                            <p> {{i.blog_body}} <p id="reload"></p></p>
                         </div>
                     </div>
                 </div> 
+                {% endfor %}
 
             </div>           
         </div>
     </div>
 </div>
 
-</form>
 
 <div class="container position-relative">
     <div class="wrapper position-relative bottom-0 start-50 translate-middle-x">
@@ -46,12 +46,12 @@
 
             {% for i in blog_content reversed %}
             <div class="col blog">
-                <a href="{% url 'showblog' i.id %}" class="blog-link">
+                <a href="{% url 'showblog' i.id %}" class="blog-link" style="text-decoration: none;" >
                     <div class="text-center mb-2">
                         <img class="img-blog" src="{{i.image.url}}" alt="..">
                     </div>
                     <div class="blog-title text-center py-2">
-                        <label> {{i.blog_title}} </label>
+                        <h5 style="font-size: 28pt;"> {{i.blog_title | upper}} </h5>
                     </div>
                 </a>
             </div>

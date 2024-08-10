@@ -44,7 +44,7 @@
             <span class="navbar-text">
               {% if user.is_authenticated %} 
               <p href="" class="text-center" style="color: #000; border-bottom: 1px solid gray; cursor: crosshair;"> <strong>{{user | upper}}</strong> <i class="fa fa-user edit-admin"></i></p>
-              <a class="ad-ank" href="/">Visit site</a> |
+              <a class="ad-ank" href="/" target="_blank" >Visit site</a> |
               <a class="ad-ank" href="{% url 'password_change'  %}">Change Password</a> |
               <a class="ad-ank" href="{% url 'out' %}">Log Out</a>
               {% endif %}

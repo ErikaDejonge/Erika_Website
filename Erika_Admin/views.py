@@ -5,15 +5,23 @@ from django.contrib.auth import authenticate, login,logout,update_session_auth_h
 from django.contrib.auth.decorators import login_required
 from ErikaApp.models import Email_Info,BookErika,Blog
 from django.contrib.auth.forms import PasswordChangeForm
+from .models import Profile_Images
 import requests
 import json
 from django.contrib import messages
 import datetime
-from .models import Country
+import os
+
 
 
 
 # Create your views here.
+def profiles(request):
+    account = Profile_Images.objects.all()
+    context = {
+        'account':account
+    }
+    return render(request, 'partials/base.html',context)
 
 class AdminLogin():
     def AdminLogin(request):
@@ -139,8 +147,10 @@ class Delete_items():
     
     @login_required(login_url='adminlogin')
     def Remove_Blog(request,id):
-        remove= Blog.objects.get(id=id)
-        remove.delete()
+        remove_blog= Blog.objects.get(id=id)
+        if len(remove_blog.image)>0:
+            os.remove(remove_blog.image.path)
+        remove_blog.delete()
         return redirect('admin_blogs')
 
 
@@ -231,3 +241,12 @@ def Password_change(request):
     else:
         fm = PasswordChangeForm(user=request.user)
     return render(request, 'password/password_change.html',{'fm':fm})
+
+def profile_image(request):
+    if request.method=='POST' and request.FILES:
+        profile_img = request.FILES['profile_image']
+        profileimage = Profile_Images(profile_Image = profile_img)
+        profileimage.save()
+        return redirect('my-profile')
+
+    return render(request, 'profile/image.html')

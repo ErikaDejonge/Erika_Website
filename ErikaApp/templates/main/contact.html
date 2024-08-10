@@ -1,0 +1,48 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock link %}
+
+
+{% block content %}
+<div class="container mb-5">
+    <div class="in-touch">
+      <div class="contact">
+        <div class="form-title">
+            <p class="contact-title text-center">Get in Touch </p>
+        </div>
+        <form action="" class="contact-form">
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label class="col-form-labels">Name: </label>
+                  
+                </div>
+                <div class="col-auto">
+                  <input type="text" class="contact-input-controle">
+                </div>
+            </div>
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label  class="col-form-labels">E-mail: </label>
+                </div>
+                <div class="col-auto">
+                  <input type="text" class="contact-input-controle">
+                </div>
+            </div>
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                  <label  class="col-form-labels">Messages: </label>
+                </div>
+                <div class="col-auto">
+                  <textarea name="" id="" rows="4" cols="50" class="message"></textarea>
+                </div>
+            </div>
+
+        </form>
+      </div>
+    </div>
+</div>
+
+{% endblock content %}

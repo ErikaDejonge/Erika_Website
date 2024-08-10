@@ -29,4 +29,4 @@ class Email_Info(models.Model):
 
     def __str__(self):
         return self.Info_Email
-    
+

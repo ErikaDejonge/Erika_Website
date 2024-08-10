@@ -20,6 +20,7 @@ urlpatterns =[
     path('password_change/',views.Password_change,name='password_change'),
     path('myprofile?/',views.myprofile, name='my-profile'),
     path('edit_myprofile/<int:id>',views.edit_myprofile, name='edit_profile'),
+    path('profile=img/',views.profile_image,name='profile-image'),
 
 
 

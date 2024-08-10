@@ -23,12 +23,12 @@
                     <img class='main-img' src="{% static 'images/Erika_holder.jpg' %}" alt="">
                 </div>
                 <div class="col-md-8 ">
-                    <p class="pag py-5 mb-5 ">ON A MISSION TO MAKE HEARING GOD'S VOICE A DAILY PART OF YOUR LIFE.</p>
+                    <p class="pag py-5 mb-5 ">ON A MISSION TO MAKE HEARING GOD'S VOICE SIMPLE</p>
                 </div>                    
             </div>
         </div>
     </div>
-</div>
+</div><br><br>
 
 <div class="container-fluid py-5">
     <div class="row row-cols-12 row-cols-md-12">
@@ -36,10 +36,10 @@
             <div class="box py-4 position-relative">
                 <div class=" position-relative bottom-0 start-50 translate-middle ">
                     <div class="container box-sub p-4">
-                        <h1 class="text-center hi">Hi, I'm</h1>
+                        <h1 class="text-center font" style="margin-right: 20%;" >Hi, I'm</h1>
                         <h1 class="text-center erika_h1 mx-50">Erika</h1>
                         
-                        <p id='reload' class="main-pag">I am a wife and mother and I believe God wants to speak into every aspect of you life from parenting to marriage.
+                        <p id='reload' class="main-pag">I believe God wants to speak into every aspect of your life from marriage to work and relationships.
                             We aren't meant to do this alone, so I am on a mission to create tools and resources to help you begin hearing God's voice today!
                         </p>
                     </div>
@@ -57,12 +57,12 @@
 
             {% for i in blog reversed %}
             <div class="col blog">
-                <a href="{% url 'showblog' i.id %}" class="blog-link">
+                <a href="{% url 'showblog' i.id %}" style="text-decoration: none; color: #000000;" >
                     <div class="text-center mb-2">
                         <img class="img-blog" src="{{i.image.url}}" alt="..">
                     </div>
                     <div class="blog-title text-center py-2">
-                        <label> {{i.blog_title}} </label>
+                        <h5 style="font-size: 28pt;" > {{i.blog_title | upper }} </h5>
                     </div>
                 </a>
             </div>
@@ -97,15 +97,16 @@
     <div class="container py-5 ">
         <div class="wrapper justify-content-center position-relative top-50 start-50 translate-middle">
             <div class="d-grid gap-2 text-center title-read">
-                <h2 class="read-title" >START READING TODAY!</h2>
+                <a href="#" class="read_link">START READING TODAY!</a>
             </div>
         </div>
     </div>
-    <div class="container" id="book-erika">
+
+    <div class="container"  id="book-erika">
         <div class="wrapper">
             <div class="form mb-5" >
                 <span>
-                    <h3 class="font ft-2 text-center">Book Erika for an event.</h3>
+                    <h3 class="ft-2 text-center" style="font-size: 32pt !important;" >Book Erika for an event.</h3>
                 </span>
                 <form class="main-form" action="{% url 'event_book' %}" method="POST">
                     {% csrf_token %}

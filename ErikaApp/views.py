@@ -94,3 +94,7 @@ class About():
 class Books():
     def books(request):
         return render(request, "main/book.html")
+    
+class Contact():
+    def contact(request):
+        return render(request,  'main/contact.html')

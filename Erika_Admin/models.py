@@ -8,3 +8,8 @@ class Country(models.Model):
 
     def __str__(self):
         return self.city_name
+
+class Profile_Images(models.Model):
+    profile_Image = models.ImageField(upload_to='ProfileImg')
+
+    

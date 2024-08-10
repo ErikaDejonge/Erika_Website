@@ -1,0 +1,62 @@
+{% extends 'partials/base.html' %}
+{% block link %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+{% endblock link %}
+
+{% block body %}
+<div class="container py-5">
+
+    <div class="wrapper py-5">
+        <form method="POST" action="{% url 'profile-image' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div id="selectedBanner"></div>
+            <div class="form-group">
+              <label for="pwd"></label>
+              <input type="file"class="form-control" id="img" name="profile_image" required>
+            </div>
+            <button type="submit" class="btn btn-outline-success">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    let selDiv = "";
+    let storedFiles = [];
+    $(document).ready(function () {
+      $("#img").on("change", handleFileSelect);
+      selDiv = $("#selectedBanner");
+    });
+
+    function handleFileSelect(e) {
+      let files = e.target.files;
+      let filesArr = Array.prototype.slice.call(files);
+      filesArr.forEach(function (f) {
+        if (!f.type.match("image.*")) {
+          return;
+        }
+        storedFiles.push(f);
+
+        let reader = new FileReader();
+        reader.onload = function (e) {
+          let html =
+            '<img src="' +
+            e.target.result +
+            "\" data-file='" +
+            f.name +
+            "' class='avatar rounded lg' alt='Category Image' height='200px' width='200px'>";
+          selDiv.html(html);
+        };
+        reader.readAsDataURL(f);
+      });
+    }
+  </script>
+{% endblock body %}

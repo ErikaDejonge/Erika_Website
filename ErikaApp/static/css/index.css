@@ -254,13 +254,13 @@ h3{
 }
 
 @media screen and (max-width:425px) {
+
     .myblog{
-        position: relative;
-        width: 99dvh;
+        width: 60rem !important ;
         overflow: hidden;
     }
     .blog_show{
-        width: 99dvh;
+        width: 60rem !important;
     }
     .book-input{
         width: 50%;

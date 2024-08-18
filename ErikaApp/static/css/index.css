@@ -41,9 +41,9 @@ body{
 
 .box-sub{
     position: relative;
-    top: 50%;
+    margin-top:-6% ;
     background: #a6a6a6;
-    border: 0px solid rgb(255, 255, 255);
+    border:1px solid #fff;
     border-width: 10px;
 }
 .main-pag{

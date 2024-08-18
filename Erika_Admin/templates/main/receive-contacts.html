@@ -1,0 +1,57 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block link %}
+<style>
+    .btn{
+        border: 1px solid #d40606;
+        color: #d40606;
+    }
+    .btn:hover{
+        border:1px solid #d40606 ;
+        background: #d40606;
+        color: #fff !important;
+    }
+</style>
+
+{% endblock link %}
+
+{% block body %}
+
+<div class="main-panel justify-content-center">
+  <div class="content-wrapper pb-0">
+      <div class="page-header flex-wrap">
+        <div class="container-fluid py-5 ">
+            <div class="container">
+                <table class="table text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Messages</th>
+                            <th scope="col">Active</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for Rcontact in receiveContact reversed %}
+                        <tr>
+                            <th scope="row">{{ forloop.counter }}</th>
+                            <td>{{Rcontact.Name}}</td>
+                            <td> <a href="mailto:{{Rcontact.Email}}" class="mailto-link" >{{Rcontact.Email}} </a></td>
+                            <td>{{Rcontact.Messages}}</td>
+                            <td>
+                                <a href="{% url 'RC_delete' Rcontact.id %}">
+                                    <button type="button" class="btn">Delete</button>
+                                </a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock body %}

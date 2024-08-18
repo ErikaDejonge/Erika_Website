@@ -1,7 +1,62 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
+{% block link %}
+<style>
+    body .main-book-container{
+        background: #C9DCDD;
+    }
+    .fs-32{
+        font-size: 32pt;
+    }
+    .fs-28{
+        font-size: 28pt;
+    }
+    .button .button{
+        background: #a6a6a6;
+        border: none;
+        outline: none;
+        font-size: 28pt;
+        padding: 0% 5% 0% 5%;
+    }
+    @media screen and (max-width:425px){
+        .main-book-container{
+            width: 99dvh !important;            
+        }
+    }
+</style>
+{% endblock link %}
+
 
 {% block content %}
- <h1>Books  Section Of the Erika</h1>
+
+<div class="main-book-container">   
+    <div class="book-info">
+        <div class="body-book-img">
+            <img src="{% static 'images/erika-book.png' %}" width="100%" alt="">
+        </div>
+        <div class="button text-center py-5">
+            <button class="button" >START READING TODAY!</button>
+        </div>
+        <div class="container book-descriptions">
+            <div class="ttl text-center py-5">
+                <h4 class="fs-32" >BOOK DESCRIPTION</h4>
+            </div>
+            <div class=" review fs-32 p-5">
+                <h5 class="text-center py-2 fs-32" >Reviews</h5>
+                
+                <p class="book-des p-3">
+                    "I thought the book was very exciting to read and had a lot of good information and things to try to get closer God. I thought it was insightful and hard to put down. I couldn't do one chapter a day I had to keep reading to find out more. All in all I completely loved it. And it was the first book I have completely read in a long time! I have been struggling to hear from God and I believe this book has helped me to hear him speak to me. It's still a work in progress but I belive it has helped." - Brea, MI
+                </p>
+                <p class="book-des p-3" >
+                    I was really struggling to hear Gods voice when I attended the women's retreat. I went to the retreat hoping to find out where God has been this whole time because it felt like he was miles away. I was one of the winners of the free book (thanks again by the way!) | started reading it and I realized I hear Gods voice more often than I thought. The quieter I am, the more I just sit still and meditate on the word the more I hear him and feel his presence. -Kaysi, MI
+                </p>
+                <p class="book-des p-3">
+                    l gave thins book to a new believer who I just started discipling. She really wanted to hear God speak, so I thought it would be perfect. We also go to Bible study together and our opening question for Bible study one day was, "Other than the Bible, what is the greatest book you've ever read?" She was the first one to speak and she said this book!!! She said she is loving it. She's loving the story and the book is helping her expand how she prays and hears from God. -Sonja
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
 {% endblock content %}

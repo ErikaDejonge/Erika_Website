@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login,logout,update_session_auth_h
 from django.contrib.auth.decorators import login_required
 from ErikaApp.models import Email_Info,BookErika,Blog
 from django.contrib.auth.forms import PasswordChangeForm
-from .models import Profile_Images
+from .models import Profile_Images,Receive_Contact
 import requests
 import json
 from django.contrib import messages
@@ -138,6 +138,23 @@ class Booking():
             }
         return render(request, 'main/admin_book.html',context)
 
+class Receive_Contacts():
+    def receive_contacts(request):
+
+
+        receiveContact = Receive_Contact.objects.all()
+
+        context = {
+            'receiveContact':receiveContact,
+        }
+        return render(request, 'main/receive-contacts.html',context)
+    
+    def RC_Delete(request, id):
+            ReceiveCon = Receive_Contact.objects.get(id=id)
+            ReceiveCon.delete()
+            return redirect('admin-contacts')
+
+
 class Delete_items():
     @login_required(login_url='adminlogin')
     def event_delete(request,id):
@@ -201,6 +218,8 @@ class Blogs():
             'edit_blog':edit_blog,                    
         }
         return render(request, 'main/edit_blog.html',context)
+    
+
 @login_required(login_url='adminlogin')
 def changeImage(request, id):
     if request.FILES and  request.method=="POST":

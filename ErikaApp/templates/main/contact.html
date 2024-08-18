@@ -3,43 +3,49 @@
 
 {% block link %}
 <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
 {% endblock link %}
 
 
 {% block content %}
-<div class="container mb-5">
-    <div class="in-touch">
-      <div class="contact">
-        <div class="form-title">
-            <p class="contact-title text-center">Get in Touch </p>
-        </div>
-        <form action="" class="contact-form">
-            <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                  <label class="col-form-labels">Name: </label>
-                  
-                </div>
-                <div class="col-auto">
-                  <input type="text" class="contact-input-controle">
-                </div>
-            </div>
-            <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                  <label  class="col-form-labels">E-mail: </label>
-                </div>
-                <div class="col-auto">
-                  <input type="text" class="contact-input-controle">
-                </div>
-            </div>
-            <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                  <label  class="col-form-labels">Messages: </label>
-                </div>
-                <div class="col-auto">
-                  <textarea name="" id="" rows="4" cols="50" class="message"></textarea>
-                </div>
-            </div>
 
+<div class="container-fluid main-contact-container py-5" style="overflow: hidden;">
+  <div class="wrapper">
+      <div class="container contact">
+        <div class="contact-tag p-1">
+          <h3 class="ft-2 text-center" style="font-size: 32pt !important;" >Get in Touch! </h3>
+          <div class="message-show">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+              <strong style="font-size: 28pt;" >Thank You!</strong> <p style="font-size: 28pt;" >{{message}}</p>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+            {% endif %}
+          </div>
+        </div>
+
+        <form class="main-form" action="{% url 'contact' %}" method="POST">
+          {% csrf_token %}  
+          <div class="mb-3 row now-1 input-controle-form">
+              <label  class="col-sm-2 col-form-label font contact-ttl">Name:</label>
+              <div class="col-sm-10">
+                <input type="text" name="name" class="form-control-plaintext contact-input-controle"  placeholder="Full Name" required >
+              </div>
+            
+            
+              <label  class="col-sm-2 col-form-label font contact-ttl">E-mail:</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control-plaintext contact-input-controle mb-5" name="email" placeholder="E-mail" required >
+              </div>
+  
+              <label  class="col-sm-2 col-form-label font contact-ttl">Message:</label>
+              <div class="col-sm-10">
+                  <textarea name="message" id="" rows="2" class="message" placeholder="Message" ></textarea>
+              </div>            
+          </div>       
+          <input type="submit" class="form-control-plaintext submit-contact" value="Submit" >         
         </form>
       </div>
     </div>

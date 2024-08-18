@@ -33,7 +33,7 @@
         }
         .nav-link{
             font-weight: bold !important;
-            font-size: 32pt !important ;
+            font-size: 25pt !important ;
         }
         .main-footer{
             background:#C5DCDD ;
@@ -42,6 +42,10 @@
             font-size: 32pt;
             font-weight: lighter bold;
         }
+        .footer-ul{
+            position: relative;
+            left: 25%;
+        }
         .footer-ul ul{
             list-style: none;
             text-align: left;
@@ -49,14 +53,13 @@
        .footer-ul ul li a{
             text-decoration: none;
             color: #000000;
-            font-weight: bold;
-            font-size: 32pt;
+            font-size: 28pt;
        }
        .nav-link{
         font-size: 20px;
        }
        .nav-link-book{
-        font-size: 32pt;
+        font-size: 28pt;
        }
 
         .input{
@@ -72,11 +75,11 @@
         .body-font{
             font-family: Sans SemiCondensed;
         }
-        .title-font{
+        /* .title-font{
             font-family: 'CinzelRegular';
             font-size: 18pt;
             text-transform: uppercase;
-        }
+        } */
 
         .input::placeholder{
             font-size: 23px;
@@ -93,6 +96,46 @@
             width:200px ;
             height: 200px;
             padding: 1%;
+        }
+
+
+
+
+
+
+        /* tablet */
+        @media screen and (max-width:1024px) {
+            .footer-ul{
+                position: relative;
+                left: 10%;
+
+            }
+        }
+        @media screen and (max-width:425px) {
+            .main-footer{
+                width: 99dvh;
+                overflow: hidden;
+            }
+            .footer-ul{
+                position: relative;     
+                left: -2%;           
+            }
+            .footer-ul ul{
+                list-style: none;
+                /* text-align: left; */
+                display: flex;
+                flex-direction: row;
+
+
+            }
+            .footer-ul ul li{
+                padding: 2%;
+            }
+            .footer-ul ul li a{
+                text-decoration: none;
+                color: #000000;
+                font-size: 18pt;
+            }
         }
 
     </style>
@@ -137,8 +180,7 @@
 
       {% block content %}
       
-      {% endblock content %}
-    
+      {% endblock content %}    
     <footer>
         <div class="container-fluid main-footer py-5" id="footer_email">
         <div class="container">
@@ -156,13 +198,13 @@
                 <div class="col-md-auto">
 
                 </div>
-                <div class="text-center mx-5 col-md-auto footer-ul" style="position: relative; left: 35%;">
+                <div class="text-center mx-5 col-md-auto footer-ul">
                     <ul>
                         <li>
-                            <a href="">BOOKS</a>
+                            <a href="{% url 'books' %}">BOOKS</a>
                         </li>
                         <li>
-                            <a href="">TOOLS</a>
+                            <a href="{% url 'tools' %}">TOOLS</a>
                         </li>
                         <li>
                             <a href="{% url 'blogpage' %}">BLOG</a>
@@ -176,7 +218,7 @@
             <hr>
             <div class="container-fluid">
                 <div class="wrapper text-center">
-                    <p> &copy;2024 | All Right Reserved</p>
+                    <p class="fs-3"> &copy;2024 | All Right Reserved</p>
                 </div>
             </div>
         </div>

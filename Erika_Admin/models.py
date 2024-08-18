@@ -12,4 +12,11 @@ class Country(models.Model):
 class Profile_Images(models.Model):
     profile_Image = models.ImageField(upload_to='ProfileImg')
 
-    
+class Receive_Contact(models.Model):
+    Name = models.CharField(max_length=100)
+    Email = models.EmailField()
+    Messages = models.TextField()
+
+
+    def __str__(self):
+        return self.Name

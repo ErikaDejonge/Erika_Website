@@ -18,7 +18,7 @@ class Blog(models.Model):
 class BookErika(models.Model):
     Name = models.CharField(max_length=100)
     EventDescription = models.TextField()
-    Email = models.EmailField(unique=True)
+    Email = models.EmailField()
     Phone = models.CharField(max_length=10)
 
     def __str__(self):

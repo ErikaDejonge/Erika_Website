@@ -36,7 +36,7 @@
               <div class="card text-center mb-3">
                 <img src="{{blog.image.url}}" width="auto" height="240px" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title"> {{blog.blog_title}} </h5>
+                  <h5 class="card-title"> {{blog.blog_title | upper}} </h5>
                   <p class="card-text">{{blog.blog_intro}} </p>
                   <a href="{% url 'read_blog' blog.id %}" class="btn btn-color">Read More</a>
                 </div>

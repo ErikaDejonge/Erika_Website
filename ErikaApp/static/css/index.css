@@ -10,6 +10,7 @@
 body{
     font-family: open sans condensed ;
     color: #000000;
+    width: 100%;
 
 }
 .osc-font{
@@ -42,7 +43,7 @@ body{
 .box-sub{
     position: relative;
     top: 50%;
-    background: #A6A6Af;
+    background: #a6a6a6;
     border: 0px solid rgb(255, 255, 255);
     border-width: 10px;
 }
@@ -142,25 +143,28 @@ h3{
 }
 
 .book-input{
+    position: relative;
+    display: grid;
+    max-width: 60%;
     border: none;
     outline: none;
     background: transparent;
     border-bottom: 2px solid #000000;
-    width: 60%;
-    padding:0 12px;
+    padding:0 20px;
     margin-top: 1%;
+   
     font-size: 28pt !important;
 }
 
 .main-form{
-    margin: 0% 10%;
     width: 100rem;
-    padding: 1%;
+    padding: 3%;
     overflow: hidden;   
 }
 
 
 .book-submit{
+    margin-left:10%;
     width: 30%;
     font-size: 28px;
     font-weight:bold ;
@@ -176,8 +180,146 @@ h3{
     background-color: #C5DCDD;
     
 }
+/* Tablet */
+/* 
+@media screen and (max-width:2560px){
+    .myblog{
+        width: 200dvh;
+        overflow: hidden;
+    }
+    .book-input{
+        width: 70%;
+    } */
 
-@media screen and (max-width:450px) {
+    
+@media screen and (max-width:1024px){
+    .main-form{
+        margin-left: 8%;
+    }
+    .book-input{
+        width: 65%;
+    }
+
+    
+}
+@media screen and (max-width:1024px) {
+    .myblog{
+        overflow: hidden;
+    }
+    .book-input{
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .book-ttl{
+        font-weight: bold;
+        font-size: 20pt;
+        text-align: right;
+    }
+
+    .book-input{
+        position: relative;
+        display: grid;
+        max-width: 30%;
+        border: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 2px solid #000000;
+        padding:0 10px;
+        margin-top: 1%;       
+        font-size: 20pt !important;
+    }
+    
+    .main-form{
+        width: 100rem;
+        margin-left: -10%;
+        overflow: hidden;   
+    }
+    
+    
+    .book-submit{
+        margin-left:10%;
+        width: 30%;
+        font-size: 28px;
+        font-weight:bold ;
+        background-color: transparent;
+        transition: 0.7s;
+        border-radius:2px ;
+        overflow: hidden;
+    
+    }
+}
+
+@media screen and (max-width:425px) {
+    .myblog{
+        position: relative;
+        width: 99dvh;
+        overflow: hidden;
+    }
+    .blog_show{
+        width: 99dvh;
+    }
+    .book-input{
+        width: 50%;
+    }
+    .box-sub{
+        margin-top: -8%;
+        width: 59rem;
+    }
+    .thumnail-body{
+        width: 99dvh;
+    }
+    .title-read{
+        width: 60dvh;
+        margin:auto 20% ;
+        margin-top: 10%;
+    }
+    .form{
+        width: 90dvh;
+    }
+    .book-ttl{
+        font-weight: bold;
+        font-size: 18pt;
+        text-align: left;
+    }
+
+    .book-input{
+        position: relative;
+        display: grid;
+        max-width: 20%;
+        border: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 2px solid #000000;
+        padding:0 10px;
+        margin-top: 1%;       
+        font-size: 20pt !important;
+    }
+    
+    .main-form{
+        width: 100rem;
+        margin-left: 10%;
+        overflow: hidden;   
+    }
+    
+    
+    .book-submit{
+        margin-left:-10%;
+        width: 30%;
+        font-size: 28px;
+        font-weight:bold ;
+        background-color: transparent;
+        transition: 0.7s;
+        border-radius:2px ;
+        overflow: hidden;
+    
+    }
+}
+
+ /*@media screen and (max-width:450px) {
     .myblog{
         padding:20% 0;
     }
@@ -233,4 +375,4 @@ h3{
     .box-sub{
         margin-top: 60%;
     }
-}
+} */

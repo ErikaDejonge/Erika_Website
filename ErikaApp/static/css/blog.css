@@ -39,3 +39,10 @@
 .divider{
     border: 3px solid #ddd;
 }
+
+
+@media screen and (max-width:425px) {
+    body .blog-body{
+        width: 85dvh;
+    }
+}

@@ -8,11 +8,12 @@
 
 {% block content %}
 
-<div class="container-fluid">
+<div class="blog-body">
+  <div class="container-fluid">
     <div class="container text-center">
         <div class="wrapper">
             <div class='container py-5 ' >
-               {% for i in pg_blogs %}
+               {% for i in pg_blogs reversed %}
                 <div class="blog-body py-5">
                     <h1 class ='blog-tts title-font' > {{i.blog_title | upper }} </h1>
                     <div class="paragraph">
@@ -72,6 +73,7 @@
           </nav>
     </div>
     
+</div>
 </div>
 
 <!-- <nav aria-label="Page navigation example">

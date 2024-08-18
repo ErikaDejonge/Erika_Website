@@ -21,6 +21,8 @@ urlpatterns =[
     path('myprofile?/',views.myprofile, name='my-profile'),
     path('edit_myprofile/<int:id>',views.edit_myprofile, name='edit_profile'),
     path('profile=img/',views.profile_image,name='profile-image'),
+    path('receive-contact/', views.Receive_Contacts.receive_contacts,name='admin-contacts'),
+    path('RC_Delete/<int:id>',views.Receive_Contacts.RC_Delete,name='RC_delete'),
 
 
 

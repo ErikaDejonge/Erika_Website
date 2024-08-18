@@ -23,7 +23,7 @@
 
 .contact-input-controle{
     border: none;
-    width: 60rem;
+    width: 50rem !important;
     background: transparent;
     border-bottom: 2px solid black;
     outline: none;
@@ -35,7 +35,7 @@
     text-align: right;
 }
 .message{
-    width: 60rem !important;
+    width: 50rem !important;
     background: transparent !important;
     outline: none;
     border: 2px solid #000000;
@@ -67,7 +67,7 @@
 
 
 /* responsive code here */
-
+/* 
 @media screen and (max-width:1440px) {
     .main-contact-container{
         background-color: #C9DCDD;
@@ -93,7 +93,7 @@
 
     .contact-input-controle{
         border: none;
-        width: 60rem;
+        width: 50rem !important;
         background: transparent;
         border-bottom: 2px solid black;
         outline: none;
@@ -105,7 +105,7 @@
         text-align: right;
     }
     .message{
-        width: 60rem !important;
+        width: 50rem !important;
         background: transparent !important;
         outline: none;
         border: 1px solid #000000;
@@ -113,7 +113,7 @@
         position: relative;
     }
     
-}
+} */
 /* laptop */
 @media screen and (max-width:1024px) {
     .main-contact-container{
@@ -140,7 +140,7 @@
     
     .contact-input-controle{
         border: none;
-        width: 40rem;
+        width: 60rem;
         background: transparent;
         border-bottom: 2px solid black;
         outline: none;
@@ -213,11 +213,12 @@
 
 /* Mobile */
 @media screen and (max-width:425px) {
-    .main-contact-container{
-        width: 99dvh;
+    body .main-contact-container{
+        width: 60rem !important;
+        height: 70rem;
     }
     .main-form{
-        width: 80dvh;
+        width: 80rem;
     }
     
     .input-controle-form{
@@ -234,11 +235,11 @@
     
     .contact-input-controle{
         border: none;
-        width: 35rem;
+        width: 35rem !important;
         background: transparent;
         border-bottom: 2px solid black;
         outline: none;
-        font-size:25pt;
+        font-size:28pt;
     }
     .contact-ttl{
         /* font-weight: bold; */
@@ -250,7 +251,7 @@
         background: transparent !important;
         outline: none;
         border: 2px solid #000000;
-        font-size: 20pt;
+        font-size: 28pt;
         position: relative;
     }
 }

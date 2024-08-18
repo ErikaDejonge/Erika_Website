@@ -36,6 +36,7 @@
             font-weight: bold !important;
             font-size: 25pt !important ;
         }
+        
         .main-footer{
             background:#C5DCDD ;
         }
@@ -116,6 +117,7 @@
             }
         }
         @media screen and (max-width:425px) {
+
             .logo-img{
                 margin:auto 100%;
             }
@@ -125,6 +127,8 @@
             .main-footer{
                 width: 60rem;
                 overflow: hidden;
+                left: 0;
+                bottom: 0%;
             }
             .footer-ul{
                 position: relative;     
@@ -147,7 +151,6 @@
                 font-size: 28pt;
             }
         }
-
     </style>
     {% block link %}
 
@@ -156,9 +159,9 @@
 <body>
     
     <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3" style="background-color: #ffff !important;">
-        <div class="container position-relative">
-            <a class="navbar-brand position-absolute top-100 start-50 translate-middle" href="{% url 'index' %}">
-                <img class="logo-img mb-4 py-1" src="{% static 'logo/ED-logo.png' %}" alt="LOGO">
+        <div class="container position-relative py-3 nav-padding">
+            <a class="navbar-brand position-absolute top-100 start-50 translate-middle mb-5 " href="{% url 'index' %}">
+                <img class="logo-img mb-4 py-3" src="{% static 'logo/ED-logo.png' %}" alt="LOGO">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

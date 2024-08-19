@@ -37,12 +37,12 @@
 
 
 <div class="container position-relative">
-    <div class="wrapper position-relative bottom-0 start-50 translate-middle-x">
-        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
+    <div class="wrapper position-relative bottom-0 start-50 translate-middle-x wrapper-items">
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4  ">
 
             {% for i in blog_content reversed %}
             <div class="col blog">
-                <a href="{% url 'showblog' i.id %}" class="blog-link" style="text-decoration: none;" >
+                <a href="{% url 'showblog' i.id %}" class="blog-link align" style="text-decoration: none;" >
                     <div class="text-center mb-2">
                         <img class="img-blog" src="{{i.image.url}}" alt="..">
                     </div>

@@ -214,15 +214,15 @@
 /* Mobile */
 @media screen and (max-width:425px) {
     body .main-contact-container{
-        width: 60rem !important;
+        width: 65rem !important;
         height: 70rem;
     }
-    .main-form{
-        width: 80rem;
-    }
+    /* .main-form{
+        width: 100rem;
+    } */
     .input-controle-form{
         position: relative;
-        right: -10%
+        right: -2%
     }
     .form-title  .contact-title{
         text-decoration: underline;
@@ -234,7 +234,7 @@
     
     .contact-input-controle{
         border: none;
-        width: 35rem !important;
+        width: 45rem !important;
         background: transparent;
         border-bottom: 2px solid black;
         outline: none;
@@ -246,7 +246,7 @@
         text-align: left;
     }
     .message{
-        width: 35rem !important;
+        width: 45rem !important;
         background: transparent !important;
         outline: none;
         border: 2px solid #000000;

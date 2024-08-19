@@ -7,9 +7,9 @@
     height: 150px;
     width: 150px;
 }
+
 .blog{
     cursor: pointer;
-    
 }
 
 .blog label{
@@ -42,7 +42,16 @@
 
 
 @media screen and (max-width:425px) {
-    body .blog-body{
-        width: 85dvh;
+    .blog-body{
+        width: 62rem !important;
     }
+    .wrapper-items{
+        width: 200dvh;
+        margin-left: 20rem;
+        padding: 0 -400px;
+
+    }
+    
+    
+    
 }

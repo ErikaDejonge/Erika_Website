@@ -264,12 +264,10 @@ h3{
     }
     .blog_show{
         width: 65rem !important;
-        margin-top: 15rem;
+        margin-top: 14rem;
 
     }
-    .book-input{
-        width: 50%;
-    }
+    
     .box-sub{
         width: 54rem;
         margin: -30% 25%;
@@ -280,7 +278,7 @@ h3{
     }
     .title-read{
         width: 40rem;
-        margin:auto 30% ;
+        margin:auto 58% ;
         margin-top: 10%;
     }
     .form{
@@ -295,7 +293,7 @@ h3{
     .book-input{
         position: relative;
         display: grid;
-        max-width:40%;
+        max-width: 50%;
         border: none;
         outline: none;
         background: transparent;
@@ -304,6 +302,10 @@ h3{
         margin-top: 1%;       
         font-size: 28pt !important;
     }
+    .book-input{
+        width: 46%;
+    }
+    
     
     .main-form{
         width: 100rem;

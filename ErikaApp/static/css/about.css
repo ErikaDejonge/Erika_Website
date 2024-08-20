@@ -1,0 +1,53 @@
+.about-body{
+    background: #c9dcdd;
+    padding: 5% 0;
+    font-size: 32pt;
+}
+.about-title{
+    padding: 0%;
+    
+}
+.about-title .title{
+    font-size: 46.4pt;
+}
+.review-about-author{
+    padding: 5%;
+}
+
+.author-img .img{
+    border-radius: 50%;
+    border: 0px solid white;
+    width: 400px;
+    height: 400px;
+    border-width: 10px;
+}
+
+
+@media screen and (max-width:425px) {
+    .about-body{
+        background: #c9dcdd;
+        padding: 5% 0;
+        font-size: 18pt;
+        width: 100%;
+        overflow: hidden;
+    }
+    .about-title{
+        padding: 0%;
+        
+    }
+    .about-title .title{
+        font-size: 28pt;
+    }
+    .review-about-author{
+        padding: 5%;
+    }
+    
+    .author-img .img{
+        border-radius: 50%;
+        border: 0px solid white;
+        width: 200px;
+        height: 200px;
+        border-width: 7px;
+    }
+    
+}

@@ -1,7 +1,42 @@
 {% extends 'main/base.html' %}
 {% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock link %}
 
 
 {% block content %}
- <h1>About  Section Of the Erika</h1>
+ <div class="container-fluid about-body">
+    <div class="container">
+        <div class="wrapper">
+            <div class="about-title text-center">
+                <h1 class="title">ABOUT THE AUTHOR</h1>
+            </div>
+            <div class="author-img">
+                <img class="img"  src="{% static 'images/Erika_holder.jpg' %}" alt="">
+            </div>
+            <div class="review-about-author text-center">
+                <label class="review-title">Review</label>
+            </div>
+            <div class="about-author">
+                <p>"I thought the book was very exciting to read and had a lot of 
+                    good information and things to try to get closer God. I thought it was
+                    insightful and hard to put down. I couldn't do one chapter a day I had 
+                    to keep reading to find out more. All in all I completely loved it. And 
+                    it was the first book I have completely read in a long time! I have been
+                    struggling to hear from God and I believe this book has helped me to hear
+                    him speak to me. It's still a work in progress but I belive it has helped." - Brea, MI
+                </p>
+                <p>
+                    I was really struggling to hear Gods voice when I attended the women's retreat. 
+                    I went to the retreat hoping to find out where God has been this whole time because 
+                    it felt like he was miles away. I was one of the winners of the free book (thanks 
+                    again by the way!) | started reading it and I realized I hear Gods voice more often 
+                    than I thought. The quieter I am, the more I just sit still and meditate on the word 
+                    the more I hear him and feel his presence. -Kaysi, MI
+                </p>
+            </div>
+        </div>
+    </div>
+ </div>
 {% endblock content %}

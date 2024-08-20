@@ -42,8 +42,11 @@
 
 
 @media screen and (max-width:425px) {
+    .body .blog-body{
+        zoom: 0.5;
+    }
     .blog-body{
-        width: 62rem !important;
+        width: 60rem !important;
     }
     .wrapper-items{
         width: 200dvh;

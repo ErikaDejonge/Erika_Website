@@ -29,11 +29,13 @@
             color: #000000 !important;
             font-weight: bold;
             transition: 0.6s;
+            
         }
         .btn-book:hover{
             background: #89b2b4;
         }
         .nav-link{
+
             font-weight: bold !important;
             font-size: 25pt !important ;
         }
@@ -62,6 +64,8 @@
         font-size: 20px;
        }
        .nav-link-book{
+        font-weight: bold;
+        width: 50vh;
         font-size: 28pt;
        }
 
@@ -101,6 +105,7 @@
             height: 200px;
             padding: 1%;
             margin-right: -10%;
+            margin-top: -30%;
         }
 
 
@@ -118,8 +123,24 @@
 
         @media screen and (max-width:425px) {
 
+            .nav-bar{
+                width: 100%;
+                overflow: hidden;
+            }
             .logo-img{
-                margin:auto 5%;
+                margin-top: -10%;
+                width: 100%;
+                position: relative;
+                left: 60%;
+                
+            }
+            .nav-link-book{
+                font-weight: bold;
+                width: 100% !important;
+                font-size: 28pt;
+            }
+            .footer-info-text{
+                font-size: 28pt;
             }
             .main-footer{
                 overflow: hidden;
@@ -129,7 +150,7 @@
             .footer-ul ul{
                 display: flex;
                 position: relative;
-                right: 20%;
+                right: 22%;
             }
             .footer-ul ul li{
                 padding: 2%;
@@ -140,6 +161,74 @@
                 font-size: 20pt;
             }
         }
+        @media screen and (max-width:375px) {
+            body{
+                font-size: 16px;
+            }
+            .nav-bar{
+                width: 100%;
+                overflow: hidden;
+            }
+            .logo-img{
+                margin-top: -30%;
+                width: 100%;
+                position: relative;
+                left: 40%;
+                
+            }
+            .footer-info-text{
+                font-size: 28pt;
+            }
+            .footer-ul ul{
+                display: flex;
+                position: relative;
+                right: 90px;
+            }
+            .footer-ul ul li{
+                padding: 2%;
+            }
+            .footer-ul ul li a{
+                text-decoration: none;
+                color: #000000;
+                font-size: 18pt;
+            }
+        }
+
+
+
+        @media screen and (max-width:320px) {
+            body{
+                font-size: 16px;
+            }
+            .nav-bar{
+                width: 100%;
+                overflow: hidden;
+            }
+            .logo-img{
+                margin-top: -30%;
+                width: 100%;
+                
+                position: relative;
+                left: 40%;
+                
+            }
+            .footer-info-text{
+                font-size: 28pt;
+            }
+            .footer-ul ul{
+                display: flex;
+                position: relative;
+                right: 100px;
+            }
+            .footer-ul ul li{
+                padding: 2%;
+            }
+            .footer-ul ul li a{
+                text-decoration: none;
+                color: #000000;
+                font-size: 18pt;
+            }
+        }
     </style>
     {% block link %}
 
@@ -147,10 +236,10 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3" style="background-color: #ffff !important;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3 nav-bar" style="background-color: #ffff !important;">
         <div class="container position-relative py-3 nav-padding">
-            <a class="navbar-brand position-absolute top-100 start-50 translate-middle mb-5 " href="{% url 'index' %}">
-                <img class="logo-img mb-4 py-3" src="{% static 'logo/ED-logo.png' %}" alt="LOGO"><br>
+            <a class="navbar-brand position-absolute top-100 start-50 translate-middle mb-5 overflow" href="{% url 'index' %}">
+               <img class="logo-img mb-4 py-3" src="{% static 'logo/ED-logo.png' %}" alt="LOGO"><br>
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -170,9 +259,9 @@
                 <a class="nav-link" href="{% url 'blogpage' %}">BLOG</a>
               </li>              
             </ul>            
-            <div class="d-flex">
+            <div class="d-flex ">
                 <a href="../#book-erika">      
-                    <button class="btn btn-outline-success btn-book nav-link-book"  type="submit">BOOK ERIKA</button>
+                    <button class="btn-book nav-link-book"  type="submit">BOOK ERIKA</button>
                 </a>    
             </div>
           </div>
@@ -190,7 +279,7 @@
                 <div class="col-md-6 mb-3">
                     <form action="{% url 'info_email' %}" method="POST">
                         {% csrf_token %}
-                        <h2 class="footer-info-text">Want more from Erika Sign up for her Newsletter today!</h2><br>
+                        <h2 class="footer-info-text">Want more from Erika?<br> Sign up for her Newsletter today!</h2><br>
                         <div class="input-group mb-3">
                             <input type="email" class="input" placeholder="Email" aria-label="Email" name="News_Mail" aria-describedby="basic-addon1" required>
                         </div>

@@ -5,6 +5,8 @@
 <style>
     body .main-book-container{
         background: #C9DCDD;
+        width: 100%;
+        
     }
     .fs-32{
         font-size: 32pt;
@@ -20,9 +22,79 @@
         padding: 0% 5% 0% 5%;
     }
     @media screen and (max-width:425px){
-        .main-book-container{
-            width: 65rem !important;            
+        body .main-book-container{
+            background: #C9DCDD;
+            width: 100%;
+            overflow: hidden;      
         }
+        
+        .fs-32{
+            font-size: 32pt;
+        }
+        .fs-28{
+            font-size: 28pt;
+        }
+        .button .button{
+            background: #a6a6a6;
+            border: none;
+            outline: none;
+            font-size: 28pt;
+            padding: 0% 5% 0% 5%;
+        }
+        .book-descriptions{
+            width: 520px;
+            position: relative;
+            left: -11%;
+
+        }
+        .book-des{
+            font-size: 20px !important;
+        }
+
+    }
+
+    @media screen and (max-width:375px){
+        .fs-32{
+            font-size: 18pt;
+        }
+        .button .button{
+            background: #a6a6a6;
+            border: none;
+            outline: none;
+            font-size: 28pt;
+            padding: 0% 5% 0% 5%;
+        }
+        .book-descriptions{
+            width: 470px;
+            position: relative;
+            left: -12%;
+
+        }
+        .book-des{
+            font-size: 18px !important;
+        }
+    }
+    @media screen and (max-width:320px){
+        .fs-32{
+            font-size: 18pt;
+        }
+        .button .button{
+            background: #a6a6a6;
+            border: none;
+            outline: none;
+            font-size: 28pt;
+            padding: 0% 5% 0% 5%;
+        }
+        .book-descriptions{
+            width: 410px;
+            position: relative;
+            left: -12%;
+
+        }
+        .book-des{
+            font-size: 18px !important;
+        }
+
     }
 </style>
 {% endblock link %}
@@ -38,9 +110,12 @@
         <div class="button text-center py-5">
             <button class="button" >START READING TODAY!</button>
         </div>
-        <div class="container book-descriptions">
-            <div class="ttl text-center py-5">
-                <h4 class="fs-32" >BOOK DESCRIPTION</h4>
+        <div class="book-descriptions">
+            <div class="ttl  py-5 p-5">
+                <h4 class="fs-28 text-center" >Book Description</h4><br>
+                <p class="book-des p-3" >
+                    Have you been in the church a long time but still struggle to hear from God? Or is walking with Jesus brand new to you, and you're not even sure that He speaks? Either way, this book will help walk you into deeper intimacy with the One who made you and wants to speak to you. If you're sick of prayer being a one-sided conversation and are ready to start hearing more clearly from God, join me on my three-year journey through Nepal learning to listen and obey. This book is full of stories of my adventures with Jesus, paired with tangible baby steps for you to have even greater adventures with Jesus. If you're hungry to encounter more of God, look no further. Grab a cup of coffee, this book, and a journal, and let the adventures with Jesus begin!
+                </p>
             </div>
             <div class=" review fs-32 p-5">
                 <h5 class="text-center py-2 fs-32" >Reviews</h5>

@@ -41,7 +41,7 @@ body{
 
 .box-sub{
     position: relative;
-    margin-top:-6% ;
+    margin-top:-5% ;
     background: #a6a6a6;
     border:1px solid #fff;
     border-width: 10px;
@@ -60,8 +60,8 @@ body{
 }
 .img-blog{
     border-radius: 50%;
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
 }
 .page-link{
     font-size: 23pt;
@@ -86,13 +86,13 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 
 }
 
 .thum-body{
     position: relative;
-    height: 60vh;
+    height: 100vh;
 }
 .title-read{
     background-color: #C5DCDD;
@@ -136,7 +136,6 @@ h3{
 }
 
 .book-ttl{
-    font-weight: bold;
     font-size: 28pt;
     text-align: right;
 }
@@ -155,7 +154,6 @@ h3{
     border-bottom: 2px solid #000000;
     padding:0 20px;
     margin-top: 1%;
-   
     font-size: 28pt !important;
 }
 
@@ -183,16 +181,9 @@ h3{
     background-color: #C5DCDD;
     
 }
-/* Tablet */
-/* 
-@media screen and (max-width:2560px){
-    .myblog{
-        width: 200dvh;
-        overflow: hidden;
-    }
-    .book-input{
-        width: 70%;
-    } */
+
+
+
 
     
 @media screen and (max-width:1024px){
@@ -221,6 +212,11 @@ h3{
         font-weight: bold;
         font-size: 20pt;
         text-align: right;
+    }
+
+    .img-blog{
+        width: 150px;
+        height: 150px;
     }
 
     .book-input{
@@ -256,51 +252,57 @@ h3{
     }
 }
 
-@media screen and (min-width:320px) and (max-width:500px) {
-
+@media screen and (max-width:425px) {
     .myblog{
-        width: 65rem !important ;
         overflow: hidden;
+        width: 100%;
     }
-    .blog_show{
-        width: 65rem !important;
-        margin-top: 14rem;
 
+    .main-img{
+        width: 200px !important;
+        height: 200px;
+        border-radius: 50%;
+        border: 0px solid #fff;
+        border-width: 7px;
     }
-    
+     
     .box-sub{
-        width: 54rem;
-        margin: -30% 25%;
+        position: relative;
+        margin-top:-6% ;
+        background: #a6a6a6;
+        border:1px solid #fff;
+        border-width: 10px;
     }
     .thumnail-body{
-        width: 65rem;
+        width: 100%;
         height: 30rem;
     }
     .title-read{
-        width: 40rem;
-        margin:auto 58% ;
-        margin-top: 10%;
+        padding: 1%;
+        width: 100%;
+        margin: 0% 1%;
+        font-size: 28pt; 
     }
     .form{
-        width:62rem;
+        width:100%;
     }
     .book-ttl{
         font-weight: bold;
-        font-size: 28pt;
+        font-size: 18pt;
         text-align: left;
     }
 
     .book-input{
         position: relative;
         display: grid;
-        max-width: 50%;
+        max-width: 18%;
         border: none;
         outline: none;
         background: transparent;
         border-bottom: 2px solid #000000;
         padding:0 10px;
         margin-top: 1%;       
-        font-size: 28pt !important;
+        font-size: 18pt !important;
     }
     .book-input{
         width: 46%;
@@ -327,60 +329,212 @@ h3{
     }
 }
 
- /*@media screen and (max-width:450px) {
-    .myblog{
-        padding:20% 0;
-    }
-    .pag{
-        margin: 0% 0% 40% 0%;
-        font-size: 30px;
-    }
-    .box-sub{
-        margin-top: 10%;
-    }
-}
-
-@media screen and (max-width:400px) {
-    .myblog{
-        padding:20% 0;
-    }
-    .pag{
-        margin: 0% 0% 40% 0%;
-        font-size: 30px;
-    }
-    .box-sub{
-        margin-top: 20%;
-    }
-}
-@media screen and (max-width:350px) {
-    .myblog{
-        padding:20% 0;
-    }
-    .pag{
-        margin: 0% 0% 40% 0%;
-        font-size: 30px;
-    }
-    .box-sub{
-        margin-top: 40%;
-    }
+@media screen and (max-width:375px){
     .main-img{
-        width: 200px !important;
-        height: 200px;
+        width: 250px !important;
+        height: 250px;
         border-radius: 50%;
         border: 0px solid #fff;
         border-width: 7px;
-        
-    }
-}
-@media screen and (max-width:310px) {
-    .myblog{
-        padding:20% 0;
     }
     .pag{
-        margin: 0% 0% 40% 0%;
-        font-size: 30px;
+        font-size: 28pt;
+        text-align: center;
+        width: 100%;
+        margin-left: -5px;
+        
     }
+    
     .box-sub{
-        margin-top: 60%;
+        position: relative;
+        margin-top:-10% ;
+        background: #a6a6a6;
+        border:1px solid #fff;
+        border-width: 10px;
     }
-} */
+    .blog_show{
+        margin:-10px 0 ;
+    }
+
+    .img-blog{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+    }
+    .blog-link-title{
+        font-size: 18pt !important;
+    }
+    .page-link{
+        font-size: 18pt !important;
+    }
+    .example{
+        padding: 5% 0;
+    }
+    .main-pag{
+        font-family:  'Open Sans Condensed';
+        font-size: 18pt !important;
+    }
+    .thumnail-body{
+        margin-top: -30%;
+        width: 100%;
+    }
+    .title-read{
+        padding: 1%;
+        width: 100%;
+        margin: 0% 1%;
+        font-size: 28pt; 
+    }
+    .form{
+        width:100%;
+    }
+    .erika-book-title{
+        font-size:28pt ;
+    }
+    .book-ttl{
+        font-weight: bold;
+        font-size: 18pt;
+        text-align: left;
+    }
+
+    .book-input{
+        position: relative;
+        display: grid;
+        max-width: 15%;
+        border: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 2px solid #000000;
+        padding:0 -10px;
+        margin-top: 1%;       
+        font-size: 18pt !important;
+    }
+    
+    
+    
+    .main-form{
+        width: 100rem;
+        margin-left: 10%;
+        overflow: hidden;   
+    }
+    
+    
+    .book-submit{
+        margin-left:-10%;
+        width: 30%;
+        font-size: 28px;
+        font-weight:bold ;
+        background-color: transparent;
+        transition: 0.7s;
+        border-radius:2px ;
+        overflow: hidden;
+    
+    }
+
+}
+
+
+@media screen and (max-width:320px){
+
+    .main-img{
+        width: 250px !important;
+        height: 250px;
+        border-radius: 50%;
+        border: 0px solid #fff;
+        border-width: 7px;
+    }
+    .pag{
+        font-size: 28pt;
+        text-align: center;
+        width: 100%;
+        margin-left: -5px;
+        
+    }
+    
+    .box-sub{
+        position: relative;
+        margin-top:-10% ;
+        background: #a6a6a6;
+        border:1px solid #fff;
+        border-width: 10px;
+    }
+    .blog_show{
+        margin:-10px 0 ;
+    }
+
+    .img-blog{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+    }
+    .blog-link-title{
+        font-size: 18pt !important;
+    }
+    .page-link{
+        font-size: 18pt !important;
+    }
+    .example{
+        padding: 5% 0;
+    }
+    .main-pag{
+        font-family:  'Open Sans Condensed';
+        font-size: 18pt !important;
+    }
+    .thumnail-body{
+        margin-top: -30%;
+        width: 100%;
+    }
+    .title-read{
+        background-color: #C5DCDD;
+        padding: 1%;
+        width: 100%;
+        margin: 0% 1%;
+        font-size: 28pt; 
+    }
+    .form{
+        width:100%;
+    }
+    .erika-book-title{
+        font-size:28pt ;
+    }
+    .book-ttl{
+        font-weight: bold;
+        font-size: 19pt;
+        text-align: left;
+    }
+
+    .book-input{
+        position: relative;
+        display: grid;
+        max-width: 12%;
+        border: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 2px solid #000000;
+        padding:0 -10px;
+        margin-top: 1%;       
+        font-size: 18pt !important;
+    }
+    
+    
+    
+    .main-form{
+        width: 100rem;
+        margin-left: 10%;
+        overflow: hidden;   
+    }
+    
+    
+    .book-submit{
+        margin-left:-10%;
+        width: 30%;
+        font-size: 28px;
+        font-weight:bold ;
+        background-color: transparent;
+        transition: 0.7s;
+        border-radius:2px ;
+        overflow: hidden;
+    
+    }
+
+}
+

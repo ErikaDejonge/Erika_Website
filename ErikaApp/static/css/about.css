@@ -1,8 +1,27 @@
+@font-face {
+    font-family: le jour script;
+    src: url(../text/LeJourScript-Eaqpg.otf);
+    
+}
+
+.title-1{
+    font-family: le jour script;
+}
+
 .about-body{
     background: #c9dcdd;
     padding: 5% 0;
     font-size: 32pt;
 }
+.about-author-body .phg{
+    margin-top: 5%;
+    padding-left: 2%;
+}
+.about-author-body{
+    display: flex;
+    justify-content: space-between;
+}
+
 .about-title{
     padding: 0%;
     
@@ -17,9 +36,50 @@
 .author-img .img{
     border-radius: 50%;
     border: 0px solid white;
-    width: 400px;
+    width: 410px;
     height: 400px;
     border-width: 10px;
+}
+
+
+@media screen and (max-width:768px) {
+    .about-body{
+        background: #c9dcdd;
+        padding: 5% 0;
+        font-size: 18pt;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .about-author-body{
+        display: grid;
+        grid-template-columns: auto;
+        padding: 10px;
+        width: 100%;
+    }
+    .phg{
+        padding: 5% 0;
+    }
+    .about-title{
+        padding: 0%;
+        
+    }
+    .about-title .title{
+        font-size: 28pt;
+    }
+    .review-about-author{
+        padding: 5%;
+    }
+    
+    .author-img .img{
+        border-radius: 50%;
+        border: 0px solid white;
+        width: 250px;
+        height: 250px;
+        border-width: 7px;
+        margin-left: 30%;
+    }
+    
 }
 
 
@@ -30,6 +90,16 @@
         font-size: 18pt;
         width: 100%;
         overflow: hidden;
+    }
+    
+    .about-author-body{
+        display: grid;
+        grid-template-columns: auto;
+        padding: 10px;
+        width: 100%;
+    }
+    .phg{
+        padding: 5% 0;
     }
     .about-title{
         padding: 0%;
@@ -48,6 +118,46 @@
         width: 200px;
         height: 200px;
         border-width: 7px;
+        margin-left: 20%;
+    }
+    
+}
+@media screen and (max-width:320px) {
+    .about-body{
+        background: #c9dcdd;
+        padding: 5% 0;
+        font-size: 18pt;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .about-author-body{
+        display: grid;
+        grid-template-columns: auto;
+        padding: 10px;
+        width: 100%;
+    }
+    .phg{
+        padding: 5% 0;
+    }
+    .about-title{
+        padding: 0%;
+        
+    }
+    .about-title .title{
+        font-size: 28pt;
+    }
+    .review-about-author{
+        padding: 5%;
+    }
+    
+    .author-img .img{
+        border-radius: 50%;
+        border: 0px solid white;
+        width: 200px;
+        height: 200px;
+        border-width: 7px;
+        margin-left: 12%;
     }
     
 }

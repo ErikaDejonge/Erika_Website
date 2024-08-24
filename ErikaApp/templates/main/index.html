@@ -16,13 +16,13 @@
 {% block content %}    
 
 <div class="container-fluid main-container py-5 mb-5 myblog">
-    <div class="container sub-container">
+    <div class="container-fluid sub-container">
         <div class="wrapper">
             <div class="row text-center">
                 <div class="col-md-4">
                     <img class='main-img' src="{% static 'images/Erika_holder.jpg' %}" alt="">
                 </div>
-                <div class="col-md-8 ">
+                <div class="col-md-8">
                     <p class="pag py-5 mb-5 ">ON A MISSION TO MAKE HEARING GOD'S VOICE SIMPLE</p>
                 </div>                    
             </div>
@@ -51,7 +51,7 @@
 
 
 <div class="container position-relative fixed-top">
-    <div class="wrapper position-relative top-0 start-50 translate-middle ">
+    <div class="wrapper position-relative top-0 start-50 translate-middle">
         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 blog_show">
             {% for blog in blog reversed %}
                 <div class="col blog">
@@ -60,7 +60,7 @@
                             <img class="img-blog" src="{{blog.image.url}}" alt="..">
                         </div>
                         <div class="blog-title text-center py-2">
-                            <h5 style="font-size: 28pt;" > {{blog.blog_title | upper }} </h5>
+                            <h5 style="font-size: 28pt;"  class="blog-link-title"> {{blog.blog_title | upper }} </h5>
                         </div>
                     </a>
                 </div>
@@ -105,7 +105,7 @@
         <div class="wrapper">
             <div class="form mb-5" >
                 <span>
-                    <h3 class="ft-2 text-center" style="font-size: 32pt !important;" >Book Erika for an event.</h3>
+                    <h3 class="ft-2 text-center erika-book-title " style="font-size: 32pt !important; " >Book Erika for an event.</h3>
                 </span>
                 <form class="main-form" action="{% url 'event_book' %}" method="POST">
                     {% csrf_token %}

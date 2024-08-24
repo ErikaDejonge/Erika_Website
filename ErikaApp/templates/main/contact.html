@@ -9,11 +9,11 @@
 
 {% block content %}
 
-<div class="container-fluid main-contact-container py-5" style="overflow: hidden;">
+<div class="container-fluid main-contact-container py-5">
   <div class="wrapper py-5">
       <div class="container contact">
         <div class="contact-tag p-1">
-          <h3 class="ft-2 text-center" style="font-size: 32pt !important;" >Get in Touch! </h3>
+          <h3 class="ft-2 text-center form-title-show"  >Get in Touch! </h3>
           <div class="message-show">
             {% if messages %}
             {% for message in messages %}
@@ -29,19 +29,19 @@
         <form class="main-form" action="{% url 'contact' %}" method="POST">
           {% csrf_token %}  
           <div class="mb-3 row now-1 input-controle-form">
-              <label  class="col-sm-2 col-form-label font contact-ttl">Name:</label>
+              <label  class="col-md-2 col-form-label font contact-ttl">Name:</label>
               <div class="col-sm-10">
                 <input type="text" name="name" class="form-control-plaintext contact-input-controle"  placeholder="Full Name" required >
               </div>
             
             
               <label  class="col-sm-2 col-form-label font contact-ttl">E-mail:</label>
-              <div class="col-sm-10">
+              <div class="col-md-10">
                 <input type="text" class="form-control-plaintext contact-input-controle mb-5" name="email" placeholder="E-mail" required >
               </div>
   
               <label  class="col-sm-2 col-form-label font contact-ttl">Message:</label>
-              <div class="col-sm-10">
+              <div class="col-md-10">
                   <textarea name="message" id="" rows="2" class="message" placeholder="Message" ></textarea>
               </div>            
           </div>       

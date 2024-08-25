@@ -329,7 +329,7 @@ h3{
     }
 }
 
-@media screen and (max-width:375px){
+@media screen and (max-width:400px){
     .main-img{
         width: 250px !important;
         height: 250px;

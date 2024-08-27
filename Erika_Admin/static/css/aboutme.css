@@ -1,0 +1,66 @@
+@font-face {
+    font-family: le jour script;
+    src: url(../fonts/LeJourScript-Eaqpg.otf);
+    
+}
+@font-face {
+    font-family: open sans condensed;
+    src: url(../fonts/OpenSans-CondLight.ttf);
+}
+.add-about-section{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding: 2%;
+}
+.title{
+    font-size: 32pt;
+    font-family:open sans condensed;
+}
+.danger{
+    border: 1px solid #ff0000;
+    color: #ff0000;
+}
+.danger:hover{
+    background-color: #ff0000;
+}
+
+.Signature
+{
+    font-size: 32pt;
+    font-family: le jour script;
+    align-items: center;
+}
+.images{
+    padding: 5%;
+}
+.images img{
+    border: 0px solid #ffffff;
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+
+}
+.about-container{
+    display: flex;
+    padding: 5% 0;
+
+}
+.about-me{
+    font-size: 28pt;
+    margin-top: 10%;
+}
+.about-erika-page p{
+    font-size: 28pt;
+}
+.bio{
+    font-size: 32pt;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    padding-bottom: 5%;
+}
+.form{
+    padding: 10%;
+}
+

@@ -1,0 +1,90 @@
+
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/aboutme.css' %}">
+{% endblock link %}
+
+{% block body %}
+<div class="main-panel">
+  <div class="content-wrapper pb-0">
+    <div class="main-about-sections ">
+        
+        <div class="main-body">
+            <div class="form">
+              <form action="{% url 'edit-about-content' edit_about.id %}" method="POST"  enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="title text-center">
+                  <h1 class="bio">My Bio</h1>
+              </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Your Name:</label>
+                  <input name="author_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Name or Signature that represent you" value="{{edit_about.Signature}}" required="required" >
+                </div>
+                <div class="mb-3">
+                  <label >Bio:</label>
+                  <textarea name="bio" class="form-control" rows="5"  cold placeholder="Write About Your self" required="required" > {{edit_about.Erika_Bio}} </textarea>
+                </div>
+                <div class="mb-3 py-2">
+                  <label for="formFileMultiple" class="form-label">
+                    <div id="selectedBanner"></div>
+                  </label>
+                  <input class="form-control" id="img" name="bio-image" type="file" value="{{edit_about.Author_Image.url}}" id="formFileMultiple" multiple>
+                </div>
+                <div class="mb-3">
+                  <label >Reviews:</label>
+                  <textarea name="reviews" class="form-control" cols="5" rows="8" placeholder="Reviews"> {{edit_about.Paragraph}} </textarea>
+                </div>
+                <div class="mb-3">
+                  <textarea name="reviews1" class="form-control" cols="5" rows="8"  placeholder="Reviews, This paragraph is always in Optional.?" > {{edit_about.Paragraph_1}} </textarea>
+                </div>
+                <input class="btn btn-primary" type="submit" value="Add Bio">
+              </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"
+></script>
+
+
+<script>
+  let selDiv = "";
+  let storedFiles = [];
+  $(document).ready(function () {
+    $("#img").on("change", handleFileSelect);
+    selDiv = $("#selectedBanner");
+  });
+
+  function handleFileSelect(e) {
+    let files = e.target.files;
+    let filesArr = Array.prototype.slice.call(files);
+    filesArr.forEach(function (f) {
+      if (!f.type.match("image.*")) {
+        return;
+      }
+      storedFiles.push(f);
+
+      let reader = new FileReader();
+      reader.onload = function (e) {
+        let html =
+          '<img src="' +
+          e.target.result +
+          "\" data-file='" +
+          f.name +
+          "' class='avatar rounded lg' alt='Category Image' height='200px' width='200px'>";
+        selDiv.html(html);
+      };
+      reader.readAsDataURL(f);
+    });
+  }
+</script>
+
+
+{% endblock body %}

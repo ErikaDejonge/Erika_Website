@@ -1,0 +1,69 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/aboutme.css' %}">
+{% endblock link %}
+
+{% block body %}
+<div class="main-panel">
+  <div class="content-wrapper pb-0">
+    <!-- button section starts -->
+    <div class="add-about-section">
+        {% if about_info is not None %}
+            {% for AI in about_info %}
+        
+                <a href="{% url 'edit-about-content' AI.id %}">
+                    <button type="button" class="btn btn-outline-info"><i class="fa fa-pencil"></i> Edit</button>
+                </a>
+        
+                <a href="{% url 'delete-about-content' AI.id %}">
+                    <button type="button" class="btn btn-outline-danger danger"> <i class="fa fa-trash" ></i> Delete</button>
+                </a>
+            {% endfor %}
+            
+                <a href="{% url 'add-about-content' %}">
+                    <button type="button" class="btn btn-outline-dark"><i class="fa fa-plus" ></i> Add</button>
+                </a>
+        {% endif %}
+    </div>
+    <!-- button section ends -->
+
+    <div class="main-about-sections ">
+        <div class="title text-center">
+            <h1>About Author</h1>
+        </div>
+        
+        <div class="main-body">
+            {% for AI in about_info %}
+
+                <div class="text-center">
+                    <label class="Signature"> {{AI.Signature}} </label>
+                </div>
+                <div class="about-container">
+
+                    <div class="images">
+                        <img src="{{AI.Author_Image.url}}" alt="Author_Image">
+                    </div>
+                    <div class="about-me">
+                        {{AI.Erika_Bio}}
+                    </div><br>
+                </div>
+
+                <div class="about-erika-page">
+                    <p>
+                        {{AI.Paragraph}}
+                    </p>
+                </div>
+                <div class="about-erika-page">
+                    <p>
+                        {{AI.Paragraph_1}}
+                    </p>
+                </div>
+                {% endfor %}
+        </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock body %}

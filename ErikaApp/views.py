@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from .models import Blog,BookErika,Email_Info
 from django.core.paginator import Paginator
 from django.contrib import messages
-from Erika_Admin.models import Receive_Contact
+from Erika_Admin.models import Receive_Contact,AboutMe
 # Create your views here.
 
 # 404 Error start
@@ -90,7 +90,8 @@ class Tools():
     
 class About():
     def about(request):
-        return render(request, "main/about.html")
+        about_show = AboutMe.objects.all()
+        return render(request, "main/about.html",{'about_show':about_show})
     
 class Books():
     def books(request):

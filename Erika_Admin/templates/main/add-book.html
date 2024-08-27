@@ -1,0 +1,42 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/add-book.css' %}">
+{% endblock link %}
+
+{% block body %}
+<div class="main-panel">
+  <div class="content-wrapper container">
+    <!-- button sections start -->
+    <div class="add-about-section">
+        <a href="">
+            <button type="button" class="btn btn-outline-dark"><i class="fa fa-plus" ></i> Add</button>
+        </a>
+
+        <a href="">
+            <button type="button" class="btn btn-outline-success"><i class="fa fa-eye" ></i> View</button>
+        </a>
+
+        <a href="">
+            <button type="button" class="btn btn-outline-info"><i class="fa fa-pencil"></i> Edit</button>
+        </a>
+
+        <a href="">
+            <button type="button" class="btn btn-outline-danger danger"> <i class="fa fa-trash" ></i> Delete</button>
+        </a>
+    </div>
+    <!-- button sections ends -->
+
+    <div class="main-body">
+        <div class="images">
+            <img src="" alt="">
+        </div>
+        .
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock body %}

@@ -1,0 +1,14 @@
+.add-about-section{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding: 2%;
+}
+.danger{
+    border: 1px solid #ff0000;
+    color: #ff0000;
+}
+.danger:hover{
+    background-color: #ff0000;
+}

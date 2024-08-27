@@ -23,6 +23,11 @@ urlpatterns =[
     path('profile=img/',views.profile_image,name='profile-image'),
     path('receive-contact/', views.Receive_Contacts.receive_contacts,name='admin-contacts'),
     path('RC_Delete/<int:id>',views.Receive_Contacts.RC_Delete,name='RC_delete'),
+    path('aboutMe/',views.aboutme, name='about-me'),
+    path('add_aboutMe/',views.add_about_content, name='add-about-content'),
+    path('edit_aboutMe/<int:id>',views.edit_about_content, name='edit-about-content'),
+    path('delete_aboutMe/<int:id>',views.delete_about_content, name='delete-about-content'),
+    path('book-sections/',views.books_sections, name='books-section'),
 
 
 

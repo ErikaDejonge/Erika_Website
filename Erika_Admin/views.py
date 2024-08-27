@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login,logout,update_session_auth_h
 from django.contrib.auth.decorators import login_required
 from ErikaApp.models import Email_Info,BookErika,Blog
 from django.contrib.auth.forms import PasswordChangeForm
-from .models import Profile_Images,Receive_Contact
+from .models import Profile_Images,Receive_Contact,AboutMe
 import requests
 import json
 from django.contrib import messages
@@ -16,6 +16,7 @@ import os
 
 
 # Create your views here.
+@login_required(login_url='adminlogin')
 def profiles(request):
     account = Profile_Images.objects.all()
     context = {
@@ -139,6 +140,7 @@ class Booking():
         return render(request, 'main/admin_book.html',context)
 
 class Receive_Contacts():
+    @login_required(login_url='adminlogin')
     def receive_contacts(request):
 
 
@@ -148,7 +150,7 @@ class Receive_Contacts():
             'receiveContact':receiveContact,
         }
         return render(request, 'main/receive-contacts.html',context)
-    
+    @login_required(login_url='adminlogin')
     def RC_Delete(request, id):
             ReceiveCon = Receive_Contact.objects.get(id=id)
             ReceiveCon.delete()
@@ -165,6 +167,7 @@ class Delete_items():
     @login_required(login_url='adminlogin')
     def Remove_Blog(request,id):
         remove_blog= Blog.objects.get(id=id)
+        
         if len(remove_blog.image)>0:
             os.remove(remove_blog.image.path)
         remove_blog.delete()
@@ -261,6 +264,7 @@ def Password_change(request):
         fm = PasswordChangeForm(user=request.user)
     return render(request, 'password/password_change.html',{'fm':fm})
 
+@login_required(login_url='adminlogin')
 def profile_image(request):
     if request.method=='POST' and request.FILES:
         profile_img = request.FILES['profile_image']
@@ -269,3 +273,62 @@ def profile_image(request):
         return redirect('my-profile')
 
     return render(request, 'profile/image.html')
+
+
+@login_required(login_url='adminlogin')
+def aboutme(request):
+
+    about_info = AboutMe.objects.all()
+    context={
+        'about_info':about_info
+    }
+    return render(request, 'main/aboutme.html',context)
+
+@login_required(login_url='adminlogin')
+def add_about_content(request):
+    if request.method == 'POST' and request.FILES:
+        name = request.POST['author_name']
+        bio = request.POST['bio']
+        review = request.POST['reviews']
+        reviews1 = request.POST['reviews1']
+        images = request.FILES['bio-image']
+
+        about_section = AboutMe(Signature=name , Erika_Bio=bio, Paragraph=review, Paragraph_1=reviews1, Author_Image=images)
+        about_section.save()
+        return redirect('about-me')
+
+    return render(request, 'main/Add-about.html')
+
+
+@login_required(login_url='adminlogin')
+def edit_about_content(request,id):
+    if request.method == 'POST' and request.FILES:
+        edit_about= AboutMe.objects.get(id=id)
+
+        edit_about.Signature = request.POST['author_name']
+        edit_about.Erika_Bio = request.POST['bio']
+        edit_about.Paragraph = request.POST['reviews']
+        edit_about.Paragraph_1 = request.POST['reviews1']
+        edit_about.Author_Image = request.FILES['bio-image']
+        edit_about.save()
+        return redirect('about-me')
+    
+    edit_about= AboutMe.objects.get(id=id)
+
+    contaxt= {
+        'edit_about':edit_about
+    }
+
+    return render(request, 'main/Edit-about.html',contaxt)
+
+@login_required(login_url='adminlogin')
+def delete_about_content(request,id):
+    delete_aboutContent= AboutMe.objects.get(id=id)
+    delete_aboutContent.delete()
+    return redirect('about-me')
+
+
+
+@login_required(login_url='adminlogin')
+def books_sections(request):
+    return render(request, 'main/add-book.html')

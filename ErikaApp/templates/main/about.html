@@ -11,38 +11,29 @@
         <div class="wrapper">
             <div class="about-title text-center mb-5">
                 <h1 class="title">ABOUT THE AUTHOR</h1>
-                <h1 class="title-1">Erika DeJonge</h1>
-                
+            </div>
+
+            {% for A_show in about_show %}
+            <div class="about-title text-center mb-5">
+                <h1 class="title-1"> {{A_show.Signature}} </h1>                
             </div>
             <div class="author-img about-author-body mb-5">
 
                 <div class="img-col ">
-                    <img class="img"  src="{% static 'images/Erika_holder.jpg' %}" alt="">    
+                    <img class="img"  src="{{A_show.Author_Image.url}}" alt="Author Image">    
                 </div>    
 
                 <div class="phg">
-                    <p class="parg">
-                        Erika currently lives in Michigan where she enjoys outdoor adventures with her family. 
-                        After years of praying God gave her Andy, her amazing husband, and her son Logan. 
-                        She is also an ER nurse and is passionate about caring for her patients.
-                    </p>
+                    <p class="parg"> {{A_show.Erika_Bio}} </p>
                 </div>
             </div>
 
             <div class="about-author py-5">
-                <p>
-                    Erika spent 3 years living in Nepal and serving at Beauty for Ashes. It was her 
-                    journey to this nation that taught her to truly listen to God’s voice and respond 
-                    in obedience. It was also in this time she fell deeply in love with Jesus and 
-                    learned that He could affect and influence every area of her life.
-                </p><br>
-                <p>
-                    While Erika returned from Nepal in 2019 she has not forgotten what God taught her in 
-                    her journey to Nepal and she continues to walk out these lessons in her life and share 
-                    those lessons with others. She is passionate about connecting others with God and 
-                    creating opportunities for them to hear His voice and have a deep relationship with Him.
-                </p>
+                <p>{{A_show.Paragraph}} </p><br>
+                <p>{{A_show.Paragraph_1}} </p>
             </div>
+
+            {% endfor %}
         </div>
     </div>
  </div>

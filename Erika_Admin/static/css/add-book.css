@@ -1,4 +1,25 @@
-.add-about-section{
+@font-face {
+    font-family: le jour script;
+    src: url(../fonts/LeJourScript-Eaqpg.otf);
+    
+}
+@font-face {
+    font-family: open sans condensed;
+    src: url(../fonts/OpenSans-CondLight.ttf);
+}
+
+.main-content{
+    font-family:open sans condensed ;
+}
+
+.add-book-section{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding: 2%;
+}
+.add-reviews-section{
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -11,4 +32,58 @@
 }
 .danger:hover{
     background-color: #ff0000;
+}
+.link-btn{
+   padding: 5%;
+   display: flex;
+   justify-content: center;
+}
+.link-btn a{
+    color: #000000;
+    font-size: 32px;
+    text-decoration: none;
+    border:none;
+    padding: 2% 9% ;
+    background: #a6a6a6;
+
+}
+.des label{
+    display: flex;
+    justify-content: center;
+    font-size: 28pt;
+}
+.des .description-paragraph{
+    font-size: 28pt;
+}
+
+.rw label{
+    display: flex;
+    justify-content: center;
+    font-size: 28pt;
+}
+.review-list .reviews-paragraph{
+    font-size: 28pt;
+    
+}
+.submit-btn{
+    padding: 2px 4% ;
+    font-size: 25px;
+    background: #c5dcdd;
+    border: none;
+
+}
+
+.go .go-back{
+    border: 1px solid;
+    padding: 2px 4%;
+    font-size: 25px;
+    color: #000000;
+    text-decoration: none;
+}
+.go-back:hover{
+    background-color: #c5dcdd;
+    border: 1px solid #c6dcdd;
+}
+.reviews{
+    text-wrap: wrap;
 }

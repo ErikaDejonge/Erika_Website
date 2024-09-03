@@ -1,0 +1,33 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/add-book.css' %}">
+{% endblock link %}
+
+{% block body %}
+
+<div class="main-panel justify-content-center main-content">
+    <div class="content-wrapper pb-0">
+
+        <div class="show-book mb-3">
+
+            <form action="{% url 'add-reviews' %}" method="POST">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label style="font-size: 28pt;" >Reviews:</label>
+                    <textarea class="form-control" name="reviews" placeholder="Write A Reviews" required  style="height: 200px; font-size: 15pt;"></textarea>
+                </div>
+
+                <input type="submit" value="Add Reviews" class="submit-btn">
+
+            </form>
+        </div>
+        <div class="go py-4">
+            <a class="go-back" href="{% url 'books-section' %}">GO Back</a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock body %}

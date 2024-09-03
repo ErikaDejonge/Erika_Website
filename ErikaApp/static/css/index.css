@@ -72,7 +72,6 @@ body{
 }
 .blog label{
     font-size: 25px !important;
-    font-weight: bold;
     cursor: pointer;
 }
 
@@ -168,7 +167,6 @@ h3{
     margin-left:10%;
     width: 30%;
     font-size: 28px;
-    font-weight:bold ;
     background-color: transparent;
     transition: 0.7s;
     border-radius:2px ;
@@ -209,7 +207,6 @@ h3{
 @media screen and (max-width:768px) {
 
     .book-ttl{
-        font-weight: bold;
         font-size: 20pt;
         text-align: right;
     }
@@ -243,7 +240,6 @@ h3{
         margin-left:10%;
         width: 30%;
         font-size: 28px;
-        font-weight:bold ;
         background-color: transparent;
         transition: 0.7s;
         border-radius:2px ;
@@ -287,7 +283,7 @@ h3{
         width:100%;
     }
     .book-ttl{
-        font-weight: bold;
+        
         font-size: 18pt;
         text-align: left;
     }
@@ -320,7 +316,6 @@ h3{
         margin-left:-10%;
         width: 30%;
         font-size: 28px;
-        font-weight:bold ;
         background-color: transparent;
         transition: 0.7s;
         border-radius:2px ;
@@ -391,7 +386,6 @@ h3{
         font-size:28pt ;
     }
     .book-ttl{
-        font-weight: bold;
         font-size: 18pt;
         text-align: left;
     }
@@ -422,7 +416,6 @@ h3{
         margin-left:-10%;
         width: 30%;
         font-size: 28px;
-        font-weight:bold ;
         background-color: transparent;
         transition: 0.7s;
         border-radius:2px ;
@@ -497,7 +490,6 @@ h3{
         font-size:28pt ;
     }
     .book-ttl{
-        font-weight: bold;
         font-size: 19pt;
         text-align: left;
     }
@@ -528,7 +520,6 @@ h3{
         margin-left:-10%;
         width: 30%;
         font-size: 28px;
-        font-weight:bold ;
         background-color: transparent;
         transition: 0.7s;
         border-radius:2px ;

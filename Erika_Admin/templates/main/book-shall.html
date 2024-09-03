@@ -1,0 +1,79 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/add-book.css' %}">
+{% endblock link %}
+
+{% block body %}
+
+<div class="main-panel justify-content-center main-content">
+    <div class="content-wrapper pb-0">
+        <a href="{% url 'add-book-section' %}">
+            <button type="button" class="btn btn-outline-dark"><i class="fa fa-plus" ></i> Add Books</button>
+        </a> 
+    {% for book_obj in books %}
+        <div class="show-book py-2">
+            <div class="image">
+                <img src="{{book_obj.Books_Images.url}}" width="100%"  alt="">
+                         </div>
+            <div class="link-btn">
+                <a href="{{book_obj.Book_Link}}">START READING TODAY</a>
+            </div>
+            <div class="des">
+                <label>Book Description</label>
+                <p class="description-paragraph">
+                    {{book_obj.Descriptions}}
+                </p>
+            </div>
+            <!-- button section starts -->
+        <div class="add-book-section">            
+            <a href="{% url 'edit_books-section' book_obj.id %}">
+                <button type="button" class="btn btn-outline-info"><i class="fa fa-pencil"></i> Edit</button>
+            </a>
+    
+            <a href="{% url 'delete_book' book_obj.id  %}">
+                <button type="button" class="btn btn-outline-danger danger"> <i class="fa fa-trash" ></i> Delete</button>
+            </a>        
+                   
+        </div>
+         <!-- button section ends -->
+        </div>
+    {% endfor %}
+
+
+
+
+        <!-- reviews -->
+        <div class="reviews py-5">
+            <div class="rw mb-5">
+                <label>Reviews</label>
+                <a href="{% url 'add-reviews' %}">
+                    <button type="button" class="btn btn-outline-dark"><i class="fa fa-plus" ></i> Add Reviews </button>
+                </a> 
+            </div>
+
+            {% for rw in reviews %}
+            <div class="review-list py-4">
+                <p class="reviews-paragraph">
+                    {{rw.Reviews}}
+                </p>
+                  <!-- button section starts -->
+                    <div class="add-reviews-section">
+                        <a href="{% url 'edit-reviews' rw.id %}">
+                            <button type="button" class="btn btn-outline-info"><i class="fa fa-pencil"></i> Edit</button>
+                        </a>
+
+                        <a href="{% url 'delete-reviews' rw.id %}">
+                            <button type="button" class="btn btn-outline-danger danger"> <i class="fa fa-trash" ></i> Delete</button>
+                        </a>       
+                                
+                    </div>
+                    <!-- button section ends -->
+                    </div>
+                    {% endfor %}
+            </div>
+          
+    </div>
+</div>
+
+{% endblock body %}

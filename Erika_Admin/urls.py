@@ -27,8 +27,13 @@ urlpatterns =[
     path('add_aboutMe/',views.add_about_content, name='add-about-content'),
     path('edit_aboutMe/<int:id>',views.edit_about_content, name='edit-about-content'),
     path('delete_aboutMe/<int:id>',views.delete_about_content, name='delete-about-content'),
+
     path('book-sections/',views.books_sections, name='books-section'),
-
-
+    path('edit-book-sections/<int:id>',views.edit_books_sections, name='edit_books-section'),
+    path('delete_books/<int:id>',views.delete_books, name='delete_book'),
+    path('add_new_books_sections/',views.add_new_book_section,name='add-book-section'),
+    path('add-Reviews/',views.add_reviews,name='add-reviews'),
+    path('edit-Reviews/<int:id>',views.edit_reviews,name='edit-reviews'),
+    path('delete-Reviews/<int:id>',views.delete_reviews,name='delete-reviews'),
 
 ]

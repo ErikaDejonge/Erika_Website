@@ -10,6 +10,6 @@ urlpatterns =[
     path('News_mail_Receive=?/',views.Book.info_Email,name='info_email'),
     path('about/',views.About.about,name='about'),
     path('tools/',views.Tools.tools,name='tools'),
-    path('books/',views.Books.books,name='books'),
+    path('books/',views.ReadBooks.books,name='books'),
     path('contact/',views.Contact.contact, name='contact'),
 ]

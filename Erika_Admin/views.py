@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login,logout,update_session_auth_h
 from django.contrib.auth.decorators import login_required
 from ErikaApp.models import Email_Info,BookErika,Blog
 from django.contrib.auth.forms import PasswordChangeForm
-from .models import Profile_Images,Receive_Contact,AboutMe
+from .models import Profile_Images,Receive_Contact,AboutMe,Reviews,Books
 import requests
 import json
 from django.contrib import messages
@@ -315,11 +315,11 @@ def edit_about_content(request,id):
     
     edit_about= AboutMe.objects.get(id=id)
 
-    contaxt= {
+    context= {
         'edit_about':edit_about
     }
 
-    return render(request, 'main/Edit-about.html',contaxt)
+    return render(request, 'main/Edit-about.html',context)
 
 @login_required(login_url='adminlogin')
 def delete_about_content(request,id):
@@ -331,4 +331,91 @@ def delete_about_content(request,id):
 
 @login_required(login_url='adminlogin')
 def books_sections(request):
-    return render(request, 'main/add-book.html')
+
+    books= Books.objects.all()
+    reviews = Reviews.objects.all()
+    context={
+        'books':books,
+        'reviews':reviews
+    }
+    return render(request, 'main/book-shall.html',context)
+
+
+@login_required(login_url='adminlogin')
+def edit_books_sections(request,id):
+    if request.method=='POST' and request.FILES:
+        books_id = Books.objects.get(id=id)
+
+        books_id.Book_Link = request.POST['links']
+        books_id.Descriptions = request.POST['descriptions']
+        books_id.Books_Images = request.FILES['new-images']
+        books_id.save()
+        return redirect('books-section')
+        
+    books_id= Books.objects.get(id=id)
+   
+    context={
+        'books':books_id
+
+    }
+    return render(request, 'main/edit-book.html',context)
+
+@login_required(login_url='adminlogin')
+def delete_books(request,id):
+    delete_Book = Books.objects.get(id=id)
+    delete_Book.delete()
+    return redirect("books-section")
+
+@login_required(login_url='adminlogin')
+def add_new_book_section(request):
+    if request.method =="POST" and request.FILES:
+        Book_Links = request.POST['links']
+        Description = request.POST['descriptions']
+        Img = request.FILES['new-images']
+
+        add_new_book_section = Books(Books_Images=Img, Book_Link = Book_Links, Descriptions=Description )
+        add_new_book_section.save()
+        return redirect('books-section')
+    
+    return render(request,  'main/add_new_book.html')
+
+@login_required(login_url='adminlogin')
+def add_reviews(request):
+    if request.method =="POST":
+       
+        reviews = request.POST['reviews']
+
+        add_reviews= Reviews(Reviews=reviews)
+        add_reviews.save()
+        return redirect('books-section')
+    
+    return render(request,  'main/add-reviews.html')
+
+@login_required(login_url='adminlogin')
+def edit_reviews(request,id):
+    if request.method == 'POST':
+        rw = Reviews.objects.get(id=id)
+        rw.Reviews = request.POST['reviews']
+        rw.save()
+        return redirect('books-section')
+    rw = Reviews.objects.get(id=id)
+    context ={
+        'rw':rw
+    }
+
+    return render(request, 'main/edit-reviews.html',context)
+
+
+@login_required(login_url='adminlogin')
+def delete_reviews(request,id):
+
+    Dl_Review = Reviews.objects.get(id=id)
+    Dl_Review.delete()
+    return redirect('books-section')
+
+
+
+
+
+
+

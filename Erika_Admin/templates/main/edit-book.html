@@ -1,0 +1,43 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/add-book.css' %}">
+{% endblock link %}
+
+{% block body %}
+
+<div class="main-panel justify-content-center main-content">
+    <div class="content-wrapper pb-0">
+
+        <div class="show-book mb-3">
+
+            <form action="{% url 'edit_books-section' books.id %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <img src="{{books.Books_Images.url}}" width="200px" height="200px" alt="" class="mb-2" >
+                </div> 
+               <div class="mb-3">
+                    <input type="file" name="new-images" class="form-control"> 
+                </div>
+                <div class="mb-3">
+                    <label>Links for the Buttons:</label>
+                    <input type="text" name="links" class="form-control" value="{{books.Book_Link}}" >
+                </div>
+
+                <div class="mb-3">
+                    <label>Description:</label>
+                    <textarea class="form-control" name="descriptions" placeholder="Write A Description"  style="height: 200px; font-size: 15pt;">{{books.Descriptions}}</textarea>
+                </div>
+
+                <input type="submit" value="Edit Book" class="submit-btn">
+
+            </form>
+        </div>
+        <div class="go py-4">
+            <a class="go-back" href="{% url 'books-section' %}">GO Back</a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock body %}

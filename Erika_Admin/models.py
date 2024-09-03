@@ -31,3 +31,18 @@ class AboutMe(models.Model):
 
     def __str__(self):
         return self.Signature
+
+class Books(models.Model):
+    Books_Images = models.ImageField(upload_to='Media')
+    Book_Link = models.CharField(max_length=200)
+    Descriptions = models.TextField()
+
+    def __str__(self):
+        return self.Book_Link
+
+
+class Reviews(models.Model):
+    Reviews = models.TextField()
+
+    def __str__(self):
+        return self.Reviews

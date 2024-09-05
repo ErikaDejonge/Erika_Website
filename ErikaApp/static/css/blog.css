@@ -6,6 +6,12 @@
     height: 150px;
     width: 150px;
 }
+.title-font{
+    font-family: "Cinzel";
+    text-align: center;
+    font-size: 46.4pt;
+
+}
 
 .blog{
     cursor: pointer;
@@ -17,11 +23,7 @@
     color: #000000;
     font-weight: lighter;
 }
-.blog-tts{
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    font-size: 46.4pt;
-}
+  
 .blog-body{
     font-size: 28pt;
     font-family: Open Sans Condensed;

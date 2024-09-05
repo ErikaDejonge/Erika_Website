@@ -10,19 +10,18 @@
         font-size: 46.4pt;
         text-align: center;
     }
-    .img{
-        margin: auto 10%;
-    }
+    
     .img .img1{
-        width: 400px;
-        height: 400px;
+        width: 350px;
+        height: 350px;
         border-radius: 50%;
         border: none;
+        
     }
 
     .img .img2{
-        width: 400px;
-        height: 400px;
+        width: 350px;
+        height: 350px;
         border-radius: 50%;
 
     }
@@ -30,6 +29,18 @@
     .text{
         margin: auto 50%;
         margin-top: -10%;
+    }
+    .text .des{
+        font-size: 32pt;
+        width: 110vh;
+        margin-left: -40%;
+        margin-top: -90%;
+    }
+    .text .des1{
+        font-size: 32pt;
+        width: 110vh;
+        margin-left: -40%;
+        margin-top: -80%;
     }
     .text .button{
         font-size: 32pt;
@@ -43,6 +54,38 @@
     }
     .btn-1{
         width: 30rem;
+    }
+    .model-form{
+        width: 100%;
+        height: 100%;
+    }
+    .model-sub-info{
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+    .model-label{
+        font-size: 25px;
+    }
+    .model-input{
+        width: 80%;
+        height: 45px;
+        font-size: 22px;
+        padding: 0 10px;
+        outline: none;
+        border: 1px solid #C9DCDD;
+        border-radius: 1px;
+    }
+    .model-submit{
+        height: 45px;
+        font-size: 25px;
+        margin-top: 1%;
+        background: #C9DCDD;
+        border: none;
+        border-radius: 2px;
+    }
+    .model-submit:hover{
+        background: #8aa8aa;
+        transition: .5s ease-in-out;
     }
 
 
@@ -246,13 +289,27 @@
                         <img class="img1" src="{% static 'images/erika-book.png' %}" alt="">
                     </div>
                     <div class="col-md-4 text">
+                        <p class="des">Have you been in the church a long time but still struggle to hear from God? 
+                            Or is walking with Jesus brand new to you, and you're not even sure that 
+                            He speaks? Either way, this book will help walk you into deeper intimacy with 
+                            the One who made you and wants to speak to you. If you're sick of prayer being a 
+                            one-sided conversation and are ready to start hearing more clearly from God, join 
+                            me on my three-year journey through Nepal learning to listen and obey. This book is 
+                            full of stories of my adventures with Jesus, paired with tangible baby steps for you 
+                            to have even greater adventures with Jesus.</p>
                         <button class="button btn-0" >START READING TODAY!</button>
                     </div>
+
                     <div class="col-mg-4 py-5 img">
-                        <img class="img2" src="{% static 'images/img2.jpeg' %}" alt="">
+                        <img class="img2" src="{% static 'images/tools.jpg' %}" alt="">
                     </div>
-                    <div class="col-md-4 text ">
-                        <button class="button btn-1" >DOWNLOAD NOW!</button>
+                    <div class="col-md-4 text py-5">
+                        <p class="des1 py-3" >
+                            Looking for more ways to connect with God every day? 
+                            Download this free calendar with 4 weeks of prompts to get 
+                            you started hearing God’s voice today! 
+                        </p>
+                        <button class="button btn-1" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >DOWNLOAD NOW!</button>
                     </div>
                 </div>
             </div>
@@ -260,5 +317,34 @@
     </div>
 
 </div>
+
+  
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Get Subscription</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <form class="model-form" action="{% url 'tools' %}" method="POST">
+            {% csrf_token %}
+            <label class="model-sub-info">Enter your Email to Download This Document...</label><br>
+            <label class="model-label">E-Mail:</label><br>
+            <input class="model-input" type="email" name="email" name="email"  placeholder="Enter your email address" required>
+            
+            <input class="model-submit" type="submit" value="Get Now">
+        </form>
+    </div>
+    <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+         <h5 class="model-footer-text">After sending your email Please check you email Box </h5>
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- <a href="{% url 'send-email' %}" class="btn btn-sucess">Send Email</a> -->
 
 {% endblock content %}

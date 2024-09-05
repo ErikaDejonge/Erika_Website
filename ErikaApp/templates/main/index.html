@@ -18,11 +18,11 @@
 <div class="container-fluid main-container py-5 mb-5 myblog">
     <div class="container-fluid sub-container">
         <div class="wrapper">
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <img class='main-img' src="{% static 'images/Erika_holder.jpg' %}" width="100px" height="200px" alt="">
+            <div class="row text-center ">
+                <div class="round col-md-5">
+                    <img class='main-img' src="{% static 'images/author.jpg' %}"  alt="">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-7">
                     <p class="pag py-5 mb-5 ">ON A MISSION TO MAKE HEARING GOD'S VOICE SIMPLE</p>
                 </div>                    
             </div>
@@ -59,8 +59,8 @@
                         <div class="text-center mb-2">
                             <img class="img-blog" src="{{blog.image.url}}" alt="..">
                         </div>
-                        <div class="blog-title text-center py-2">
-                            <h5 style="font-size: 28pt;"  class="blog-link-title"> {{blog.blog_title | upper }} </h5>
+                        <div class="blog-title text-center py-5">
+                            <h5 class="blog-link-title"> {{blog.blog_title | upper }} </h5>
                         </div>
                     </a>
                 </div>
@@ -86,17 +86,25 @@
     
 </div>
 
+<!-- this is the main thumbnail of the website -->
 <div class="container-fluid thumnail-body">
     <div class="wrapper thum-body">
         
     </div>
 </div>
+<!-- this thumbnail end here -->
 
 <div class="container-fluid py-3">
     <div class="container py-5 ">
         <div class="wrapper justify-content-center position-relative top-50 start-50 translate-middle">
             <div class="d-grid gap-2 text-center title-read">
-                <a href="#" class="read_link">START READING TODAY!</a>
+                <a href="https://www.amazon.com/Every-Step-AdventuresErikaDeJonge/dp/B0CPW4157J/ref=sr_1_1?crid=3QQCLTR57H7XT&dib=eyJ2IjoiMSJ9.CL4
+                muj6qIbYHz5pU_GsH5Od47Klx33RSUgcfNkUZeio6W6vW2O1StWxlaAMK1zZc_nfBi9VPO7I
+                9XZbgBKu1cYuKvR-oucSgC1gyoCssJvB4PdNrIBERATFCM6E_ZFZ9iKdEADEruxsWAX6ySm1X-PEtafu6NcJR25SpV-JlLpWGg2b4CyeDT9CMS_Zy1-
+                HEkuXONlHQulxgnO1JDfLeuKgsNKa8ubxvZeJp9Cs.dDFQnYaBpgdQHLetKUzXMs_e8yWk5
+                gOcbRz2BtGtnt4&dib_tag=se&keywords=every+step+adventures+with+jesus&qid=172499
+                4634&sprefix=Every+step+with+jesus%2Caps%2C483&sr=8-1
+                " target="_blank" class="read_link">START READING TODAY!</a>
             </div>
         </div>
     </div>
@@ -105,7 +113,7 @@
         <div class="wrapper">
             <div class="form mb-5" >
                 <span>
-                    <h3 class="ft-2 text-center erika-book-title " style="font-size: 32pt !important; " >Book Erika for an event.</h3>
+                    <h1 class="ft-2 text-center erika-book-title" style="font-size: 32pt !important;" >Book Erika for an event.</h1>
                 </span>
                 <form class="main-form" action="{% url 'event_book' %}" method="POST">
                     {% csrf_token %}

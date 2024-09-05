@@ -1,8 +1,11 @@
 from django.shortcuts import render,redirect
-from .models import Blog,BookErika,Email_Info
+from .models import Blog,BookErika,Email_Info,Download_email
 from django.core.paginator import Paginator
 from django.contrib import messages
 from Erika_Admin.models import Receive_Contact,AboutMe,Books,Reviews
+from .utlis import send_email_with_attachment
+from django.conf import settings
+
 # Create your views here.
 
 # 404 Error start
@@ -10,6 +13,14 @@ def handling_404(request, exception):
     return render(request, '404.html', {})
 
 # 404 Error ends
+
+def send_email(request):
+    subject= 'With file attachment: from the Erika Books'
+    message= 'Download the Files'
+    recipient_list = ['kungrocky22@gmail.com']
+    file_path = f'{settings.BASE_DIR}/main.xlsx'
+    send_email_with_attachment(subject, message, recipient_list, file_path)
+    return redirect('tools')
 
 def index(request):
     blogs = Blog.objects.all()
@@ -86,6 +97,20 @@ class Book():
 
 class Tools():
     def tools(request):
+
+        if request.method == 'POST':
+            email_send = request.POST['email']
+            sv_e = Download_email(Downloaded_Email=email_send)
+            sv_e.save()
+
+            subject= 'With file attachment: from the Erika Books'
+            message= 'Download the Files'
+            recipient_list = [email_send]
+            file_path = f'{settings.BASE_DIR}/main.xlsx'
+            send_email_with_attachment(subject, message, recipient_list, file_path)
+            return redirect('tools')
+
+
         return render(request, "main/tools.html")
     
 class About():

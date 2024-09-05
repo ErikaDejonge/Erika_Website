@@ -14,7 +14,7 @@ body{
 }
 .myblog{
     width: 100%;
-    height: 80vh !important;
+    height: 90vh !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,11 +24,10 @@ body{
 }
 
 .main-img{
-    width: 350px !important;
-    height: 350px;
+    width: 410px !important;
+    height: 410px;
     border-radius: 50%;
-    border: 10px solid #fff;
-    field-sizing: content;
+    border: 10px solid #ffffff;  
     
 }
 .font{
@@ -44,19 +43,19 @@ body{
     margin: 10px 40px;
     font-family:  Cinzel !important;
     color: #000000;
+    font-weight: lighter !important;
 }
 
 .box-sub{
     position: relative;
-    margin-top:-5% ;
     background: #a6a6a6;
-    border:1px solid #fff;
-    border-width: 10px;
+    border:10px solid #ffffff;
+    outline: none;
+
 }
 .main-pag{
     font-family:  'Open Sans Condensed';
-    font-size: 28pt !important;
-    font-weight: 500;
+    font-size: 32pt !important;
 }
 .hi{
     font-family:'Open Sans Condensed' ;
@@ -64,21 +63,39 @@ body{
 }
 .erika_h1{
     font-family: le jour script;
+    font-size: 44.5pt;
+}
+
+.erika-book-title{
+    font-size: 32pt !important;
 }
 .img-blog{
     border-radius: 50%;
     height: 200px;
     width: 200px;
+    transition: .5s;
+}
+.img-blog:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
 }
 .page-link{
-    font-size: 23pt;
+    text-decoration: none;
+    font-size: 32pt;
     color: #000000;
 }
 .blog{
     cursor: pointer;
 }
+.blog-link-title{
+    font-size: 32pt;
+    transition: .5s ease-in-out;
+}
+.blog-link-title:hover{
+    transform: scale(1.1);
+}
 .blog label{
-    font-size: 25px !important;
+    font-size: 32pt !important;
     cursor: pointer;
 }
 
@@ -112,11 +129,12 @@ body{
     color: #000000;
     text-decoration: none;
     font-weight: lighter;
+    font-size: 32pt;
     
 }
 
 .col-form-labels{
-    font-size: 28pt;
+    font-size: 32pt;
 }
 
 .contact-title{
@@ -126,6 +144,7 @@ body{
     background-color: #A6A6Af !important;
     padding:1%;
     overflow: hidden;
+    width:100%;
 }
 h3{
  margin: 50px;
@@ -148,6 +167,7 @@ h3{
 .now-1{
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .book-input{
@@ -159,7 +179,7 @@ h3{
     background: transparent;
     border-bottom: 2px solid #000000;
     padding:0 20px;
-    margin-top: 1%;
+    
     font-size: 28pt !important;
 }
 
@@ -171,13 +191,14 @@ h3{
 
 
 .book-submit{
-    margin-left:10%;
+    margin-left:20%;
     width: 30%;
-    font-size: 28px;
+    font-size: 28pt;
     background-color: transparent;
     transition: 0.7s;
     border-radius:2px ;
     overflow: hidden;
+    border: 1px solid #C5DCDD;
 
 }
 
@@ -185,6 +206,10 @@ h3{
     border: 2px solid #C5DCDD;
     background-color: #C5DCDD;
     
+}
+.book-submit:focus{
+    transform: scale(0.9);
+    transition: 0.2s ease-in-out;
 }
 
 
@@ -494,7 +519,7 @@ h3{
         width:100%;
     }
     .erika-book-title{
-        font-size:28pt ;
+        font-size:28pt !important;
     }
     .book-ttl{
         font-size: 19pt;

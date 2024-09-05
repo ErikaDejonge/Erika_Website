@@ -30,10 +30,10 @@
     background: transparent;
     border-bottom: 2px solid black;
     outline: none;
-    font-size:25pt;
+    font-size:32pt;
 }
 .contact-ttl{
-    font-size: 28pt;
+    font-size: 32pt;
     text-align: right;
 }
 .message{
@@ -59,12 +59,11 @@
     transition: 0.5s;
 }
 .submit-contact:focus{
-    
     transform: scale(0.8);
 }
 
 .message-show{
-    font-size: 28pt;
+    font-size: 32pt;
 }
 
 

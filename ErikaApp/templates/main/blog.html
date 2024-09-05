@@ -13,13 +13,13 @@
   <div class="container-fluid">
     <div class="container">
         <div class="wrapper">
-            <div class='container py-5 ' >
+            <div class='container' >
                {% for i in pg_blogs reversed %}
                 <div class="blog-body py-5">
-                    <h1 class ='blog-tts title-font' > {{i.blog_title | upper }} </h1>
+                    <h6 class ='title-font' > {{i.blog_title | upper }} </h6>
                     <div class="paragraph">
-                       <div class="intro py-5">
-                        <p class="blog-introduction blog-blog py-5 " > {{i.blog_intro}} </p>
+                       <div class="intro">
+                        <p class="blog-introduction blog-blog py-1 " > {{i.blog_intro}} </p>
                        </div>
                         <div class="img-content-blog mb-5">
                             <img class="content-img" src="{{i.image.url}}" alt="">
@@ -78,22 +78,5 @@
 </div>
 </div>
 
-<!-- <nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    {% if pg_blogs.has_previous %}
-    <li class="page-item">
-      <a class="page-link" href="?page={{pg_blogs.previous_page_number}}" >Previous Page &laquo;</a>
-    </li>
-    {% endif %}
-
-
-    {% if pg_blogs.has_next %}
-    <li class="page-item">
-      <a class="page-link" href="?page={{pg_blogs.next_page_number}}" >Read More &raquo;</a>
-
-    </li>
-    {% endif %}
-  </ul>
-</nav> -->
 
 {% endblock content %}

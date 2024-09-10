@@ -9,140 +9,156 @@
 <!-- link section -->
 {% block link %}
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
 {% endblock link %}
 
 
 <!-- Body section -->
 {% block content %}    
 
-<div class="container-fluid main-container py-5 mb-5 myblog">
-    <div class="container-fluid sub-container">
-        <div class="wrapper">
-            <div class="row text-center ">
-                <div class="round col-md-5">
-                    <img class='main-img' src="{% static 'images/author.jpg' %}"  alt="">
-                </div>
-                <div class="col-md-7">
-                    <p class="pag py-5 mb-5 ">ON A MISSION TO MAKE HEARING GOD'S VOICE SIMPLE</p>
-                </div>                    
-            </div>
-        </div>
-    </div>
-</div><br><br>
-
-<div class="container-fluid py-5 mb-2">
-    <div class="row row-cols-12 row-cols-md-12">
-        <div class="col-12">
-            <div class="box py-4 position-relative">
-                <div class="position-relative bottom-0 start-50 translate-middle ">
-                    <div class="container box-sub p-4">
-                        <h1 class="text-center font" style="margin-right: 20%;" >Hi, I'm</h1>
-                        <h1 class="text-center erika_h1 mx-50">Erika</h1>
-                        
-                        <p id='reload' class="main-pag">I believe God wants to speak into every aspect of your life from marriage to work and relationships.
-                            We aren't meant to do this alone, so I am on a mission to create tools and resources to help you begin hearing God's voice today!
-                        </p>
+<div class="hero-page">
+    <div class="container-fluid page-header">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="p-5 col-md-5 img-control">
+                        <img class='main-img' src="{% static 'images/author.jpg' %}"  alt="">
                     </div>
-                </div>        
+                    <div class="col-md-6 main-text" >
+                        <p class="pag">ON A MISSION TO MAKE <br> <b class="bold-text"> HEARING GOD'S VOICE </b><br> FOR EVERYONE! </p>
+                    </div>                    
+                </div>
+            </div>
+    </div><br><br>
+    
+    
+    <div class="container position-box">
+        <div class="wrapper">
+            <div class="container box-sub ">
+                <p class="text-center font">Hi, I'm</p>
+                <h1 class="text-center erika_h1 mx-50">Erika</h1>
+                
+                <p id='reload' class="main-pag">I believe God wants to speak into every aspect of your life from marriage to work and relationships.
+                    We aren't meant to do this alone, so I am on a mission to create tools and resources to help you begin hearing God's voice today!
+                </p>
             </div>
         </div>
-    </div>
-</div >    
-
-
-<div class="container position-relative fixed-top">
-    <div class="wrapper position-relative top-0 start-50 translate-middle">
-        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 blog_show">
-            {% for blog in blog reversed %}
-                <div class="col blog">
-                    <a href="{% url 'showblog' blog.id %}" style="text-decoration: none; color: #000000;" >
-                        <div class="text-center mb-2">
-                            <img class="img-blog" src="{{blog.image.url}}" alt="..">
-                        </div>
-                        <div class="blog-title text-center py-5">
-                            <h5 class="blog-link-title"> {{blog.blog_title | upper }} </h5>
-                        </div>
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-              {% if blog.has_previous %}
-              <li class="page-item">
-                <a class="page-link" style="color: #000;" href="?page={{blog.previous_page_number}} #reload" >Previous Page &laquo;</a>
-              </li>
-              {% endif %}
-          
-          
-              {% if blog.has_next  %}
-              <li class="page-item">
-                <a class="page-link" style="color: #000;" href="?page={{blog.next_page_number}} #reload">More Blog &raquo;</a>          
-              </li>
-              {% endif %}
-            </ul>
-          </nav>
-    </div>
+    </div >    
     
-</div>
-
-<!-- this is the main thumbnail of the website -->
-<div class="container-fluid thumnail-body">
-    <div class="wrapper thum-body">
+    
+    
+    <div class="container py-5">
+        <div class="wrapper">
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 blog_show">
+                {% for blog in blog reversed %}
+                    <div class="col blog">
+                        <a href="{% url 'showblog' blog.id %}" style="text-decoration: none; color: #000000;" >
+                            <div class="text-center mb-2">
+                                <img class="img-blog" src="{{blog.image.url}}" alt="..">
+                            </div>
+                            <div class="blog-title text-center py-5">
+                                <h5 class="blog-link-title"> {{blog.blog_title | upper }} </h5>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  {% if blog.has_previous %}
+                  <li class="page-item">
+                    <a class="page-link" style="color: #000;" href="?page={{blog.previous_page_number}} #reload" >Previous Page &laquo;</a>
+                  </li>
+                  {% endif %}
+              
+              
+                  {% if blog.has_next  %}
+                  <li class="page-item">
+                    <a class="page-link" style="color: #000;" href="?page={{blog.next_page_number}} #reload">More Blog &raquo;</a>          
+                  </li>
+                  {% endif %}
+                </ul>
+            </nav>
+        </div>
         
     </div>
-</div>
-<!-- this thumbnail end here -->
 
-<div class="container-fluid py-3">
-    <div class="container py-5 ">
-        <div class="wrapper justify-content-center position-relative top-50 start-50 translate-middle">
-            <div class="d-grid gap-2 text-center title-read">
-                <a href="https://www.amazon.com/Every-Step-AdventuresErikaDeJonge/dp/B0CPW4157J/ref=sr_1_1?crid=3QQCLTR57H7XT&dib=eyJ2IjoiMSJ9.CL4
-                muj6qIbYHz5pU_GsH5Od47Klx33RSUgcfNkUZeio6W6vW2O1StWxlaAMK1zZc_nfBi9VPO7I
-                9XZbgBKu1cYuKvR-oucSgC1gyoCssJvB4PdNrIBERATFCM6E_ZFZ9iKdEADEruxsWAX6ySm1X-PEtafu6NcJR25SpV-JlLpWGg2b4CyeDT9CMS_Zy1-
-                HEkuXONlHQulxgnO1JDfLeuKgsNKa8ubxvZeJp9Cs.dDFQnYaBpgdQHLetKUzXMs_e8yWk5
-                gOcbRz2BtGtnt4&dib_tag=se&keywords=every+step+adventures+with+jesus&qid=172499
-                4634&sprefix=Every+step+with+jesus%2Caps%2C483&sr=8-1
-                " target="_blank" class="read_link">START READING TODAY!</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="container"  id="book-erika">
-        <div class="wrapper">
-            <div class="form mb-5" >
-                <span>
-                    <h1 class="ft-2 text-center erika-book-title" style="font-size: 32pt !important;" >Book Erika for an event.</h1>
-                </span>
-                <form class="main-form" action="{% url 'event_book' %}" method="POST">
-                    {% csrf_token %}
-
-                    <div class="mb-3 row now-1">
-                        <label  class="col-sm-2 col-form-label font book-ttl">Name:</label>
-                        <div class="col-sm-10">
-                          <input type="text" name="name" class="form-control-plaintext book-input"  placeholder="Full Name" required >
-                        </div>
-                        <label  class="col-sm-2 col-form-label font book-ttl">Event Description:</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control-plaintext book-input" name="event_description"  placeholder="Event Description" required> 
-                        </div>
-                        <label  class="col-sm-2 col-form-label font book-ttl">E-mail:</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control-plaintext book-input" name="email" placeholder="E-mail" required >
-                        </div>
-                        <label  class="col-sm-2 col-form-label font book-ttl">Phone#:</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control-plaintext book-input" name="phone"  placeholder="Phone No." required >
-                        </div>
-                    </div> 
-                  
-                    <input type="submit" class="form-control-plaintext book-submit" value="Book Erika" >         
-                </form>
-            </div>
+    
+    
+    <!-- this is the main thumbnail of the website -->
+    <div class="container-fluid thumnail-body">
+        <div class="wrapper thum-body">
             
         </div>
-
+    </div>
+    <!-- this thumbnail end here -->
+    
+    <div class="container-fluid py-3">
+        <div class="container py-5 ">
+            <div class="wrapper justify-content-center position-relative top-50 start-50 translate-middle">
+                <div class="d-grid gap-2 text-center title-read">
+                    <a href="https://www.amazon.com/Every-Step-AdventuresErikaDeJonge/dp/B0CPW4157J/ref=sr_1_1?crid=3QQCLTR57H7XT&dib=eyJ2IjoiMSJ9.CL4
+                    muj6qIbYHz5pU_GsH5Od47Klx33RSUgcfNkUZeio6W6vW2O1StWxlaAMK1zZc_nfBi9VPO7I
+                    9XZbgBKu1cYuKvR-oucSgC1gyoCssJvB4PdNrIBERATFCM6E_ZFZ9iKdEADEruxsWAX6ySm1X-PEtafu6NcJR25SpV-JlLpWGg2b4CyeDT9CMS_Zy1-
+                    HEkuXONlHQulxgnO1JDfLeuKgsNKa8ubxvZeJp9Cs.dDFQnYaBpgdQHLetKUzXMs_e8yWk5
+                    gOcbRz2BtGtnt4&dib_tag=se&keywords=every+step+adventures+with+jesus&qid=172499
+                    4634&sprefix=Every+step+with+jesus%2Caps%2C483&sr=8-1
+                    " target="_blank" class="read_link">START READING TODAY!</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container"  id="book-erika">
+            <div class="wrapper">
+                <div class="form mb-5" >
+                    <span>
+                        <p class="ft-2 text-center erika-book-title" >Book Erika for an event.</p>
+                    </span>
+                    <form class="main-form" action="{% url 'event_book' %}" method="POST">
+                        {% csrf_token %}
+    
+                        <div class="row g-3 align-items-center main-form-controls ">
+                            <div class="col-auto">
+                              <label class="col-form-label">Name:</label>
+                            </div>
+                            <div class="col-auto">
+                              <input type="text" name="name" class="form-control-input" required="required" >
+                            </div>
+                            
+                        </div>
+                        <div class="row g-3 align-items-center main-form-controls ">
+                            <div class="col-auto">
+                                <label class="col-form-label">Event Description:</label>
+                              </div>
+                              <div class="col-auto">
+                                <input type="text" name="event_description" class="form-control-input" required="required" >
+                              </div>
+                              
+                        </div>
+                        <div class="row g-3 align-items-center main-form-controls ">
+                            <div class="col-auto">
+                                <label class="col-form-label">E-mail:</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" name="email" class="form-control-input" required="required" >
+                            </div>
+                              
+                        </div>
+                        <div class="row g-3 align-items-center main-form-controls ">
+                            <div class="col-auto">
+                                <label class="col-form-label">Phone#:</label>
+                              </div>
+                              <div class="col-auto">
+                                <input type="text" name="phone"  class="form-control-input" required="required" >
+                              </div>
+                        </div>
+                      
+                        <input type="submit" class="form-control-plaintext book-submit" value="Book Erika" >         
+                    </form>
+                </div>
+                
+            </div>
+    
+        </div>
     </div>
 </div>
 

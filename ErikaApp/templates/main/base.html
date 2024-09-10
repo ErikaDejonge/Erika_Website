@@ -29,7 +29,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary nav-bar" >
         <div class="container position-relative py-3 nav-padding">
             <a class="navbar-brand position-absolute top-100 start-50 translate-middle mb-5 " href="{% url 'index' %}">
-               <img class="logo-img mb-4 py-3" src="{% static 'logo/Ed.png' %}" alt="LOGO">
+               <img class="logo-img mb-4 py-3"  src="{% static 'logo/Ed.png' %}" alt="LOGO">
             </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -87,6 +87,9 @@
                         </li>
                         <li>
                             <a href="{% url 'tools' %}">TOOLS</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'about' %}">ABOUT</a>
                         </li>
                         <li>
                             <a href="{% url 'blogpage' %}">BLOG</a>

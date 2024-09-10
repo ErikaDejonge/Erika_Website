@@ -1,7 +1,6 @@
 
 .main-contact-container{
     background-color: #C9DCDD;
-    overflow: hidden;
 }
 
 .contact{
@@ -12,10 +11,16 @@
 .contact-tag h3{
     font-size: 32pt !important;
 }
+
+.main-form{
+    font-size: 32pt;
+}
+
 .input-controle-form{
     position: relative;
     right: 5%;
 }
+
 .form-title  .contact-title{
     text-decoration: underline;
     text-decoration-line: underline;
@@ -31,6 +36,7 @@
     border-bottom: 2px solid black;
     outline: none;
     font-size:32pt;
+    margin-left: 20rem;
 }
 .contact-ttl{
     font-size: 32pt;
@@ -43,6 +49,7 @@
     border: 2px solid #000000;
     font-size: 20pt;
     position: relative;
+    margin-left: 20rem;
 }
 .submit-contact{
     font-size: 32pt;

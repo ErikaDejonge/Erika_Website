@@ -13,4 +13,5 @@ urlpatterns =[
     path('books/',views.ReadBooks.books,name='books'),
     path('contact/',views.Contact.contact, name='contact'),
     path('send/',views.send_email,name='send-email'),
+    path('base/',views.base),
 ]

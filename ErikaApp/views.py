@@ -12,6 +12,9 @@ from django.conf import settings
 def handling_404(request, exception):
     return render(request, '404.html', {})
 
+def base(request):
+    return render(request, 'main/base.html')
+
 # 404 Error ends
 
 def send_email(request):

@@ -1,10 +1,10 @@
 .main-book-container{
     font-size: 32pt;
+    background: #c5dcdd !important;
+    padding-bottom: 10%;
 }
-.fs-32{
-    font-size: 32pt;
-}
-.button .button{
+
+.start-button{
     background: #a6a6a6;
     border: none;
     outline: none;
@@ -15,78 +15,26 @@
     font-size:32pt !important ;
 }
 
-@media screen and (max-width:425px){
-    body .main-book-container{
-        background: #C9DCDD;
-        width: 100%;
-        overflow: hidden;      
-    }
-    
-    .fs-32{
-        font-size: 32pt;
-    }
-    .fs-28{
-        font-size: 28pt;
-    }
-    .button .button{
-        background: #a6a6a6;
-        border: none;
-        outline: none;
-        font-size: 28pt;
-        padding: 0% 5% 0% 5%;
+@media (max-width:500px){
+    .start-button{
+        font-size: 20pt;
     }
     .book-descriptions{
-        width: 480px;
-        position: relative;
-        left: -11%;
-
+        font-size: 20pt;
     }
     .book-des{
-        font-size: 20px !important;
+        font-size: 20pt !important;
     }
-
 }
 
-@media screen and (max-width:375px){
-    .fs-32{
-        font-size: 18pt;
-    }
-    .button .button{
-        background: #a6a6a6;
-        border: none;
-        outline: none;
-        font-size: 28pt;
-        padding: 0% 5% 0% 5%;
+@media (max-width:400px){
+    .start-button{
+        font-size: 17pt;
     }
     .book-descriptions{
-        width: 450px;
-        position: relative;
-        left: -12%;
-
+        font-size: 17pt;
     }
     .book-des{
-        font-size: 18px !important;
+        font-size: 17pt !important;
     }
-}
-@media screen and (max-width:320px){
-    .fs-32{
-        font-size: 18pt;
-    }
-    .button .button{
-        background: #a6a6a6;
-        border: none;
-        outline: none;
-        font-size: 28pt;
-        padding: 0% 5% 0% 5%;
-    }
-    .book-descriptions{
-        width: 405px;
-        position: relative;
-        left: -14%;
-
-    }
-    .book-des{
-        font-size: 18px !important;
-    }
-
 }

@@ -11,9 +11,9 @@
 
 <div class="container-fluid main-contact-container py-5">
   <div class="wrapper py-5">
-      <div class="container contact">
+      <div class="contact">
         <div class="contact-tag p-1">
-          <h3 class="ft-2 text-center form-title-show"  >Get in Touch! </h3>
+          
           <div class="message-show">
             {% if messages %}
             {% for message in messages %}
@@ -27,25 +27,36 @@
         </div>
 
         <form class="main-form" action="{% url 'contact' %}" method="POST">
+          <div class="title-box">
+            <label class="form-title"> Get in Touch! </label>
+          </div>
           {% csrf_token %}  
-          <div class="mb-3 row now-1 input-controle-form">
+          <div class="row controle-form">
+            <div class="i-controle">
               <label  class="col-md-2 col-form-label  contact-ttl">Name:</label>
-              <div class="col-sm-10">
-                <input type="text" name="name" class="form-control contact-input-controle"  placeholder="Full Name" required >
+              <div class="col-md-10">
+                <input type="text" name="name" class=" contact-input-controle"  placeholder="Full Name" required >
               </div>
+            </div>
             
             
+            <div class="i-controle">
               <label  class="col-sm-2 col-form-label  contact-ttl">E-mail:</label>
               <div class="col-md-10">
-                <input type="text" class="form-control contact-input-controle mb-5" name="email" placeholder="E-mail" required >
+                <input type="text" class=" contact-input-controle mb-5" name="email" placeholder="E-mail" required >
               </div>
-  
-              <label  class="col-sm-2 col-form-label  contact-ttl">Message:</label>
+            </div>
+
+            <div class="i-controle">
+              <label  class="col-sm-2 col-form-label  contact-ttl ">Message:</label>
               <div class="col-md-10">
                   <textarea name="message" id="" rows="4" class="message" placeholder="Message" ></textarea>
-              </div>            
+              </div> 
+            </div>           
+            <div class="btn-submit">
+              <input type="submit" class="form-control submit-contact" value="Submit" >  
+            </div>       
           </div>       
-          <input type="submit" class="form-control submit-contact" value="Submit" >         
         </form>
       </div>
     </div>

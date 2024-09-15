@@ -3,7 +3,9 @@
     src: url(../text/LeJourScript-Eaqpg.otf);
     
 }
-
+.title{
+    font-family: Cinzel;
+}
 .title-1{
     font-family: le jour script;
 }
@@ -13,10 +15,7 @@
     padding: 5% 0;
     font-size: 32pt;
 }
-.about-author-body .phg{
-    margin-top: 5%;
-    padding-left: 2%;
-}
+
 .about-author-body{
     display: flex;
     justify-content: space-between;
@@ -41,12 +40,34 @@
     border-width: 10px;
 }
 
+@media(max-width:1000px){
+    .about-author-body{
+       display: grid;
+       grid-template-columns: auto;
+    }
+    
+    .about-title .title{
+        font-size: 46.4pt;
+    }
+    
+    .img{
+        border-radius: 50%;
+        border: 0px solid white;
+        width: 410px;
+        height: 400px;
+        border-width: 10px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+}
 
 @media screen and (max-width:768px) {
     .about-body{
         background: #c9dcdd;
         padding: 5% 0;
-        font-size: 18pt;
+        font-size: 20pt;
         width: 100%;
         overflow: hidden;
     }
@@ -57,27 +78,23 @@
         padding: 10px;
         width: 100%;
     }
-    .phg{
-        padding: 5% 0;
-    }
-    .about-title{
-        padding: 0%;
-        
-    }
+    
+    
     .about-title .title{
         font-size: 28pt;
     }
-    .review-about-author{
-        padding: 5%;
-    }
     
-    .author-img .img{
-        border-radius: 50%;
-        border: 0px solid white;
+    
+    
+    .img{
+        border: 10px solid white;
         width: 250px;
         height: 250px;
-        border-width: 7px;
-        margin-left: 30%;
+        display: grid;
+        position:relative;
+        left: 50%;
+        transform: translate(-50%);
+
     }
     
 }
@@ -98,13 +115,8 @@
         padding: 10px;
         width: 100%;
     }
-    .phg{
-        padding: 5% 0;
-    }
-    .about-title{
-        padding: 0%;
-        
-    }
+    
+    
     .about-title .title{
         font-size: 28pt;
     }
@@ -114,11 +126,11 @@
     
     .author-img .img{
         border-radius: 50%;
-        border: 0px solid white;
-        width: 200px;
-        height: 200px;
-        border-width: 7px;
-        margin-left: 20%;
+        border: 10px solid white;
+        width: 250px;
+        height: 250px;
+        
+        
     }
     
 }
@@ -126,7 +138,7 @@
     .about-body{
         background: #c9dcdd;
         padding: 5% 0;
-        font-size: 18pt;
+        font-size: 20pt;
         width: 100%;
         overflow: hidden;
     }
@@ -137,9 +149,7 @@
         padding: 10px;
         width: 100%;
     }
-    .phg{
-        padding: 5% 0;
-    }
+    
     .about-title{
         padding: 0%;
         
@@ -153,11 +163,10 @@
     
     .author-img .img{
         border-radius: 50%;
-        border: 0px solid white;
+        border: 10px solid white;
         width: 200px;
         height: 200px;
-        border-width: 7px;
-        margin-left: 12%;
+        
     }
     
 }

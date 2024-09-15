@@ -10,13 +10,13 @@
 
 {% block content %}
 <!-- Show all the blog in this page  -->
-<div class="blog-body">
+<div class="main-blog-body">
   <div class="container-fluid">
     <div class="container">
         <div class="wrapper">
-            <div class='container' >
+            <div class='container py-5' >
                {% for i in pg_blogs reversed %}
-                <div class="blog-body py-5">
+                <div class="blog-body py-4">
                     <h6 class ='title-font' > {{i.blog_title | upper }} </h6>
                     <div class="paragraph">
                        <div class="intro">

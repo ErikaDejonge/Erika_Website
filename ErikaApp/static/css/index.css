@@ -363,13 +363,48 @@
         margin-top: 2%;
     }
     .img-blog{
-        width: 10rem;
-        height: 10rem !important;
+        width: 9rem;
+        height: 9rem !important;
     }
     .blog-link-title{
-        font-size: 20pt;
+        font-size: 17pt;
 
     }
 }
+@media (max-width:400px){
+    .hero-page{
+        font-size: 17pt;
+    }
+    .img-control{
+        width: 100rem !important;
+    }
+    .main-img{
+        height: 200px !important;
+        width: 200px !important;
+    }
+    .erika_h1
+    {
+        font-size: 19pt;
+    }
+    .pag{
+        font-size: 17pt;
+    }
+    .bold-text{
+        font-size: 30pt;
+    }
+    
+    .page-link{
+        font-size: 17pt;
+    }
+    
 
+    .form-control-input{
+        font-size: 17pt;
+    }
+
+    .blog-link-title{
+        font-size: 17pt;
+
+    }
+}
 

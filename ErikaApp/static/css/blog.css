@@ -3,13 +3,20 @@
 }
 .img-blog{
     border-radius: 50%;
-    height: 150px;
-    width: 150px;
+    height: 15rem;
+    width: 15rem;
+}
+.blog-link-title{
+    font-size: 32pt !important;
+    color: #000000;
+    text-decoration: none;
+
 }
 .title-font{
     font-family: "Cinzel";
     text-align: center;
     font-size: 46.4pt;
+    font-weight: lighter;
 
 }
 
@@ -17,13 +24,6 @@
     cursor: pointer;
 }
 
-.blog label{
-    font-size: 28pt !important;
-    cursor: pointer;
-    color: #000000;
-    font-weight: lighter;
-}
-  
 .blog-body{
     font-size: 32pt;
     font-family: Open Sans Condensed;
@@ -37,13 +37,19 @@
     width: 100% !important;
     height: 550px !important;
 }
-.divider{
-    border: 3px solid #ddd;
-}
 
 
-@media screen and (max-width:500px){
-    .blog-body{
+@media (max-width:500px){
+    .title-font{
+        font-size: 32pt;
+    }
+    .blog-introduction {
+        font-size: 20pt !important;
+    }
+    .blog-body-text{
+        font-size: 20pt !important;
+    }
+    .blog-link-title{
         font-size: 20pt !important;
     }
 }

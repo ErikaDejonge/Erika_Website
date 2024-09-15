@@ -8,12 +8,14 @@
 }
 .title-1{
     font-family: le jour script;
+    margin-top: -1.2%;
 }
 
 .about-body{
     background: #c9dcdd;
     padding: 5% 0;
     font-size: 32pt;
+    
 }
 
 .about-author-body{
@@ -21,10 +23,6 @@
     justify-content: space-between;
 }
 
-.about-title{
-    padding: 0%;
-    
-}
 .about-title .title{
     font-size: 46.4pt;
 }
@@ -36,7 +34,7 @@
     border-radius: 50%;
     border: 0px solid white;
     width: 410px;
-    height: 400px;
+    height: 410px;
     border-width: 10px;
 }
 

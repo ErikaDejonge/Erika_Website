@@ -29,8 +29,8 @@
 .main-img{
     border-radius: 50%;
     border-radius: 50%;
-    width: 450px !important;
-    height: 450px !important;
+    width: 410px !important;
+    height: 410px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,6 +106,11 @@
 }
 .read_link:hover{
     background: #779697;
+}
+
+.erika-book-title{
+    text-decoration: underline;
+    text-underline-offset: 10px;
 }
 
 .form{
@@ -305,8 +310,8 @@
         margin-top: 2%;
     }
     .img-blog{
-        width: 10rem;
-        height: 10rem !important;
+        width: 14rem;
+        height: 14rem !important;
     }
 }
 @media (max-width:500px) {

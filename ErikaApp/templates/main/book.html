@@ -20,13 +20,13 @@
         </div>
 
         <div class="container text-area">
-            <div class="button text-center py-2">
+            <div class="button text-center py-5">
                 <a href="{{show_book.Book_Link}}" target="_blank" >
                     <button class="start-button" >START READING TODAY!</button>
                 </a>
             </div>
             <div class="book-descriptions">
-                <div class="ttl  py-5">
+                <div class="ttl  py-3">
                     <p class="text-center" >Book Description</p>
                     <p class="book-des" >
                         {{show_book.Descriptions}}
@@ -34,10 +34,10 @@
                 </div>
             </div>
             {% endfor %}
-            <div class="book-descriptions Rw">                
+            <div class="book-descriptions Rw py-5">                
                 <p class="text-center" > Reviews</p>
                 {% for RW in show_reviews %}
-                <p class="book-des">
+                <p class="book-des py-2">
                     {{RW.Reviews}}
                 </p>
                 {% endfor %}                

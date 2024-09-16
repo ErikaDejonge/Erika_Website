@@ -66,14 +66,14 @@
                 <ul class="pagination justify-content-center">
                   {% if blog.has_previous %}
                   <li class="page-item">
-                    <a class="page-link" style="color: #000;" href="?page={{blog.previous_page_number}} #reload" >Previous Page &laquo;</a>
+                    <a class="page-link" style=" color: #000000; text-decoration: none;" href="?page={{blog.previous_page_number}} #reload" >Previous Page &laquo;</a>
                   </li>
                   {% endif %}
               
               
                   {% if blog.has_next  %}
                   <li class="page-item">
-                    <a class="page-link" style="color: #000;" href="?page={{blog.next_page_number}} #reload">More Blog &raquo;</a>          
+                    <a class="page-link" style="color: #000000; text-decoration: none;" href="?page={{blog.next_page_number}} #reload">More Blog &raquo;</a>          
                   </li>
                   {% endif %}
                 </ul>

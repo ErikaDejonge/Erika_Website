@@ -68,10 +68,11 @@ body{
     width: 100%;
     background-color: transparent;
     border: none;
-    border-bottom:2px solid ;
+    border-bottom:2px solid #000000;
     padding: 1px 10px;
     margin: 0px 10%;
     font-size: 32pt;
+    border-radius: 0%;
 }
 .body-font{
     font-family: Sans SemiCondensed;
@@ -221,12 +222,13 @@ body{
     .footer-ul{
         display: grid;
         grid-template-columns: 1fr 1fr ;
+        justify-content: center;
     }
     .footer-ul ul{
         display: flex;
         position: relative;
-        right: 50%;
-        transform: translate(12%);
+        left: -60%;
+        transform: translate(50%);
     }
     .footer-ul ul li{
         padding: 2%;
@@ -241,10 +243,7 @@ body{
     .footer-forms{
         margin-left: -20% ;
     }
-    .footer-ul ul{
-        position: relative;
-        right: 60%;
-    }
+    
 }
 @media (max-width:500px) {
     body{

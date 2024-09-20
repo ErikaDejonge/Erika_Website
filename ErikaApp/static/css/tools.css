@@ -19,18 +19,23 @@
     border-radius: 50%;
     padding: 5%;
 }
+.books-book-link{
+    text-decoration: none !important;
+    color: #000000 !important;
+}
 .button{
     background: #a6a6a6;
     border: none;
     padding: 2% 20%;
+    color: #000000 !important;
 }
 .download{
     display: grid;
     grid-template-columns: auto auto;
 }
 .img .img2{
-    width: 400px;
-    height: 400px;
+    width: 400px !important;
+    height: 400px !important;
     padding: 2%;
     border: none;
     border-radius: 50%;

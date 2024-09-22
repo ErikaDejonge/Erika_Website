@@ -58,13 +58,14 @@
     padding: 5%;
     display: flex;
     justify-content: center;
+
 }
 .submit-contact{
-
     background: #c5dcdd;
     width: 30rem;
     font-size: 32pt;
     outline: none;
+    border: none !important;
 }
 
 @media (max-width:1000px){

@@ -34,7 +34,7 @@
     display: grid;
     grid-template-columns: auto auto;
 }
-.img .img2{
+.d-img .img2{
     width: 400px !important;
     height: 400px !important;
     padding: 2%;
@@ -42,7 +42,6 @@
     object-fit: cover;
     object-position: 0px 0%;
     border-radius: 50%;
-    transform: translate(10px 20px);
 }
 .des{
     padding: 3%;
@@ -63,6 +62,10 @@
         display: grid;
         justify-content: center;
     }
+    .d-img{
+        display: grid;
+        justify-content: center;
+    }
     .button{
         position: relative;
         left: 50%;
@@ -77,29 +80,22 @@
 }
 
 @media (max-width:425px){
-    .container-tools-body{
-        font-size: 20pt;
-    }
-    
     .books-book .img1{
         width: 350px;
         height: 350px;
         border: none;
         border-radius: 50%;
-        padding: 5%;
+        object-fit: cover;
+        object-position: center;
     }
-    .button{
-        background: #a6a6a6;
-        border: none;
-        padding: 0% 10%;
-    }
-    .img .img2{
-        width: 350px;
-        height: 350px;
+    .d-img .img2{
+        width: 350px !important;
+        height: 350px !important;
         padding: 2%;
         border: none;
+        object-fit: cover;
+        object-position: 0px 0%;
         border-radius: 50%;
-        transform: translate(10px 20px);
     }
     .des{
         padding: 3%;
@@ -115,30 +111,52 @@
         font-size: 17pt;
     }
     .books-book .img1{
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
         border: none;
         border-radius: 50%;
-        padding: 5%;
+        object-fit: cover;
+        object-position: center;
     }
+    .d-img .img2{
+        width: 300px !important;
+        height: 300px !important;
+        padding: 2%;
+        border: none;
+        object-fit: cover;
+        object-position: 0px 0%;
+        border-radius: 50%;
+    }
+    
     .button{
         background: #a6a6a6;
         border: none;
         padding: 0% 10%;
-    }
-    .img .img2{
-        width: 300px;
-        height: 300px;
-        padding: 2%;
-        border: none;
-        border-radius: 50%;
-        transform: translate(10px 20px);
     }
     .des{
         padding: 3%;
     }
     .des1{
         padding: 3%;
+    }
+}
+@media (max-width:374px){
+    .books-book .img1{
+        width: 250px;
+        height: 250px;
+        border: none;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .d-img .img2{
+        width: 250px !important;
+        height: 250px !important;
+        padding: 2%;
+        border: none;
+        object-fit: cover;
+        object-position: 0px 0%;
+        border-radius: 50%;
     }
 }
 

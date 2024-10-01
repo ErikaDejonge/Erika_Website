@@ -15,7 +15,7 @@
 
 .page-header{
     background: #c5dcdd;
-    height: 90vh;
+    height: 80vh;
     
 }
 
@@ -379,13 +379,13 @@
         height: 9rem !important;
     }
     .blog-link-title{
-        font-size: 17px;
+        font-size: 20px;
 
     }
 }
 @media (max-width:400px){
     .hero-page{
-        font-size: 17px;
+        font-size: 20px;
     }
     .img-control{
         width: 100rem !important;
@@ -399,19 +399,19 @@
         font-size: 19px;
     }
     .pag{
-        font-size: 17px;
+        font-size: 20px;
     }
     .bold-text{
         font-size: 30px;
     }
     
     .page-link{
-        font-size: 17px;
+        font-size: 20px;
     }
     
 
     .form-control-input{
-        font-size: 17px;
+        font-size: 20px;
     }
     .main-text{
         display: flex;
@@ -419,7 +419,7 @@
     }
 
     .blog-link-title{
-        font-size: 17px;
+        font-size: 20px;
 
     }
 }

@@ -104,7 +104,7 @@
 
 @media (max-width:768px) {
     .container-tools-body{
-        font-size: 20pt;
+        font-size: 20px;
     }
 }
 
@@ -137,7 +137,7 @@
 @media (max-width:400px){
     .container-tools-body {
         background-color: #C9DCDD;
-        font-size: 17pt;
+        font-size: 20px;
     }
     .books-book .img1{
         width: 300px;

@@ -411,7 +411,7 @@ body{
         left: -65%;
     }
     .btn-book{
-        font-size: 17px !important;
+        font-size: 20px !important;
         width:8rem;
         margin-left: -20%;
     }
@@ -435,13 +435,13 @@ body{
         transform: translate(-27%);
     }
     .input-group .input{
-        font-size: 17px;
+        font-size: 20px;
     }
     .input-group .input::placeholder{
-        font-size: 17px;
+        font-size: 20px;
     }
     .footer-info-text{
-        font-size: 17px !important;
+        font-size: 20px !important;
     }
     .footer-ul{
         display: grid;
@@ -456,7 +456,7 @@ body{
 
     }
     .footer-ul ul li a{
-        font-size: 17px;
+        font-size: 20px;
     }
     
 }
@@ -471,7 +471,7 @@ body{
 
     }
     .footer-ul ul li a{
-        font-size: 17px;
+        font-size: 20px;
     }
 }
 
@@ -487,7 +487,7 @@ body{
 
     }
     .footer-ul ul li a{
-        font-size: 17px;
+        font-size: 20px;
     }
     
 }

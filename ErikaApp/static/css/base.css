@@ -22,9 +22,9 @@ body{
     margin-top: -60%;
     margin-left: 10%;
 }
-.btn-book{
-    font-size: 32px;
-    background: #c5dcdd;
+.btn-books{
+    font-size: 32px !important;
+    background: #C5DCDD;
     border: none;
     color: #000000 !important;
     transition: 0.6s;
@@ -32,7 +32,7 @@ body{
 }
 
 
-.btn-book:hover{
+.btn-books:hover{
     background: #89b2b4;
 }
 
@@ -61,11 +61,6 @@ body{
 .nav-link{
     font-size: 32px;
 }
-.nav-link-book{
-    width: 50vh;
-    font-size: 32px;
-}
-
 .input{
     width: 100%;
     background-color: transparent;
@@ -92,6 +87,7 @@ body{
     border-bottom:2px solid ;
 }
 
+
 /* up 1204 */
 @media (min-width:1204px){
     .navbar{
@@ -106,7 +102,7 @@ body{
         display: grid;
         place-content: center;
     }
-    .btn-book{
+    .btn-books{
         font-size: 32px;
         background: #c5dcdd;
         border: none;
@@ -115,7 +111,7 @@ body{
         
     }
     
-    .btn-book:hover{
+    .btn-books:hover{
         background: #89b2b4;
     }
     
@@ -143,7 +139,7 @@ body{
         font-size: 32px;
     }
     .nav-link-book{
-        width: 50vh;
+        width: 40vh;
         font-size: 32px;
     }
     
@@ -172,6 +168,37 @@ body{
         border-bottom:2px solid ;
     }
 
+}
+
+@media(max-width:1104px){
+    
+    .logo-img{
+        width:200px ;
+        height: 200px;
+        padding: 1%;
+        margin-top: -50%;
+        margin-left: -6%;
+    }
+    .nav-link-book{
+        width: 10vh;
+        font-size: 32px;
+    }
+    
+}
+@media(max-width:1180px){
+    .nav-link-book{
+        width: 50vh;
+        font-size: 32px;
+    }
+    
+}
+
+@media(max-width:1194px){
+    .nav-link-book{
+        width: 50vh;
+        font-size: 32px;
+    }
+    
 }
 
 @media (max-width:1000px){
@@ -223,7 +250,7 @@ body{
         display: grid;
     }
     .nav-link-book{
-        width: 45vh;
+        width: 40vh;
         left: -10%;
     }
     .link-book-position {
@@ -327,7 +354,7 @@ body{
     .navbar-collapse ul li a{
         font-size: 20px !important;
     }
-    .btn-book{
+    .btn-books{
         font-size: 20px !important;
         width:10rem;
         margin-left: -25%;
@@ -339,16 +366,16 @@ body{
 
     .logo-img{
         position: relative;
-        width:150px;
-        height: 150px;
+        width:100px;
+        height: 100px;
         padding: 1%;
         margin-top: -25%;
         left:-50%;
     }
     .navbar-toggler{
-        left: 80%;
+        left: 70%;
     }
-    .btn-book{
+    .btn-books{
         font-size: 20px !important;
     }
     
@@ -410,7 +437,7 @@ body{
         margin-top: -25%;
         left: -65%;
     }
-    .btn-book{
+    .btn-books{
         font-size: 20px !important;
         width:8rem;
         margin-left: -20%;

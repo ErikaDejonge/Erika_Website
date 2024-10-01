@@ -6,6 +6,7 @@ from Erika_Admin.models import Receive_Contact,AboutMe,Books,Reviews
 from .utlis import send_email_with_attachment
 from django.conf import settings
 from django.http import HttpResponse
+import datetime
 
 # Create your views here.
 
@@ -13,8 +14,6 @@ from django.http import HttpResponse
 def handling_404(request, exception):
     return render(request, '404.html', {})
 
-def base(request):
-    return render(request, 'main/base.html')
 
 # 404 Error ends
 
@@ -25,7 +24,8 @@ def index(request):
     blog = paginator.get_page(page_number)
 
     context = {
-        'blog': blog
+        'blog': blog,
+        'date':datetime.datetime.now()
     }
     return render(request,  'main/index.html',context)
 
@@ -44,7 +44,8 @@ def blog(request):
     context = {
         'blogs': blogs,
         'pg_blogs': pg_blogs,
-        'blog_content':obj_blog
+        'blog_content':obj_blog,
+        'date':datetime.datetime.now()
 
     }
     return render(request, 'main/blog.html',context)
@@ -61,7 +62,8 @@ def showBlog(request,id):
 
     context ={
         'show_blog': blog,
-        'blog_content':obj_blog
+        'blog_content':obj_blog,
+        'date':datetime.datetime.now()
     }
 
     return render(request, 'main/showblog.html',context)
@@ -107,12 +109,12 @@ class Tools():
             return redirect('tools')
 
 
-        return render(request, "main/tools.html")
+        return render(request, "main/tools.html",{'date':datetime.datetime.now()})
     
 class About():
     def about(request):
         about_show = AboutMe.objects.all()
-        return render(request, "main/about.html",{'about_show':about_show})
+        return render(request, "main/about.html",{'about_show':about_show,'date':datetime.datetime.now()})
     
 class ReadBooks():
     def books(request):
@@ -120,7 +122,8 @@ class ReadBooks():
         show_reviews = Reviews.objects.all()
         context={
             'show_books':show_books,
-            'show_reviews':show_reviews
+            'show_reviews':show_reviews,
+            'date':datetime.datetime.now()
         }
         return render(request, "main/book.html",context)
     
@@ -134,5 +137,5 @@ class Contact():
             RegisterContact.save()
             messages.success(request, "We've received your message and will follow up shortly.")
             return redirect('contact')
-        return render(request,  'main/contact.html')
+        return render(request,  'main/contact.html',{'date':datetime.datetime.now()})
     

@@ -10,7 +10,6 @@
 
 <div class="main-book-container">   
     <div class="wrapper book-info">
-
         {% for show_book in show_books %}
 
         <div class="">
@@ -20,9 +19,9 @@
         </div>
 
         <div class="container text-area">
-            <div class="button text-center py-5">
+            <div class="button text-center py-2">
                 <a href="{{show_book.Book_Link}}" target="_blank" style="color: #000000; text-decoration: none;" >
-                    <button class="start-button" >START READING TODAY!</button>
+                    <button class="start-button"  style="color: #000000;" >START READING TODAY!</button>
                 </a>
             </div>
             <div class="book-descriptions">
@@ -34,10 +33,10 @@
                 </div>
             </div>
             {% endfor %}
-            <div class="book-descriptions Rw py-5">                
+            <div class="book-descriptions Rw py-1">                
                 <p class="text-center" > Reviews</p>
                 {% for RW in show_reviews %}
-                <p class="book-des py-2">
+                <p class="book-des py-1">
                     {{RW.Reviews}}
                 </p>
                 {% endfor %}                

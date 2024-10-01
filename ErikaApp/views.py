@@ -5,6 +5,7 @@ from django.contrib import messages
 from Erika_Admin.models import Receive_Contact,AboutMe,Books,Reviews
 from .utlis import send_email_with_attachment
 from django.conf import settings
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -16,14 +17,6 @@ def base(request):
     return render(request, 'main/base.html')
 
 # 404 Error ends
-
-def send_email(request):
-    subject= 'With file attachment: from the Erika Books'
-    message= 'Download the Files'
-    recipient_list = ['kungrocky22@gmail.com']
-    file_path = f'{settings.BASE_DIR}/main.xlsx'
-    send_email_with_attachment(subject, message, recipient_list, file_path)
-    return redirect('tools')
 
 def index(request):
     blogs = Blog.objects.all()
@@ -109,7 +102,7 @@ class Tools():
             subject= 'With file attachment: from the Erika Books'
             message= 'Download the Files'
             recipient_list = [email_send]
-            file_path = f'{settings.BASE_DIR}/main.xlsx'
+            file_path = f'{settings.BASE_DIR}/planner.pdf'
             send_email_with_attachment(subject, message, recipient_list, file_path)
             return redirect('tools')
 

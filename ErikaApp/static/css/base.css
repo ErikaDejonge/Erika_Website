@@ -23,7 +23,7 @@ body{
     margin-left: 10%;
 }
 .btn-book{
-    font-size: 32pt;
+    font-size: 32px;
     background: #c5dcdd;
     border: none;
     color: #000000 !important;
@@ -40,7 +40,7 @@ body{
     background:#C5DCDD ;
 }
 .footer-info-text{
-    font-size: 32pt;
+    font-size: 32px;
     font-weight: lighter;
 }
 .footer-ul{
@@ -56,14 +56,14 @@ body{
 .footer-ul ul li a{
     text-decoration: none;
     color: #000000;
-    font-size: 32pt;
+    font-size: 32px;
 }
 .nav-link{
-    font-size: 32pt;
+    font-size: 32px;
 }
 .nav-link-book{
     width: 50vh;
-    font-size: 32pt;
+    font-size: 32px;
 }
 
 .input{
@@ -73,7 +73,7 @@ body{
     border-bottom:2px solid #000000;
     padding: 1px 10px;
     margin: 0px 10%;
-    font-size: 32pt;
+    font-size: 32px;
     border-radius: 0%;
 }
 .body-font{
@@ -101,11 +101,13 @@ body{
         width:200px ;
         height: 200px;
         padding: 1%;
-        margin-top: -60%;
+        margin-top: -50%;
         margin-left: 10%;
+        display: grid;
+        place-content: center;
     }
     .btn-book{
-        font-size: 32pt;
+        font-size: 32px;
         background: #c5dcdd;
         border: none;
         color: #000000 !important;
@@ -121,7 +123,7 @@ body{
         background:#C5DCDD ;
     }
     .footer-info-text{
-        font-size: 32pt;
+        font-size: 32px;
         font-weight: lighter;
     }
     .footer-ul{
@@ -135,14 +137,14 @@ body{
     .footer-ul ul li a{
         text-decoration: none;
         color: #000000;
-        font-size: 32pt;
+        font-size: 32px;
     }
     .nav-link{
-        font-size: 32pt;
+        font-size: 32px;
     }
     .nav-link-book{
         width: 50vh;
-        font-size: 32pt;
+        font-size: 32px;
     }
     
     .input{
@@ -152,7 +154,7 @@ body{
         border-bottom:2px solid ;
         padding: 1px 10px;
         margin: 0px 10%;
-        font-size: 32pt;
+        font-size: 32px;
     }
     .body-font{
         font-family: Sans SemiCondensed;
@@ -176,24 +178,32 @@ body{
     .navbar{
         padding: 4%;
     }
-    .logo-img{
-        position: relative;
-        margin-top:-22%;
-        left: -90%;
-        transform: translateX(-60%);
-    }
-    .navbar-toggler{
-        position: relative;
-        left: 90%;
-    }
+    
     .navbar-collapse ul .nav-item{
         text-align: right;
     }
     .link-book-position {
-        margin:auto 70%;
+        margin-left: 15%;
     }
-    
-    
+}
+@media (max-width:991px){
+    .logo-img{
+        position: relative;
+        margin-top:-22%;
+        left: -100%;
+        transform: translateX(-60%);
+    } 
+    .navbar-toggler{
+        position: relative;
+        left: 100%;
+    }
+    .nav-link-book{
+        position: relative;
+        left:90%;
+    } 
+    .navbar-collapse{
+        transition: .6s;
+    }
 }
 @media (max-width:900px){
     .navbar{
@@ -210,10 +220,11 @@ body{
         left: 90%;
     }
     .navbar-collapse ul .nav-item{
-        text-align: right;
+        display: grid;
     }
     .nav-link-book{
         width: 45vh;
+        left: -10%;
     }
     .link-book-position {
         margin:auto 70%;
@@ -250,7 +261,9 @@ body{
     .logo-img{
         position: relative;
         margin-top:-22%;
-        left: -70%;
+        width:150px;
+        height: 150px;
+        left: -90%;
         transform: translateX(-60%);
     }
     .navbar-toggler{
@@ -260,8 +273,11 @@ body{
     .navbar-collapse ul .nav-item{
         text-align: right;
     }
+    
     .nav-link-book{
-        width: 45vh;
+        position:relative;
+        left: -30%;
+        width: 40vh;
     }
     .link-book-position {
         margin:auto 70%;
@@ -301,28 +317,39 @@ body{
 @media (max-width:500px) {
     body{
         font-family:'Open Sans Condensed';
-        font-size: 20pt !important;
+        font-size: 20px !important;
         width: 100%;
 
     }
+    .navbar-collapse ul .nav-item{
+        display: grid;
+    }
     .navbar-collapse ul li a{
-        font-size: 20pt !important;
+        font-size: 20px !important;
     }
     .btn-book{
-        font-size: 18pt !important;
+        font-size: 20px !important;
         width:10rem;
-        margin-left: -20%;
+        margin-left: -25%;
+    }
+    .nav-link-book{
+        position: relative;
+        left: -10%;
     }
 
     .logo-img{
+        position: relative;
         width:150px;
         height: 150px;
         padding: 1%;
         margin-top: -25%;
-        margin-left: 45%;
+        left:-50%;
+    }
+    .navbar-toggler{
+        left: 80%;
     }
     .btn-book{
-        font-size: 20pt !important;
+        font-size: 20px !important;
     }
     
     .main-footer{
@@ -340,11 +367,14 @@ body{
         transform: translate(-27%);
     }
     .footer-info-text{
-        font-size: 20pt !important;
+        font-size: 20px !important;
     }
     .input-group .input{
-        font-size: 20pt;
+        font-size: 20px;
         width: 100%;
+    }
+    .input-group .input::placeholder{
+        font-size: 20px;
     }
     .footer-ul ul{
         position: relative;
@@ -353,19 +383,24 @@ body{
         transform: translateX(8%);
     }
     .footer-ul ul li a{
-        font-size: 20pt;
+        font-size: 20px;
     }
     
+}
+@media (max-width:425px){
+    .logo-img{
+        left: -30%;
+    }
 }
 @media (max-width:400px){
     body{
         font-family:'Open Sans Condensed';
-        font-size: 20pt !important;
+        font-size: 17fddfdpx !important;
         width: 100%;
 
     }
     .navbar-collapse ul li a{
-        font-size: 20pt !important;
+        font-size: 20px !important;
     }
 
     .logo-img{
@@ -373,10 +408,10 @@ body{
         height: 100px;
         padding: 1%;
         margin-top: -25%;
-        margin-left: 55%;
+        left: -65%;
     }
     .btn-book{
-        font-size: 18pt !important;
+        font-size: 17px !important;
         width:8rem;
         margin-left: -20%;
     }
@@ -400,10 +435,13 @@ body{
         transform: translate(-27%);
     }
     .input-group .input{
-        font-size: 17pt;
+        font-size: 17px;
+    }
+    .input-group .input::placeholder{
+        font-size: 17px;
     }
     .footer-info-text{
-        font-size: 17pt !important;
+        font-size: 17px !important;
     }
     .footer-ul{
         display: grid;
@@ -418,12 +456,13 @@ body{
 
     }
     .footer-ul ul li a{
-        font-size: 17pt;
+        font-size: 17px;
     }
     
 }
 
 @media (max-width:374px){
+    
     .footer-ul ul{
         position: relative;
         width: 100%;
@@ -431,9 +470,15 @@ body{
         transform: translateX(5%);
 
     }
+    .footer-ul ul li a{
+        font-size: 17px;
+    }
 }
 
 @media (max-width:334px){
+    .logo-img{
+        left: -50%;
+    }
     .footer-ul ul{
         position: relative;
         width: 100%;
@@ -441,6 +486,10 @@ body{
         transform: translateX(5%);
 
     }
+    .footer-ul ul li a{
+        font-size: 17px;
+    }
+    
 }
 
 

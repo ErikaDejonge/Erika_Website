@@ -8,14 +8,17 @@
     src: url(../text/OpenSans-CondLight.ttf);
 }
 .hero-page{
-    font-size: 32pt;
+    font-size: 32px;
     font-family: open sans condensed;
+    width: 100%;
 }
 
 .page-header{
     background: #c5dcdd;
-    padding: 5%;
+    height: 90vh;
+    
 }
+
 .main-text{
     display: flex;
     justify-content: center;
@@ -27,12 +30,14 @@
     align-items: center;
 }
 .main-img{
+    
     border-radius: 50%;
     width: 410px !important;
     height: 410px !important;
     display: flex;
     justify-content: center;
     align-items: center;
+    
     border: 10px solid #ffffff;
 }
 
@@ -52,14 +57,14 @@
     font-size: 54.4px;
 }
 .position-box{
-    margin-top: -14%;
+    margin-top: -10%;
 }
 
 .box-sub{
     background: #a6a6a6;
     border: 10px solid #ffffff;
-    
     padding: 2%;
+    box-shadow: 2px 5px 20px rgb(235, 232, 232);
 }
 .font{
     margin-right: 20%;
@@ -79,16 +84,18 @@
     border-radius: 50%;
 }
 .blog-link-title{
-    font-size: 32pt;
+    font-size: 32px;
 }
 .page-link{
-    font-size: 32pt;
+    font-size: 32px;
 }
 .thumnail-body{
     background-image: url(../../static/images/thumnail_image.jpg);
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: center;
     background-position: center;
     background-size: cover;
 }
@@ -128,7 +135,7 @@
     background: transparent !important;
     width: 37rem;
     outline: none !important;
-    font-size: 28pt;
+    font-size: 28px;
 }
 .form-control:focus{
     outline-width: 0%;
@@ -144,82 +151,55 @@
     margin-left: 35%;
     margin-top: 2%;
     border-radius: 0%;
+    transition: .4s ease-in-out;
+}
+.book-submit:hover{
+    background:#779697 ;
 }
 
-@media (max-width:1344px){
-    
-    .page-header{
-        background: #c5dcdd;
-        padding: 2%;
-    }
-    .main-text{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .img-control{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .main-img{
-        border-radius: 50%;
-        width: 450px !important;
-        height: 450px !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 10px solid #ffffff;
-    }
-    
-    .main-text{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 39rem ;
-    }
-    .pag{
-        font-family: Cinzel;
-        font-size: 50.4px;
-    }
-    .position-box{
-        margin-top: -14%;
-    }
-    
-    .img-blog{
-        width: 14rem;
-        height: 14rem !important;
+
+@media (max-width:1199px){
+    .form{
+        background: #a6a6a6;
+        padding: 4%;
     }
     
     .col-form-label{
-        display: flex;
-        justify-content: right;
-        width: 20rem;
+        text-align: right !important;
+        width: 40dvh;
+        overflow: hidden;
     }
     .form-control-input{
         border: none;
         border-bottom: 2px solid #000000;
         border-radius: 0%;
         background: transparent !important;
-        width: 35rem;
+        width: 37rem;
         outline: none !important;
-        font-size: 28pt;
+        font-size: 28px;
     }
-    
+    .form-control:focus{
+        outline-width: 0%;
+    }
+    .form-control::placeholder{
+        background: transparent !important;
+        outline: none !important;
+    }
     .book-submit{
         background: #c5dcdd;
         width: 20rem;
         justify-content: center;
         margin-left: 35%;
         margin-top: 2%;
+        border-radius: 0%;
+        transition: .4s ease-in-out;
     }
-    
+    .book-submit:hover{
+        background:#779697 ;
+    }
 }
- /* @media (min-width:1280px){
 
- } */
-
-@media (max-width:1000px) and (max-width:1089px){
+@media (max-width:1000px){
     .page-header{
         height: 100%;
     }
@@ -256,29 +236,40 @@
     .col-form-label{
         display: flex;
         justify-content: right;
-        width: 20rem;
+        width: 40dvh;
     }
     .form-control-input{
         border: none;
         border-bottom: 2px solid #000000;
         border-radius: 0%;
         background: transparent !important;
-        width: 25rem;
+        width: max(35rem);
         outline: none !important;
-        font-size: 28pt;
+        font-size: 28px;
     }
     
     .book-submit{
         background: #c5dcdd;
         width: 20rem;
-        justify-content: center;
-        margin-left: 35%;
+        margin-left:25%;
         margin-top: 2%;
     }
 }
+@media (max-width:991px){
+
+    .col-form-label{
+        display: flex;
+        justify-content: left;
+        width: 20rem;
+    }
+    .img-blog{
+        width: 200px;
+        height: 200px;
+    }
+
+}
 
 @media (max-width:900px) {
-
     
     .position-box{
         position: relative;
@@ -292,30 +283,48 @@
     }
     .col-form-label{
         display: flex;
-        justify-content: right;
-        width: 20rem;
+        justify-content: left;
+        width: 40rem;
     }
     .form-control-input{
         border-radius: 0%;
-        width: 100%;
-        font-size: 28pt;
+        width: 37rem;
+        font-size: 28px;
+        padding-top: -10px;
     }
 
     .book-submit{
         background: #c5dcdd;
         width: 20rem;
         justify-content: center;
-        margin-left: 35%;
+        margin-left: 25%;
         margin-top: 2%;
     }
     .img-blog{
-        width: 14rem;
-        height: 14rem !important;
+        width: 180px;
+        height: 180px !important;
     }
 }
+
+@media (max-width:767px){
+    .hero-page{
+        font-size: 25px;
+    }
+    .form-control-input{
+        width: 30rem;
+    }
+    .main-text{
+        display: grid;
+        place-items: center;
+    }
+    .book-submit{
+        margin-left: 15%;
+    }
+}
+
 @media (max-width:500px) {
     .hero-page{
-        font-size: 20pt;
+        font-size: 20px;
     }
     .img-control{
         width: 100rem !important;
@@ -326,20 +335,20 @@
     }
     .erika_h1
     {
-        font-size: 20pt;
+        font-size: 20px;
     }
     .pag{
-        font-size: 28pt;
+        font-size: 28px;
     }
     .bold-text{
-        font-size: 33pt;
+        font-size: 33px;
     }
     .position-box{
         position: relative;
         bottom: 2rem;
     }
     .page-link{
-        font-size: 20pt;
+        font-size: 20px;
     }
     .main-form-controls{
         position: relative;
@@ -354,9 +363,8 @@
         width: 100%;
     }
     .form-control-input{
-        
         width: 100%;
-        font-size: 20pt;
+        font-size: 20px;
     }
 
     .book-submit{
@@ -371,13 +379,13 @@
         height: 9rem !important;
     }
     .blog-link-title{
-        font-size: 17pt;
+        font-size: 17px;
 
     }
 }
 @media (max-width:400px){
     .hero-page{
-        font-size: 17pt;
+        font-size: 17px;
     }
     .img-control{
         width: 100rem !important;
@@ -388,26 +396,30 @@
     }
     .erika_h1
     {
-        font-size: 19pt;
+        font-size: 19px;
     }
     .pag{
-        font-size: 17pt;
+        font-size: 17px;
     }
     .bold-text{
-        font-size: 30pt;
+        font-size: 30px;
     }
     
     .page-link{
-        font-size: 17pt;
+        font-size: 17px;
     }
     
 
     .form-control-input{
-        font-size: 17pt;
+        font-size: 17px;
+    }
+    .main-text{
+        display: flex;
+        justify-content: center;
     }
 
     .blog-link-title{
-        font-size: 17pt;
+        font-size: 17px;
 
     }
 }

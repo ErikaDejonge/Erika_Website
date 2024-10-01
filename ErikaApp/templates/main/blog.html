@@ -11,71 +11,71 @@
 {% block content %}
 <!-- Show all the blog in this page  -->
 <div class="main-blog-body">
-  <div class="container-fluid">
-    <div class="container py-4">
-        <div class="wrapper">
-            <div class='container py-5' >
-               {% for i in pg_blogs reversed %}
-                <div class="blog-body py-4">
-                    <h6 class ='title-font' > {{i.blog_title | upper }} </h6>
-                    <div class="paragraph">
-                       <div class="intro">
-                        <p class="blog-introduction blog-blog py-1 " > {{i.blog_intro}} </p>
-                       </div>
-                        <div class="img-content-blog py-4">
-                            <img class="content-img" src="{{i.image.url}}" alt="">
+    <div class="container-fluid">
+        <div class="container py-4">
+            <div class="wrapper">
+                <div class='con-p py-5' >
+                {% for i in pg_blogs reversed %}
+                    <div class="blog-body py-4">
+                        <h6 class ='title-font' > {{i.blog_title | upper }} </h6>
+                        <div class="paragraph">
+                        <div class="intro">
+                            <p class="blog-introduction blog-blog py-1 " > {{i.blog_intro}} </p>
                         </div>
-                        <div class="blog-body-text blog-blog py-2">
-                            <p> {{i.blog_body}} <p id="reload"></p></p>
+                            <div class="img-content-blog py-4">
+                                <img class="content-img" src="{{i.image.url}}" alt="">
+                            </div>
+                            <div class="blog-body-text blog-blog py-2">
+                                <p> {{i.blog_body}} <p id="reload"></p></p>
+                            </div>
                         </div>
-                    </div>
-                </div> 
-                {% endfor %}
+                    </div> 
+                    {% endfor %}
 
-            </div>           
+                </div>           
+            </div>
         </div>
     </div>
-</div>
 
 
 
  <!-- blog link show for redirect to the blog -->
-<div class="container position-relative">
-    <div class="wrapper position-relative bottom-0 start-50 translate-middle-x">
-        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
+    <div class="container-fluid position-relative">
+        <div class="wrapper position-relative bottom-0 start-50 translate-middle-x">
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
 
-            {% for i in blog_content reversed %}
-            <div class="col blog">
-                <a href="{% url 'showblog' i.id %}" class="blog-link" style="text-decoration: none;"  >
-                    <div class="text-center mb-2">
-                        <img class="img-blog" src="{{i.image.url}}" alt="..">
-                    </div>
-                    <div class="text-center py-2">
-                        <h4 class="blog-link-title"> {{i.blog_title | upper}} </h4>
-                    </div>
-                </a>
+                {% for i in blog_content reversed %}
+                <div class="col blog">
+                    <a href="{% url 'showblog' i.id %}" class="blog-link" style="text-decoration: none;"  >
+                        <div class="text-center mb-2">
+                            <img class="img-blog" src="{{i.image.url}}" alt="..">
+                        </div>
+                        <div class="text-center py-2">
+                            <h4 class="blog-link-title"> {{i.blog_title | upper}} </h4>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
+            <nav aria-label="Page navigation example py-5">
+                <ul class="pagination justify-content-center">
+                {% if blog_content.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" style="text-decoration: none; color: #000000;" href="?page={{blog_content.previous_page_number}} #reload" >Previous Page &laquo;</a>
+                </li>
+                {% endif %}
+            
+            
+                {% if blog_content.has_next %}
+                <li class="page-item">
+                    <a class="page-link" style="text-decoration: none; color: #000000;"  href="?page={{blog_content.next_page_number}} #reload" >More Blog &raquo;</a>
+            
+                </li>
+                {% endif %}
+                </ul>
+            </nav>
         </div>
-        <nav aria-label="Page navigation example py-5">
-            <ul class="pagination justify-content-center">
-              {% if blog_content.has_previous %}
-              <li class="page-item">
-                <a class="page-link" style="text-decoration: none; color: #000000;" href="?page={{blog_content.previous_page_number}} #reload" >Previous Page &laquo;</a>
-              </li>
-              {% endif %}
-          
-          
-              {% if blog_content.has_next %}
-              <li class="page-item">
-                <a class="page-link" style="text-decoration: none; color: #000000;"  href="?page={{blog_content.next_page_number}} #reload" >More Blog &raquo;</a>
-          
-              </li>
-              {% endif %}
-            </ul>
-          </nav>
     </div>
-</div>
 </div>
 
 

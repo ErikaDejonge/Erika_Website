@@ -13,7 +13,7 @@
     <div class="wrapper py-5">
         <label class="tools-title" >Tools</label>
 
-        <div class="books-book py-1 p-2">
+        <div class=" container books-book py-1 p-2">
             <div class="img">
                 <img class="img1" src="{% static 'images/erika-book.png' %}" alt="">
             </div>
@@ -35,14 +35,14 @@
                             HEkuXONlHQulxgnO1JDfLeuKgsNKa8ubxvZeJp9Cs.dDFQnYaBpgdQHLetKUzXMs_e8yWk5
                             gOcbRz2BtGtnt4&dib_tag=se&keywords=every+step+adventures+with+jesus&qid=172499
                             4634&sprefix=Every+step+with+jesus%2Caps%2C483&sr=8-1" target="_blank" class="books-book-link" >
-                    <button class="button">START READING TODAY!</button>
+                    <button class="button" style="color: #000000;" >START READING TODAY!</button>
                 </a>
                 
             </div>
         </div>
 
         <div class="container-fluid py-5" >
-            <div class="download p-2">
+            <div class=" container download p-2">
                 <div class="d-img">
                     <img class="img2" src="{% static 'images/tools.jpg' %}" alt="">
                 </div>
@@ -53,7 +53,7 @@
                         you started hearing God’s voice today! 
                     </p>
                     
-                    <button class="button" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" color: #000000;" >DOWNLOAD NOW!</button>
+                    <button class="button"  type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="color: #000000;" >DOWNLOAD NOW!</button>
                     
                 </div>
             </div>
@@ -82,13 +82,10 @@
         </form>
     </div>
     <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
          <h5 class="model-footer-text">After sending your email Please check you email Box </h5>
     </div>
     </div>
 </div>
 </div>
-
-<!-- <a href="{% url 'send-email' %}" class="btn btn-sucess">Send Email</a> -->
 
 {% endblock content %}

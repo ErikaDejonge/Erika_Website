@@ -1,40 +1,82 @@
 .main-book-container{
-    font-size: 32pt;
+    font-size: 32px;
     background: #c5dcdd !important;
     padding-bottom: 10%;
+    overflow: hidden;
 }
 
 .start-button{
     background: #a6a6a6;
     border: none;
     outline: none;
-    font-size: 32pt;
+    font-size: 32px;
     padding: 0% 5% 0% 5%;
+    transition: .4s ease-in-out;
+
+}
+.start-button:hover{
+    background:#868686 ;
 }
 .book-des{
-    font-size:32pt !important ;
+    font-size:32px !important ;
 }
+.book-descriptions{
+    padding-top: -50px;
+}
+@media (max-width:1000px){
+    .main-book-container{
+        font-size: 32px;
+    }
+}
+@media (max-width:767){
+    .main-book-container{
+        font-size: 32px;
+        background: #c5dcdd !important;
+        padding-bottom: 10%;
+    }
+    
+    .start-button{
+        background: #a6a6a6;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        padding: 0% 5% 0% 5%;
+        transition: .4s ease-in-out;
+    
+    }
+    .start-button:hover{
+        background: #8b8a8a;
+    }
+    .book-des{
+        font-size:20px !important ;
+    }
+
+}
+
 
 @media (max-width:500px){
     .start-button{
-        font-size: 20pt;
+        font-size: 20px;
     }
     .book-descriptions{
-        font-size: 20pt;
+        position: relative;
+        margin-top: -4%;
+        font-size: 17px;
     }
     .book-des{
-        font-size: 20pt !important;
+        font-size: 17px !important;
     }
 }
 
 @media (max-width:400px){
     .start-button{
-        font-size: 17pt;
+        font-size: 17px;
     }
     .book-descriptions{
-        font-size: 17pt;
+        margin-top: -4%;
+        font-size: 17px;
     }
     .book-des{
-        font-size: 17pt !important;
+        font-size: 17px !important;
     }
 }

@@ -15,7 +15,7 @@
 
 .page-header{
     background: #c5dcdd;
-    height: 80vh;
+    height: 75vh;
     
 }
 
@@ -81,7 +81,7 @@
 .img-blog{
     width: 15rem;
     height: 15rem;
-    border-radius: 50%;
+    border-radius: 50%;d
 }
 .blog-link-title{
     font-size: 32px;
@@ -394,8 +394,6 @@
         display: grid;
         grid-template-columns: auto;
     }
-
-
     .col-form-label{
         display: flex;
         justify-content: left;
@@ -405,7 +403,6 @@
         width: 100%;
         font-size: 20px;
     }
-
     .book-submit{
         background: #c5dcdd;
         width: 100%;

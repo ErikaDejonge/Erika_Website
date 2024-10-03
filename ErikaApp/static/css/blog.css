@@ -36,6 +36,8 @@
 .img-content-blog .content-img{
     width: 100% !important;
     height: 550px !important;
+    object-fit: cover;
+    object-position: center;
 }
 
 

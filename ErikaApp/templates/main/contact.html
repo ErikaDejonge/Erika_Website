@@ -9,57 +9,61 @@
 
 {% block content %}
 
-<div class="container-fluid main-contact-container py-5">
-  <div class="wrapper py-5">
-      <div class="contact">
-        <div class="contact-tag p-1">
-          
-          <div class="message-show">
-            {% if messages %}
-            {% for message in messages %}
-            <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
-              <strong style="font-size: 28pt;" >Thank You!</strong> <p style="font-size: 28pt;" >{{message}}</p>
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-            {% endfor %}
-            {% endif %}
-          </div>
-        </div>
-
-        <form class="main-form" action="{% url 'contact' %}" method="POST">
-          <div class="title-box">
-            <label class="form-title"> Get in Touch! </label>
-          </div>
-          {% csrf_token %}  
-          <div class="row controle-form ">
-            <div class="i-controle">
-              <label  class="col-md-2 col-form-label  contact-ttl">Name:</label>
-              <div class="col-md-10 int">
-                <input type="text" name="name" class=" contact-input-controle"  placeholder="Full Name" required >
+<div class="container">
+  <div class="wrapper">
+      <div class="form mb-5 py-3" >
+        
+          <span>
+              <p class="ft-2 text-center contact-form-title" >Get in Touch!</p>
+          </span> 
+            <div class="message-show">
+              {% if messages %}
+              {% for message in messages %}
+              <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+                <strong style="font-size: 28px;" >Thank You!</strong> <p style="font-size: 28px;" >{{message}}</p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
+              {% endfor %}
+              {% endif %}
             </div>
-            
-            
-            <div class="i-controle">
-              <label  class="col-sm-2 col-form-label  contact-ttl">E-mail:</label>
-              <div class="col-md-10 int">
-                <input type="text" class=" contact-input-controle mb-5" name="email" placeholder="E-mail" required >
-              </div>
-            </div>
+          <form class="main-form" action="{% url 'contact' %}" method="POST">
+              {% csrf_token %}
 
-            <div class="i-controle">
-              <label  class="col-sm-2 col-form-label  contact-ttl ">Message:</label>
-              <div class="col-md-10 int">
-                  <textarea name="message" id="" rows="2" class="message" placeholder="Message" ></textarea>
-              </div> 
-            </div>           
-            <div class="btn-submit">
-              <input type="submit" class="submit-contact" value="Submit" >  
-            </div>       
-          </div>       
-        </form>
+              <div class="row g-3 align-items-center main-form-controls ">
+                  <div class="col-auto">
+                    <label class="col-form-label">Name:</label>
+                  </div>
+                  <div class="col-auto">
+                    <input type="text" name="name" class="form-control-input" required="required" >
+                  </div>
+                  
+              </div>
+              <div class="row g-3 align-items-center main-form-controls ">
+                  <div class="col-auto">
+                      <label class="col-form-label">E-mail:</label>
+                    </div>
+                    <div class="col-auto">
+                      <input type="text" name="email" class="form-control-input" required="required" >
+                    </div>
+                    
+              </div>
+              <div class="row g-3 align-items-center main-form-controls ">
+                  <div class="col-auto">
+                      <label class="col-form-label">Messages:</label>
+                  </div>
+                  <div class="col-auto">
+                      <input type="text" name="message" class="form-control-input" required="required" >
+                  </div>
+                    
+              </div>
+            
+              <input type="submit" class="form-control-plaintext book-submit ft-2" value="Submit" >         
+          </form>
       </div>
-    </div>
+      
+  </div>
+
 </div>
+
 
 {% endblock content %}

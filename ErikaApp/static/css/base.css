@@ -180,14 +180,13 @@ body{
         margin-left: -6%;
     }
     .nav-link-book{
-        width: 10vh;
         font-size: 32px;
     }
     
 }
 @media(max-width:1180px){
     .nav-link-book{
-        width: 50vh;
+        
         font-size: 32px;
     }
     
@@ -195,7 +194,7 @@ body{
 
 @media(max-width:1194px){
     .nav-link-book{
-        width: 50vh;
+        /* width: 0vh; */
         font-size: 32px;
     }
     
@@ -250,7 +249,7 @@ body{
         display: grid;
     }
     .nav-link-book{
-        width: 40vh;
+        width: 20vh;
         left: -10%;
     }
     .link-book-position {
@@ -407,7 +406,7 @@ body{
         position: relative;
         width: 100%;
         left: -50%;
-        transform: translateX(8%);
+        transform: translateX(4%);
     }
     .footer-ul ul li a{
         font-size: 20px;
@@ -417,6 +416,12 @@ body{
 @media (max-width:425px){
     .logo-img{
         left: -30%;
+    }
+    .footer-ul ul{
+        position: relative;
+        width: 100%;
+        left: -50%;
+        transform: translateX(4%);
     }
 }
 @media (max-width:400px){
@@ -479,7 +484,7 @@ body{
         position: relative;
         width: 100%;
         left: -50%;
-        transform: translateX(5%);
+        transform: translateX(3%);
 
     }
     .footer-ul ul li a{
@@ -494,7 +499,7 @@ body{
         position: relative;
         width: 100%;
         left: -52%;
-        transform: translateX(5%);
+        transform: translateX(3%);
 
     }
     .footer-ul ul li a{
@@ -510,7 +515,7 @@ body{
         position: relative;
         width: 100%;
         left: -54%;
-        transform: translateX(5%);
+        transform: translateX(3%);
 
     }
     .footer-ul ul li a{

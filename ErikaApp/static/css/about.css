@@ -17,6 +17,9 @@
     font-size: 32px;
     
 }
+.phg{
+    padding-top: 5%;
+}
 
 .about-author-body{
     display: flex;
@@ -26,13 +29,16 @@
 .about-title .title{
     font-size: 46.4px;
 }
+.author-img .img-col{
+    padding-top: 5%;
+}
 
 .author-img .img{
     border-radius: 50%;
     border: 0px solid white;
-    width: 410px;
-    height: 410px;
-    border-width: 10px;
+    width: 300px;
+    height: 300px;
+    border-width: 10px
 }
 
 @media(max-width:1000px){
@@ -55,7 +61,7 @@
         border-radius: 50%;
         border: 0px solid white;
         width: 410px;
-        height: 400px;
+        height: 410px;
         border-width: 10px;
         position: relative;
         left: 50%;

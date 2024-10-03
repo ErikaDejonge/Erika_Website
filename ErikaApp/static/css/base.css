@@ -86,6 +86,9 @@ body{
     outline: none !important;
     border-bottom:2px solid ;
 }
+.txt-right{
+    font-size: 20px;
+}
 
 
 /* up 1204 */
@@ -276,6 +279,9 @@ body{
         padding: 2%;
         display: grid;
         place-items: center;
+    }
+    .txt-right{
+        font-size: 20px;
     }
 
 }

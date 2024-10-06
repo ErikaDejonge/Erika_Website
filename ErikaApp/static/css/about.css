@@ -18,7 +18,7 @@
     
 }
 .phg{
-    padding-top: 5%;
+    margin-top: 5%;
 }
 
 .about-author-body{
@@ -34,11 +34,20 @@
 }
 
 .author-img .img{
+    display: grid;
+    justify-content: center;
     border-radius: 50%;
     border: 0px solid white;
-    width: 300px;
-    height: 300px;
-    border-width: 10px
+    width: 350px;
+    height: 350px;
+    border-width: 10px;
+    margin-bottom: -10%;
+}
+
+@media (max-width:1194px){
+    .about-author-body{
+        margin-bottom: -3%;
+    }
 }
 
 @media(max-width:1000px){

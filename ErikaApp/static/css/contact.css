@@ -2,6 +2,11 @@
     width: 100%;
     margin-top: 3%;
 }
+.contact-form-title{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
 .ft-2{
     font-size: 28px;
 }

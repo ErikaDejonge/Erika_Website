@@ -124,7 +124,16 @@
         margin-top: -15%;
     }
 }
-
+@media (max-width:500px) {
+    .about-author-body{
+        margin-top:-10%;
+        margin-bottom: 1%;
+    }
+    .phg{
+        margin-top: -9%;
+    }
+    
+}
 
 @media (max-width:425px) {
     .about-body{

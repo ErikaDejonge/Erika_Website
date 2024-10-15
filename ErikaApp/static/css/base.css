@@ -74,11 +74,22 @@ body{
 .body-font{
     font-family: Sans SemiCondensed;
 }
+.show{
+    display: none;
+}
 
 .input::placeholder{
     text-align: center;
     font-size: 28px;
     color: #000000;
+}
+.icon{
+    text-decoration: none !important;
+    color: #000000;
+    padding: 2%;
+}
+.icon .fa-brands{
+    font-size: 32px;
 }
 
 .input:focus {
@@ -89,6 +100,7 @@ body{
 .txt-right{
     font-size: 20px;
 }
+
 
 
 /* up 1204 */
@@ -112,6 +124,9 @@ body{
         color: #000000 !important;
         transition: 0.6s;
         
+    }
+    .show{
+        display: none;
     }
     
     .btn-books:hover{
@@ -186,12 +201,14 @@ body{
         font-size: 32px;
     }
     
+    
 }
 @media(max-width:1180px){
     .nav-link-book{
         
         font-size: 32px;
     }
+    
     
 }
 
@@ -208,11 +225,20 @@ body{
         padding: 4%;
     }
     
+    
     .navbar-collapse ul .nav-item{
         text-align: right;
     }
     .link-book-position {
         margin-left: 15%;
+    }
+    .icons{
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+        flex-direction: column column;
+        justify-content: space-between;
     }
 }
 @media (max-width:991px){
@@ -238,12 +264,26 @@ body{
     .navbar{
         padding: 4%;
     }
+    
     .logo-img{
         position: relative;
         margin-top:-22%;
         left: -90%;
         transform: translateX(-60%);
     }
+    .hide{
+        width: 100%;
+        display: block;
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        margin-left: 60%;
+    }
+    .hide .icon{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    
     .navbar-toggler{
         position: relative;
         left: 90%;
@@ -317,6 +357,20 @@ body{
     .footer-forms form{
         width: 45rem;
     }
+    .hide{
+        display: none;
+    }
+    .iconss{
+        display: block !important;
+    }
+    .iconss .icn{
+        font-size: 25px;
+        text-decoration: none;
+        padding: 2%;
+        color: #000000; 
+        justify-content: space-between;
+        
+    }
     .footer-ul{
         display: grid;
         grid-template-columns: auto;
@@ -343,6 +397,7 @@ body{
     .footer-forms{
         margin-left: -20% ;
     }
+
     
 }
 
@@ -355,6 +410,7 @@ body{
     }
     .navbar-collapse ul .nav-item{
         display: grid;
+        grid-template-columns: 1fr;
     }
     .navbar-collapse ul li a{
         font-size: 20px !important;

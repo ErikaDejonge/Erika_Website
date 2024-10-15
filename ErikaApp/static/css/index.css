@@ -55,6 +55,7 @@
 .pag{
     font-family: Cinzel;
     font-size: 54.4px;
+    text-transform: uppercase;
 }
 .position-box{
     margin-top: -10%;
@@ -98,6 +99,10 @@
     object-position: center;
     background-position: center;
     background-size: cover;
+}
+.main-pag{
+    text-align: justify;
+    text-wrap: wrap;
 }
 .title-read{
     display: flex;
@@ -302,6 +307,7 @@
         width: 200px;
         height: 200px;
     }
+
 
 }
 

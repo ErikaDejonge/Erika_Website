@@ -8,8 +8,11 @@
 
 {% block content %}
 
-<div class="main-book-container">   
+<div class="main-book-container py-5">   
     <div class="wrapper book-info">
+        <div class="book-titles text-center">
+            <label class="title-book-title" >BOOKS</label>
+        </div>
         {% for show_book in show_books %}
 
         <div class="">
@@ -18,8 +21,8 @@
             </div>
         </div>
 
-        <div class="container text-area">
-            <div class="button text-center py-2">
+        <div class="container text-area p-3">
+            <div class="button text-center py-5">
                 <a href="{{show_book.Book_Link}}" target="_blank" style="color: #000000; text-decoration: none;" >
                     <button class="start-button"  style="color: #000000;" >START READING TODAY!</button>
                 </a>

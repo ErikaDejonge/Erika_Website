@@ -1,8 +1,15 @@
 .main-book-container{
-    font-size: 32px;
+    font-size: 25px;
     background: #c5dcdd !important;
     padding-bottom: 10%;
     overflow: hidden;
+}
+.book-titles{
+    padding: 3%;
+}
+.title-book-title{
+    font-size: 32px;
+    font-family: Cinzel;
 }
 
 .start-button{
@@ -18,7 +25,8 @@
     background:#868686 ;
 }
 .book-des{
-    font-size:32px !important ;
+    font-size:25px !important ;
+    text-align: justify;
 }
 .book-descriptions{
     padding-top: -50px;

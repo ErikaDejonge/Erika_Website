@@ -1,5 +1,6 @@
 .blog-blog{
-    font-size: 32px !important;
+    font-size: 25px !important;
+    text-align: justify;
 }
 .img-blog{
     border-radius: 50%;
@@ -15,7 +16,7 @@
 .title-font{
     font-family: "Cinzel";
     text-align: center;
-    font-size: 46.4px;
+    font-size: 32px;
     font-weight: lighter;
 
 }
@@ -25,7 +26,7 @@
 }
 
 .blog-body{
-    font-size: 32px;
+    font-size: 25px;
     font-family: Open Sans Condensed;
 
 }

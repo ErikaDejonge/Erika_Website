@@ -1,21 +1,21 @@
 .container-tools-body {
     background-color: #C9DCDD;
-    font-size: 32px;
+    font-size: 25px;
 }
 .tools-title{
     font-family: Cinzel;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 46.4px;
+    font-size: 32px;
 }
 .books-book{
     display: grid;
     grid-template-columns: auto auto;
 }
 .books-book .img1{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border: none;
     border-radius: 50%;
     object-fit: cover;
@@ -28,7 +28,7 @@
 .button{
     background: #a6a6a6;
     border: none;
-    padding: 2% 20%;
+    padding: 1% 15%;
     color: #000000 !important;
     transition: .4s ease-in-out;
 }
@@ -42,8 +42,8 @@
 }
 
 .d-img .img2{
-    width: 400px !important;
-    height: 400px !important;
+    width: 300px !important;
+    height: 300px !important;
     padding: 2%;
     border: none;
     object-fit: cover;
@@ -53,9 +53,12 @@
 }
 .des{
     padding: 3%;
+    text-align: justify;
 }
 .des1{
     padding: 3%;
+    text-align: justify;
+
 }
 @media (max-width:1000px){
     .books-book{

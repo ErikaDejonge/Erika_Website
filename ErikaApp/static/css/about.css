@@ -3,204 +3,53 @@
     src: url(../text/LeJourScript-Eaqpg.otf);
     
 }
+.about-title{
+    display: grid;
+    grid-template-columns: 1fr;
+}
 .title{
     font-family: Cinzel;
-    text-decoration: underline;
+    font-size: 32px;
 }
 .title-1{
     font-family: le jour script;
-    margin-top: -1.2%;
+    margin-top: -1%;
 }
 
 .about-body{
     background: #c9dcdd;
-    padding: 5% 0;
-    font-size: 32px;
-    
+    font-size: 25px;
+    text-align: justify;
 }
-.phg{
-    margin-top: 5%;
+.container-row{
+    padding-top: 5%;
 }
-
-.about-author-body{
-    display: flex;
-    justify-content: space-between;
+#profile{
+    border-radius: 50% !important;
+    width: 200px;
+    height: 200px;
+    border: 5px solid #fff;
 }
-
-.about-title .title{
-    font-size: 46.4px;
-}
-.author-img .img-col{
-    padding-left: 15%;
-}
-
-.author-img .img{
+#img{
     display: grid;
+    place-self: center;
     justify-content: center;
-    border-radius: 50%;
-    border: 0px solid white;
-    width: 350px;
-    height: 350px;
-    border-width: 10px;
-    margin-bottom: -10%;
+    align-items: center;
+}
+.bio{
+    display: grid;
+    place-self: center;
+}
+#des_1{
+    padding-top: 1%;
 }
 
-@media (max-width:1194px){
-    .about-author-body{
-        margin-bottom: -3%;
-    }
-}
-
-@media(max-width:1000px){
-    .about-author-body{
-       display: grid;
-       grid-template-columns: auto;
-    }
-    .tittle-1{
-        margin-top: 2%;
-    }
-    
-    .about-title .title{
-        font-size: 46px;
-    }
-    .about-author{
-        margin-top: -11%;
-    }
-    
-    .img{
-        border-radius: 50%;
-        border: 0px solid white;
-        width: 410px;
-        height: 410px;
-        border-width: 10px;
+@media (max-width:900px){
+    #bio{
         position: relative;
-        left: 50%;
-        transform: translate(-50%);
+        right: 0%;
     }
-
-}
-
-@media screen and (max-width:768px) {
-    .about-body{
-        background: #c9dcdd;
-        padding: 5% 0;
-        font-size: 28px;
-        width: 100%;
-        overflow: hidden;
+    #des_1{
+        padding-top: 0%;
     }
-    
-    .about-author-body{
-        display: grid;
-        grid-template-columns: auto;
-        padding: 10px;
-        width: 100%;
-        overflow: hidden;
-    }
-    
-    
-    .about-title .title{
-        font-size: 28px;
-        padding: 2%;
-    }
-    
-    
-    
-    .img{
-        border: 10px solid white;
-        width: 250px;
-        height: 250px;
-        display: grid;
-        position:relative;
-        left: 50%;
-        transform: translate(-50%);
-
-    }
-    
-}
-@media (max-width:767px){
-    .about-body{
-        font-size: 25px;
-    }
-    .about-author{
-        margin-top: -15%;
-    }
-}
-@media (max-width:500px) {
-    .about-author-body{
-        margin-top:-10%;
-        margin-bottom: 1%;
-    }
-    .phg{
-        margin-top: -9%;
-    }
-    
-}
-
-@media (max-width:425px) {
-    .about-body{
-        background: #c9dcdd;
-        padding: 5% 0;
-        font-size: 20px;
-        width: 100%;
-        overflow: hidden;
-    }
-    .about-author{
-        margin-top: -20%;
-    }
-    
-    .about-author-body{
-        display: grid;
-        grid-template-columns: auto;
-        width: 100%;
-    }
-    
-    
-    .about-title .title{
-        font-size: 28px;
-    }
-    
-    .author-img .img{
-        border-radius: 50%;
-        border: 10px solid white;
-        width: 250px;
-        height: 250px;
-    }
-    
-}
-@media (max-width:320px) {
-    .about-body{
-        background: #c9dcdd;
-        padding: 5% 0;
-        font-size: 20px;
-        width: 100%;
-        overflow: hidden;
-    }
-    
-    .about-author-body{
-        display: grid;
-        grid-template-columns: auto;
-        padding: 10px;
-        width: 100%;
-    }
-    .about-author{
-        margin-top: -27%;
-    }
-    
-    .about-title{
-        padding: 0%;
-        
-    }
-    .about-title .title{
-        font-size: 25px;
-    }
-    
-    
-    .author-img .img{
-        border-radius: 50%;
-        border: 10px solid white;
-        width: 250px;
-        height: 250px;
-        
-    }
-    
 }

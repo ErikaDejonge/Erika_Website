@@ -6,34 +6,35 @@
 
 
 {% block content %}
- <div class="container-fluid about-body">
-    <div class="container">
+
+<div class="container-fluid about-body py-5">
+    <div class="container  about-body-author">
         <div class="wrapper">
-            <div class="about-title text-center">
+            <div class="about-title text-center ">
                 <label class="title">ABOUT THE AUTHOR</label>
-
+                <label class="title-1">Erika De Jonge</label>
+                
             </div>
-
             {% for A_show in about_show %}
-            <div class="about-title text-center mb-3">
-                <h1 class="title-1"> {{A_show.Signature}} </h1>                
-            </div>
-            <div class="author-img about-author-body">
-                <div class="img-col px-4 py-5">
-                    <img class="img"  src="{{A_show.Author_Image.url}}" alt="Author Image">    
-                </div>    
-
-                <div class="phg py-5">
-                    <p class="parg px-3"> {{A_show.Erika_Bio}} </p>
+            <div class="container-row row">
+                <div class="col-sm-5" id="img">
+                    <img src="{{A_show.Author_Image.url}}" class="img-fluid" alt="..." id="profile">
+                </div>
+                <div class="col-sm-7 bio ">
+                    <p id="bio"> {{A_show.Erika_Bio}} </p>
+                </div>
+                <div class="col-sm-12">
+                    <p id="des">{{A_show.Paragraph}}</p>
+                </div>
+                <div class="col-sm-12">
+                    <p id="des_1">{{A_show.Paragraph_1}}</p>
                 </div>
             </div>
-
-            <div class="about-author px-4">
-                <p>{{A_show.Paragraph}} </p>
-                <p>{{A_show.Paragraph_1}} </p>
-            </div>
-
             {% endfor %}
+    
+    
+    
+    
         </div>
     </div>
 </div>

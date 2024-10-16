@@ -320,6 +320,7 @@ def edit_about_content(request,id):
 
     return render(request, 'main/Edit-about.html',context)
 
+@login_required(login_url='adminlogin')
 def change_about_image(request,id):
     if request.FILES:
         change_about_image= AboutMe.objects.get(id=id)
@@ -372,6 +373,7 @@ def edit_books_sections(request,id):
     }
     return render(request, 'main/edit-book.html',context)
 
+@login_required(login_url='adminlogin')
 def edit_books_image_section(request, id):
     if request.FILES:
         books_images = Books.objects.get(id=id)

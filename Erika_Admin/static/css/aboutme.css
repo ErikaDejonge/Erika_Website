@@ -15,7 +15,7 @@
     padding: 2%;
 }
 .title{
-    font-size: 32pt;
+    font-size: 32px;
     font-family:open sans condensed;
 }
 .danger{
@@ -28,7 +28,7 @@
 
 .Signature
 {
-    font-size: 32pt;
+    font-size: 25px;
     font-family: le jour script;
     align-items: center;
 }
@@ -48,14 +48,14 @@
 
 }
 .about-me{
-    font-size: 28pt;
+    font-size: 25px;
     margin-top: 10%;
 }
 .about-erika-page p{
-    font-size: 28pt;
+    font-size: 25px;
 }
 .bio{
-    font-size: 32pt;
+    font-size: 25px;
     text-decoration: underline;
     text-underline-offset: 10px;
     padding-bottom: 5%;

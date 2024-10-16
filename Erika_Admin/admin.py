@@ -15,7 +15,7 @@ class Receive_ContactAdmin(admin.ModelAdmin):
 
 @admin.register(AboutMe)
 class AboutMeAdmin(admin.ModelAdmin):
-    list_display = ['id','Signature','Erika_Bio', 'Paragraph','Author_Image']
+    list_display = ['id','Signature','Erika_Bio', 'Paragraph']
 
 @admin.register(Books)
 class BooksAdmin(admin.ModelAdmin):

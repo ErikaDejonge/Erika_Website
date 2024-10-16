@@ -25,12 +25,14 @@ class Receive_Contact(models.Model):
 class AboutMe(models.Model):
     Signature = models.CharField(max_length=50)
     Erika_Bio = models.TextField(max_length=200)
-    Paragraph = models.TextField(help_text='For the Better view, You can user <br> when ever you want break point in your paragraph.')
+    Paragraph = models.TextField()
     Paragraph_1 = models.TextField(blank=True)
-    Author_Image = models.ImageField(upload_to='Media')
+    Author_Image = models.ImageField(upload_to='Media', blank=True)
 
     def __str__(self):
         return self.Signature
+
+
 
 class Books(models.Model):
     Books_Images = models.ImageField(upload_to='Media')

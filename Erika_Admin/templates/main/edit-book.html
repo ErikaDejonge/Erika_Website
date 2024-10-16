@@ -13,12 +13,7 @@
 
             <form action="{% url 'edit_books-section' books.id %}" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
-                <div class="mb-3">
-                    <img src="{{books.Books_Images.url}}" width="200px" height="200px" alt="" class="mb-2" >
-                </div> 
-               <div class="mb-3">
-                    <input type="file" name="new-images" class="form-control"> 
-                </div>
+                 
                 <div class="mb-3">
                     <label>Links for the Buttons:</label>
                     <input type="text" name="links" class="form-control" value="{{books.Book_Link}}" >

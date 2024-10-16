@@ -12,6 +12,9 @@
     height: 150px;
     width: 150px;
 }
+.card-text{
+    text-align: justify !important;
+}
 .blog{
     cursor: pointer;
     font-family:  Archivo Narrow;
@@ -34,8 +37,6 @@
     width: 100% !important;
     height: 550px !important;
 }
-.divider{
-    border: 3px solid #ddd;
-}
+
 
 

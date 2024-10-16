@@ -40,7 +40,7 @@
 }
 .link-btn a{
     color: #000000;
-    font-size: 32px;
+    font-size: 25px;
     text-decoration: none;
     border:none;
     padding: 2% 9% ;
@@ -50,19 +50,21 @@
 .des label{
     display: flex;
     justify-content: center;
-    font-size: 28pt;
+    font-size: 25px;
 }
 .des .description-paragraph{
-    font-size: 28pt;
+    font-size: 25px;
+    text-align: justify;
 }
 
 .rw label{
     display: flex;
     justify-content: center;
-    font-size: 28pt;
+    font-size: 25px;
 }
 .review-list .reviews-paragraph{
-    font-size: 28pt;
+    font-size: 25px;
+    text-align: justify;
     
 }
 .submit-btn{
@@ -76,7 +78,7 @@
 .go .go-back{
     border: 1px solid;
     padding: 2px 4%;
-    font-size: 25px;
+    /* font-size: 20px; */
     color: #000000;
     text-decoration: none;
 }

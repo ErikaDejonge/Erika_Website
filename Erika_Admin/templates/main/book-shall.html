@@ -30,6 +30,9 @@
             <a href="{% url 'edit_books-section' book_obj.id %}">
                 <button type="button" class="btn btn-outline-info"><i class="fa fa-pencil"></i> Edit</button>
             </a>
+            <a href="{% url 'edit_books_image_sections' book_obj.id %}">
+                <button type="button" class="btn btn-outline-info"><i class="fa fa-image"></i> Change Image</button>
+            </a>
     
             <a href="{% url 'delete_book' book_obj.id  %}">
                 <button type="button" class="btn btn-outline-danger danger"> <i class="fa fa-trash" ></i> Delete</button>

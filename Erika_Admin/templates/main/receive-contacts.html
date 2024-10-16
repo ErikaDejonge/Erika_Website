@@ -38,7 +38,7 @@
                             <th scope="row">{{ forloop.counter }}</th>
                             <td>{{Rcontact.Name}}</td>
                             <td> <a href="mailto:{{Rcontact.Email}}" class="mailto-link" >{{Rcontact.Email}} </a></td>
-                            <td>{{Rcontact.Messages}}</td>
+                            <td class="text-wrap" >{{Rcontact.Messages}}</td>
                             <td>
                                 <a href="{% url 'RC_delete' Rcontact.id %}">
                                     <button type="button" class="btn">Delete</button>

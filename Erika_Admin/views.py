@@ -277,10 +277,10 @@ def profile_image(request):
 
 @login_required(login_url='adminlogin')
 def aboutme(request):
-
     about_info = AboutMe.objects.all()
     context={
-        'about_info':about_info
+        'about_info':about_info,
+        'PI':profile_image
     }
     return render(request, 'main/aboutme.html',context)
 
@@ -302,14 +302,13 @@ def add_about_content(request):
 
 @login_required(login_url='adminlogin')
 def edit_about_content(request,id):
-    if request.method == 'POST' and request.FILES:
+    if request.method == 'POST':
         edit_about= AboutMe.objects.get(id=id)
 
         edit_about.Signature = request.POST['author_name']
         edit_about.Erika_Bio = request.POST['bio']
         edit_about.Paragraph = request.POST['reviews']
         edit_about.Paragraph_1 = request.POST['reviews1']
-        edit_about.Author_Image = request.FILES['bio-image']
         edit_about.save()
         return redirect('about-me')
     
@@ -320,6 +319,20 @@ def edit_about_content(request,id):
     }
 
     return render(request, 'main/Edit-about.html',context)
+
+def change_about_image(request,id):
+    if request.FILES:
+        change_about_image= AboutMe.objects.get(id=id)
+
+        change_about_image.Author_Image = request.FILES['change_about_image']
+        change_about_image.save()
+        return redirect('about-me')
+    
+    change_about_image= AboutMe.objects.get(id=id)
+    context = {
+        'change_image':change_about_image
+    }
+    return render(request, 'main/profile_change.html',context)
 
 @login_required(login_url='adminlogin')
 def delete_about_content(request,id):
@@ -343,12 +356,11 @@ def books_sections(request):
 
 @login_required(login_url='adminlogin')
 def edit_books_sections(request,id):
-    if request.method=='POST' and request.FILES:
+    if request.method=='POST':
         books_id = Books.objects.get(id=id)
 
         books_id.Book_Link = request.POST['links']
         books_id.Descriptions = request.POST['descriptions']
-        books_id.Books_Images = request.FILES['new-images']
         books_id.save()
         return redirect('books-section')
         
@@ -359,6 +371,20 @@ def edit_books_sections(request,id):
 
     }
     return render(request, 'main/edit-book.html',context)
+
+def edit_books_image_section(request, id):
+    if request.FILES:
+        books_images = Books.objects.get(id=id)
+        books_images.Books_Images = request.FILES['new-update-images']
+        books_images.save()
+        return redirect("books-section")
+
+
+    books_images = Books.objects.get(id=id)
+    context ={
+        'books_images':books_images
+    }
+    return render(request, 'main/edit_books_image_section.html',context)
 
 @login_required(login_url='adminlogin')
 def delete_books(request,id):

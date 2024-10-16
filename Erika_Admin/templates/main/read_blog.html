@@ -12,6 +12,9 @@
 
             <div class="container">
                 <div class="wrapper py-2">
+                    <a href="{% url 'admin_blogs' %}">
+                        <button><i class="fa fa-arrow-left"></i></button>
+                    </a>
                 <div class="text-end">
                     <a href="{% url 'change_image' read.id %}" class="btn btn-color"><i class="mdi mdi-image"></i> Change Image</a>
                     <a href="{% url 'edit_blog' read.id %}" class="btn btn-color"><i class="mdi mdi-pencil"></i> Edit</a>

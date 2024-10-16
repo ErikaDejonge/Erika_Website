@@ -26,10 +26,12 @@ urlpatterns =[
     path('aboutMe/',views.aboutme, name='about-me'),
     path('add_aboutMe/',views.add_about_content, name='add-about-content'),
     path('edit_aboutMe/<int:id>',views.edit_about_content, name='edit-about-content'),
+    path('change_image/<int:id>',views.change_about_image, name='change_about_image'),
     path('delete_aboutMe/<int:id>',views.delete_about_content, name='delete-about-content'),
 
     path('book-sections/',views.books_sections, name='books-section'),
     path('edit-book-sections/<int:id>',views.edit_books_sections, name='edit_books-section'),
+    path('edit_books_image_section/<int:id>',views.edit_books_image_section,name='edit_books_image_sections'),
     path('delete_books/<int:id>',views.delete_books, name='delete_book'),
     path('add_new_books_sections/',views.add_new_book_section,name='add-book-section'),
     path('add-Reviews/',views.add_reviews,name='add-reviews'),

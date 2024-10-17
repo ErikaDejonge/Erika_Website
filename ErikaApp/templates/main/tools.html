@@ -64,30 +64,26 @@
 
   
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content">
-    <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Subscribe</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    <div class="modal-body">
-        <form class="model-form" action="{% url 'tools' %}" method="POST">
-            {% csrf_token %}
-            <label class="model-sub-info">Enter your Email to Download This Document...</label><br>
-            <label class="model-label">E-Mail:</label><br>
-            <input class="model-input" type="email" name="email" name="email"  placeholder="Enter your email address" required><br>
-            <input type="checkbox" name="notification" id="checkbox" >
+<div class="modal fade text-center" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             
-            <label for="checkbox">Get Notification for an Update! </label><br>
-            <input class="model-submit" type="submit" value="Download Now">
-        </form>
+            <div class="modal-body">
+                <form class="model-form " action="{% url 'tools' %}" method="POST">
+                    {% csrf_token %}
+                    <label class="model-sub-info text-centeter">Enter your Email to Download This Document.</label><br>
+                    <input class="model-input" type="email" name="email" name="email" id='email' required>
+                    <input class="model-submit" type="submit" value="SUBSCRIBE NOW"><br>
+                    <label for="email"> After submitting you emai address, plase check your inbox.</label><br>
+                    
+                    <input type="checkbox" name="notification" id="checkbox" >
+                    <label for="checkbox" id='chek-label'>By chacking this box you agree to receive our monthly newsletter.</label><br>
+                    
+                </form>
+            </div>
+        </div>
     </div>
-    <div class="modal-footer">
-         
-    </div>
-    </div>
-</div>
 </div>
 
 {% endblock content %}

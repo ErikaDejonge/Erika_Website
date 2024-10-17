@@ -60,16 +60,31 @@
     text-align: justify;
 
 }
+.modal-content{
+    padding: 3%;
+    border: 3px solid #ececec;
+    border-radius: 30px;
+}
 .model-input{
-    width: 100%;
+    width: 50%;
     border: none;
     border-bottom: 1px solid #000;
 }
 .model-submit{
-    background-color: #a6a6a6;
-    border: none;
+    background-color: #c5dcdd;
+    border: 1px solid #000;
     font-size: 22px;
+    border-radius: 30px;
+    padding:0 4%;
 }
+input[type='checkbox'] {
+    height: 20px;
+    width: 20px;
+}
+.chek-label{
+    text-align: center;
+}
+
 
 @media (max-width:1000px){
     .books-book{

@@ -20,26 +20,26 @@
 <div class="hero-page">
     
     <div class="container-fluid hedline-content">
-        <div class="d-flex mg-head align-items-center">
-            <div class="flex-shrink-0">
+        <div class="d-flex mg-head align-items-center ms-3">
+            <div class="flex-shrink-0 ms-5">
               <img src="{% static 'images/author.jpg' %}" alt="" class="main-image img-fluid">
             </div>
-            <div class="flex-grow-1 ms-3">
+            <div class="flex-grow-1 ms-5">
               <label class="main-title" >On a mission to make <br> <label class="hi-tag-titile">hearing God’s voice</label> <br> possible for everyone</label>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="box">
-            <p class="tag-paragraph al" >Hi, I'm</p>
-            <label class="sig-name ">Erika</label>
+            <p class="tag-paragraphs al" id='erika_h1' >Hi, I'm <br> <label class="sig-name" for='erika_h1'>Erika</label></p>
+            
             <p class="tag-paragraph" style="text-align: justify;" >Hearing God's voice will change your life! It will impact your walk with Jesus, marriage, parenting, work, and relationships. But you don't have to figure it out for yourself; I'm here to help with testimonies, tools, and resources so you can start hearing God's voice today!</p>
         </div>
     </div> 
     
     
     
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5" id='reload'>
         <div class="wrapper">
             <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 blog_show">
                 {% for blog in blog reversed %}
@@ -59,7 +59,7 @@
                 <ul class="pagination justify-content-center">
                   {% if blog.has_previous %}
                   <li class="page-item">
-                    <a class="page-link" style=" color: #000000; text-decoration: none;" href="?page={{blog.previous_page_number}} #reload" >Previous Page &laquo;</a>
+                    <a class="page-link" style=" color: #000000; text-decoration: none;" href="?page={{blog.previous_page_number}} #reload" >&laquo; Previous </a>
                   </li>
                   {% endif %}
               

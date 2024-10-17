@@ -37,5 +37,7 @@ urlpatterns =[
     path('add-Reviews/',views.add_reviews,name='add-reviews'),
     path('edit-Reviews/<int:id>',views.edit_reviews,name='edit-reviews'),
     path('delete-Reviews/<int:id>',views.delete_reviews,name='delete-reviews'),
+    path('e_mail/',views.mail, name='e_mail'),
+    path('delete_e_mail/<int:id>',views.delete_e_mail,name='delete_e_mails'),
 
 ]

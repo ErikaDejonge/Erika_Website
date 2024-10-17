@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from ErikaApp.models import Email_Info,BookErika,Blog
 from django.contrib.auth.forms import PasswordChangeForm
 from .models import Profile_Images,Receive_Contact,AboutMe,Reviews,Books
+from ErikaApp.models import Download_email
 import requests
 import json
 from django.contrib import messages
@@ -442,8 +443,16 @@ def delete_reviews(request,id):
     return redirect('books-section')
 
 
+def mail(request):
 
+    show_download_mail = Download_email.objects.all()
 
+    context={
+        'show_download_mail':show_download_mail
+    }
+    return render(request,'mail/mail.html',context)
 
-
-
+def delete_e_mail(request,id):
+    delete_email = Download_email.objects.get(id=id)
+    delete_email.delete()
+    return redirect('e_mail')

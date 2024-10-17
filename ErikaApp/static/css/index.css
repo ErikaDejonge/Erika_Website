@@ -73,13 +73,11 @@
     padding: 2%;
     box-shadow: 2px 5px 20px rgb(235, 232, 232);
 }
+
 .font{
     margin-right: 20%;
 }
-.erika_h1{
-    font-size: 40px;
-    font-family: le jour script;
-}
+
 .blog{
     display: flex;
     justify-content: center;

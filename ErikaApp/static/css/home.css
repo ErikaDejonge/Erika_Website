@@ -32,6 +32,7 @@
 
 .tag-paragraph{
     font-size: 25px;
+    margin-top: -1%;
 }
 .al{
     position: relative;
@@ -40,7 +41,8 @@
 .sig-name{
     font-family:  le jour script;
     font-size: 32px;
-
+    position: relative;
+    margin-left: 15%;
 }
 .blog-content{
     padding-top: 5%;

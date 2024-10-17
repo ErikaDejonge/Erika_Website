@@ -60,6 +60,17 @@
     text-align: justify;
 
 }
+.model-input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+.model-submit{
+    background-color: #a6a6a6;
+    border: none;
+    font-size: 22px;
+}
+
 @media (max-width:1000px){
     .books-book{
         display: grid;

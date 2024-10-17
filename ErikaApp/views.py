@@ -98,14 +98,28 @@ class Tools():
 
         if request.method == 'POST':
             email_send = request.POST['email']
-            sv_e = Download_email(Downloaded_Email=email_send)
-            sv_e.save()
+            check_box = request.POST.get('notification')
+            
+            if not check_box:
+                check_box = False
 
-            subject= 'With file attachment: from the Erika Books'
-            message= 'Download the Files'
-            recipient_list = [email_send]
-            file_path = f'{settings.BASE_DIR}/planner.pdf'
-            send_email_with_attachment(subject, message, recipient_list, file_path)
+                subject= 'With file attachment: from the Erika Books'
+                message= 'Download the Files'
+                recipient_list = [email_send]
+                file_path = f'{settings.BASE_DIR}/planner.pdf'
+                send_email_with_attachment(subject, message, recipient_list, file_path)
+                return redirect('tools')
+            
+            else:
+                check_box = True
+                sv_e = Download_email(Downloaded_Email=email_send)
+                sv_e.save()
+
+                subject= 'With file attachment: from the Erika Books'
+                message= 'Download the Files'
+                recipient_list = [email_send]
+                file_path = f'{settings.BASE_DIR}/planner.pdf'
+                send_email_with_attachment(subject, message, recipient_list, file_path)
             return redirect('tools')
 
 

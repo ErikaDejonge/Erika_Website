@@ -68,7 +68,7 @@
 <div class="modal-dialog">
     <div class="modal-content">
     <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Get Subscription</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Subscribe</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
@@ -76,13 +76,15 @@
             {% csrf_token %}
             <label class="model-sub-info">Enter your Email to Download This Document...</label><br>
             <label class="model-label">E-Mail:</label><br>
-            <input class="model-input" type="email" name="email" name="email"  placeholder="Enter your email address" required>
+            <input class="model-input" type="email" name="email" name="email"  placeholder="Enter your email address" required><br>
+            <input type="checkbox" name="notification" id="checkbox" >
             
-            <input class="model-submit" type="submit" value="Get Now">
+            <label for="checkbox">Get Notification for an Update! </label><br>
+            <input class="model-submit" type="submit" value="Download Now">
         </form>
     </div>
     <div class="modal-footer">
-         <h5 class="model-footer-text">After sending your email Please check you email Box </h5>
+         
     </div>
     </div>
 </div>

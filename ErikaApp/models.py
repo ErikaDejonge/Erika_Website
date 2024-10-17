@@ -32,6 +32,7 @@ class Email_Info(models.Model):
 
 class Download_email(models.Model):
     Downloaded_Email = models.EmailField()
+    
 
     def __str__(self):
         return self.Downloaded_Email

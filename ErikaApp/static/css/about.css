@@ -26,8 +26,8 @@
 }
 #profile{
     border-radius: 50% !important;
-    width: 200px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
     border: 5px solid #fff;
 }
 #img{
@@ -40,9 +40,7 @@
     display: grid;
     place-self: center;
 }
-#des_1{
-    padding-top: 1%;
-}
+
 
 @media (max-width:900px){
     #bio{

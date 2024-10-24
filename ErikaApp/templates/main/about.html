@@ -12,15 +12,15 @@
         <div class="wrapper">
             <div class="about-title text-center ">
                 <label class="title">ABOUT THE AUTHOR</label>
-                <label class="title-1">Erika De Jonge</label>
+                <label class="title-1">Erika DeJonge</label>
                 
             </div>
             {% for A_show in about_show %}
             <div class="container-row row">
-                <div class="col-sm-5" id="img">
+                <div class="col-sm-12 mb-2" id="img">
                     <img src="{{A_show.Author_Image.url}}" class="img-fluid" alt="..." id="profile">
                 </div>
-                <div class="col-sm-7 bio ">
+                <div class="col-sm-12 bio ">
                     <p id="bio"> {{A_show.Erika_Bio}} </p>
                 </div>
                 <div class="col-sm-12">

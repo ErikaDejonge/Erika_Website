@@ -39,11 +39,11 @@
     
     
     
-    <div class="container-fluid py-5" id='reload'>
-        <div class="wrapper">
-            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 blog_show">
+    <div class="container-fluid py-5 " id='reload'>
+        <div class="wrapper justify-content-center">
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 blog_show d-flex justify-content-center">
                 {% for blog in blog reversed %}
-                    <div class="col blog">
+                    <div class="col blog justify-content-center">
                         <a href="{% url 'showblog' blog.id %}" style="text-decoration: none; color: #000000;" >
                             <div class="text-center mb-2">
                                 <img class="img-blog" src="{{blog.image.url}}" alt="..">
@@ -104,7 +104,7 @@
             <div class="wrapper">
                 <div class="form mb-5" >
                     <span>
-                        <p class="ft-2 text-center erika-book-title" >Book Erika for an event.</p>
+                        <p class="ft-2 text-center erika-book-title" >Invite Erika for an Event.</p>
                     </span>
                     <form class="main-form" action="{% url 'event_book' %}" method="POST">
                         {% csrf_token %}
@@ -145,7 +145,7 @@
                               </div>
                         </div>
                       
-                        <input type="submit" style="font-weight: lighter;"  class="form-control-plaintext book-submit" value="Book Erika" >         
+                        <input type="submit" style="font-weight: lighter;"  class="form-control-plaintext book-submit" value="Invite Erika" >         
                     </form>
                 </div>
                 

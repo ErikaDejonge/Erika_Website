@@ -42,8 +42,7 @@
  <!-- blog link show for redirect to the blog -->
     <div class="container-fluid position-relative">
         <div class="wrapper position-relative bottom-0 start-50 translate-middle-x">
-            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4">
-
+            <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 d-flex justify-content-center">
                 {% for i in blog_content reversed %}
                 <div class="col blog">
                     <a href="{% url 'showblog' i.id %}" class="blog-link" style="text-decoration: none;"  >

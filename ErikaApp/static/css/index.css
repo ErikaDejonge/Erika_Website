@@ -79,7 +79,15 @@
 }
 
 .blog{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    justify-self: center !important;
+
+}
+.wrap-blog{
     display: flex;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
 }

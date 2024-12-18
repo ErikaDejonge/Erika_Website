@@ -21,7 +21,6 @@
                 <div class="blog-body py-4">
                     <h1 class ='blog-tts title-font' > {{show_blog.blog_title | upper }} </h1>
                     <div class="paragraph">
-                        
                         <div class="intro">
                             <p class="blog-introduction blog-blog py-1" > {{show_blog.blog_intro}} </p>
                         </div>
@@ -41,7 +40,7 @@
 
 <div class="container-fluid position-relative">
     <div class="wrapper position-relative bottom-0 start-50 translate-middle-x wrapper-items">
-        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4  ">
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 d-flex justify-content-center ">
 
             {% for i in blog_content reversed %}
             <div class="col blog">
